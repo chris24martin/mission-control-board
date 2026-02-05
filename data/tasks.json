@@ -253,7 +253,7 @@
       "id": "task_example",
       "title": "Example Task \u2014 Delete me when ready!",
       "description": "This is an example of what a real task looks like. Feel free to edit or delete it.\n\n**Good task descriptions include:**\n- What needs to be done\n- Why it matters\n- Any constraints or requirements\n- Links to relevant resources",
-      "status": "review",
+      "status": "in_progress",
       "project": "default",
       "tags": [
         "example"
