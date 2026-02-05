@@ -1,1 +1,3 @@
 .DS_Store
+data/.tasks-snapshot.json
+data/.webhook-debug.log
