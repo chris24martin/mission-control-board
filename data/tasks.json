@@ -362,7 +362,7 @@
       "id": "m4_001_openclaw_health_slo",
       "title": "Define OpenClaw health SLO + alert thresholds",
       "description": "Specify what “healthy” means: gateway reachable, telegram OK, cron running, disk space, update window behavior. Keep alerts low-noise.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m4_ops",
       "tags": [
         "ops",
