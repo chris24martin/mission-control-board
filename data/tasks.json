@@ -366,7 +366,7 @@
       "id": "m4_001_openclaw_health_slo",
       "title": "Define OpenClaw health SLO + alert thresholds",
       "description": "Specify what “healthy” means: gateway reachable, telegram OK, cron running, disk space, update window behavior. Keep alerts low-noise.",
-      "status": "review",
+      "status": "done",
       "project": "m4_ops",
       "tags": [
         "ops",
@@ -383,7 +383,8 @@
           "createdAt": "2026-02-05T23:11:41.345574Z"
         }
       ],
-      "subtasks": []
+      "subtasks": [],
+      "completedAt": "2026-02-06T16:41:22.327Z"
     },
     {
       "id": "m4_002_weekly_ops_digest",
@@ -820,5 +821,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-06T16:23:19.859Z"
+  "lastUpdated": "2026-02-06T16:41:22.327Z"
 }
