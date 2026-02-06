@@ -390,7 +390,7 @@
       "id": "m4_002_weekly_ops_digest",
       "title": "Weekly ops digest (summary-only unless issues)",
       "description": "Create a weekly summary message: uptime, updates, warnings, cost notes. No DM spam if all OK.",
-      "status": "review",
+      "status": "done",
       "project": "m4_ops",
       "tags": [
         "ops",
@@ -413,7 +413,8 @@
           "createdAt": "2026-02-05T20:29:42.517795Z"
         }
       ],
-      "subtasks": []
+      "subtasks": [],
+      "completedAt": "2026-02-06T16:42:31.878Z"
     },
     {
       "id": "epic_m2_aas",
@@ -824,5 +825,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-06T16:42:12.256Z"
+  "lastUpdated": "2026-02-06T16:42:31.878Z"
 }
