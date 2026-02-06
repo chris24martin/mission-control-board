@@ -556,7 +556,7 @@
       "id": "m5_002_lender_shortlist",
       "title": "Build lender shortlist (local + online) + comparison table",
       "description": "Identify 5–8 lenders, collect: rate, points, lender fees, timeline, communication, pre-approval requirements. Prepare outreach script/email.",
-      "status": "review",
+      "status": "done",
       "project": "m5_real_estate",
       "tags": [
         "research"
@@ -572,7 +572,8 @@
           "createdAt": "2026-02-05T20:23:41.267413Z"
         }
       ],
-      "subtasks": []
+      "subtasks": [],
+      "completedAt": "2026-02-06T16:42:04.182Z"
     },
     {
       "id": "m5_003_get_preapproved",
@@ -821,5 +822,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-06T16:41:22.327Z"
+  "lastUpdated": "2026-02-06T16:42:04.182Z"
 }
