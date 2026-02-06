@@ -589,7 +589,7 @@
       "id": "m5_008_tour_checklist",
       "title": "Tour checklist for secluded/wooded properties",
       "description": "Checklist: drainage/water, septic/well, basement moisture, roof age, trees near structure, driveway condition, snow plowability, cell signal, internet options, noise sources, neighbors visibility.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m5_real_estate",
       "tags": [
         "checklist"
