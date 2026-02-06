@@ -545,7 +545,7 @@
       "id": "m5_004_realtor_shortlist",
       "title": "Build realtor shortlist for Holly MI area + interview questions",
       "description": "Find 5 candidates, prep interview: local expertise, negotiation style, availability, preferred lenders/inspectors, experience with wooded lots/secluded properties.",
-      "status": "backlog",
+      "status": "review",
       "project": "m5_real_estate",
       "tags": [
         "research"
@@ -553,7 +553,6 @@
       "priority": "high",
       "dod": "Realtor selected + contact info + working agreement confirmed.",
       "createdAt": "2026-02-06T01:14:20.256066Z",
-      "processingStartedAt": "2026-02-05T20:24:10.194994Z",
       "comments": [
         {
           "id": "c_1770341050194",
@@ -566,6 +565,12 @@
           "author": "MoltBot",
           "text": "Created realtor shortlist + interview question bank. File: data/m5_004_realtor_shortlist.md (5 candidates w/ contact + copy/paste interview questions focused on Holly-area wooded/secluded lots, negotiation style, availability, and vendor network).",
           "createdAt": "2026-02-05T20:27:52.629172Z"
+        },
+        {
+          "id": "c3",
+          "author": "MoltBot",
+          "text": "Realtor shortlist + interview questions prepared. Deliverable saved at mission-control-board/data/m5_004_realtor_shortlist.md (5 candidate buyer-agents w/ contact info + structured interview questions tailored to wooded/secluded properties in the Holly MI area).",
+          "createdAt": "2026-02-05T20:27:56.990888Z"
         }
       ]
     },
