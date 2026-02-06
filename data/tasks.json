@@ -481,7 +481,7 @@
       "id": "epic_m1_investing",
       "title": "📈 EPIC: Module 1 — Investing automation (alerts → paper → approvals)",
       "description": "Market intelligence + portfolio monitoring with explicit approvals. Execution comes last. Start with read-only + paper trading + journaling.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m1_investing",
       "tags": [
         "epic",
@@ -492,7 +492,8 @@
       "dod": "Read-only monitoring + paper strategy reports running with approvals wired (no live trading).",
       "createdAt": "2026-02-05T23:05:13.430135Z",
       "subtasks": [],
-      "comments": []
+      "comments": [],
+      "sortOrder": 0
     },
     {
       "id": "m1_001_define_risk_policy",
@@ -772,6 +773,14 @@
     {
       "type": "moved",
       "actor": "chris24martin",
+      "task": "📈 EPIC: Module 1 — Investing automation (alerts → paper → approvals)",
+      "from": "backlog",
+      "to": "in_progress",
+      "time": "just now"
+    },
+    {
+      "type": "moved",
+      "actor": "chris24martin",
       "task": "🛠️ EPIC: Module 4 — Ops & cost savings automation",
       "from": "backlog",
       "to": "in_progress",
@@ -790,5 +799,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-06T16:16:35.078Z"
+  "lastUpdated": "2026-02-06T16:22:35.773Z"
 }
