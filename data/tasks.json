@@ -597,14 +597,22 @@
       "id": "m5_008_tour_checklist",
       "title": "Tour checklist for secluded/wooded properties",
       "description": "Checklist: drainage/water, septic/well, basement moisture, roof age, trees near structure, driveway condition, snow plowability, cell signal, internet options, noise sources, neighbors visibility.",
-      "status": "in_progress",
+      "status": "review",
       "project": "m5_real_estate",
       "tags": [
         "checklist"
       ],
       "priority": "medium",
       "dod": "Printable/checkable list ready before first showing.",
-      "createdAt": "2026-02-06T01:14:20.256066Z"
+      "createdAt": "2026-02-06T01:14:20.256066Z",
+      "comments": [
+        {
+          "id": "c1",
+          "author": "MoltBot",
+          "text": "Created printable checklist for secluded/wooded property showings. Output file: mission-control-board/data/m5_008_tour_checklist.md (includes sections: access/driveway/plowability, drainage/water, basement moisture, roof age/condition, septic, well/water, trees/vegetation, cell + internet options, noise/privacy/neighbor visibility, plus follow-up prompts).",
+          "createdAt": "2026-02-05T20:21:34.267994Z"
+        }
+      ]
     },
     {
       "id": "m5_009_offer_playbook",
