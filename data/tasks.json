@@ -384,7 +384,7 @@
       "id": "m4_002_weekly_ops_digest",
       "title": "Weekly ops digest (summary-only unless issues)",
       "description": "Create a weekly summary message: uptime, updates, warnings, cost notes. No DM spam if all OK.",
-      "status": "backlog",
+      "status": "review",
       "project": "m4_ops",
       "tags": [
         "ops",
@@ -392,7 +392,15 @@
       ],
       "priority": "medium",
       "dod": "A scheduled job exists and produces a digest format draft (even if it posts nowhere yet).",
-      "createdAt": "2026-02-05T23:05:13.430135Z"
+      "createdAt": "2026-02-05T23:05:13.430135Z",
+      "comments": [
+        {
+          "id": "c1",
+          "author": "MoltBot",
+          "text": "Created weekly cron job in OpenClaw cron scheduler: jobId=89554f01-75e4-42c7-9586-2a62c7953588 (name m4_002_weekly_ops_digest), schedule: Mondays 09:20 America/Detroit, delivery=none (draft only). Draft digest format generated below in task comment.",
+          "createdAt": "2026-02-05T20:29:28.373201Z"
+        }
+      ]
     },
     {
       "id": "epic_m2_aas",
