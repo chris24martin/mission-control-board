@@ -5,8 +5,13 @@
       "name": "System health check (immediate alerts)",
       "enabled": true,
       "scheduleKind": "every",
-      "everyMs": 120000,
-      "timezone": "America/Detroit"
+      "schedule": "every 120000ms",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-06T16:54:44.685000+00:00",
+      "lastRunAt": "2026-02-05T18:09:54.792000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 0,
+      "sessionTarget": "main"
     },
     {
       "id": "992ab49f-4540-4fce-a6ca-27947a6d04d0",
@@ -14,7 +19,12 @@
       "enabled": true,
       "scheduleKind": "cron",
       "schedule": "0 8 * * *",
-      "timezone": "America/Detroit"
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-07T13:00:00+00:00",
+      "lastRunAt": "2026-02-05T13:00:00.003000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 13,
+      "sessionTarget": "main"
     },
     {
       "id": "0f28e648-7519-433f-b31c-8abecdfb4365",
@@ -22,7 +32,12 @@
       "enabled": true,
       "scheduleKind": "cron",
       "schedule": "14 9 * * *",
-      "timezone": "America/Detroit"
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-07T14:14:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "main"
     },
     {
       "id": "89554f01-75e4-42c7-9586-2a62c7953588",
@@ -30,17 +45,40 @@
       "enabled": true,
       "scheduleKind": "cron",
       "schedule": "20 9 * * 1",
-      "timezone": "America/Detroit"
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-09T14:20:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "ec89137f-5c50-4bcd-92f3-ee114aec2266",
+      "name": "Weekly metrics report (draft/reminder)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 10 * * 1",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-09T15:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "main"
     },
     {
       "id": "a0b9db5e-7da4-485c-a276-308f2b0bbbf2",
       "name": "Cleanup legacy OpenClaw state backup (confirm safe, then remove)",
       "enabled": true,
       "scheduleKind": "at",
-      "schedule": "2026-02-10T09:30:00-05:00",
-      "timezone": "America/Detroit"
+      "schedule": "2026-02-10T14:30:00.000Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-10T14:30:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "main"
     }
   ],
-  "note": "This is a lightweight mirror of OpenClaw cron jobs for display in the board UI. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-06T16:49:38.575337+00:00"
+  "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
+  "lastSyncedAt": "2026-02-06T16:53:27.458662+00:00"
 }
