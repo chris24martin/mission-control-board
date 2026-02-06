@@ -5979,7 +5979,7 @@
                         <div class="form-group">
                             <label class="form-label">Timezone</label>
                             <select class="form-input" id="cron-timezone">
-                                <option value="Europe/Berlin" ${cron.timezone === 'Europe/Berlin' ? 'selected' : ''}>Europe/Berlin</option>
+                                <option value="America/Detroit" ${cron.timezone === 'America/Detroit' ? 'selected' : ''}>America/Detroit</option>
                                 <option value="UTC" ${cron.timezone === 'UTC' ? 'selected' : ''}>UTC</option>
                                 <option value="America/New_York" ${cron.timezone === 'America/New_York' ? 'selected' : ''}>America/New_York</option>
                                 <option value="America/Los_Angeles" ${cron.timezone === 'America/Los_Angeles' ? 'selected' : ''}>America/Los_Angeles</option>
@@ -6055,7 +6055,7 @@
             errorEl.style.display = 'none';
             const humanReadable = cronToHuman(schedule);
             hintEl.innerHTML = `Human readable: <strong>${humanReadable}</strong>`;
-            nextRunsEl.innerHTML = generateNextRuns(schedule, document.getElementById('cron-timezone')?.value || 'Europe/Berlin');
+            nextRunsEl.innerHTML = generateNextRuns(schedule, document.getElementById('cron-timezone')?.value || 'America/Detroit');
             return true;
         }
         
@@ -6443,7 +6443,7 @@
                     prompt: prompt,
                     schedule: schedule,
                     scheduleHuman: scheduleDesc,
-                    timezone: 'Europe/Berlin',
+                    timezone: 'America/Detroit',
                     enabled: true,
                     pending: true, // Mark as pending - needs Gateway sync
                     createdAt: new Date().toISOString()
@@ -6488,7 +6488,7 @@
                         prompt: prompt,
                         schedule: schedule,
                         scheduleHuman: scheduleDesc,
-                        timezone: 'Europe/Berlin',
+                        timezone: 'America/Detroit',
                         enabled: true
                     })
                 });
