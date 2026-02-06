@@ -458,7 +458,7 @@
         "finance",
         "high-risk"
       ],
-      "priority": "medium",
+      "priority": "high",
       "dod": "Read-only monitoring + paper strategy reports running with approvals wired (no live trading).",
       "createdAt": "2026-02-05T23:05:13.430135Z",
       "subtasks": [],
@@ -789,5 +789,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-06T16:42:54.743Z"
+  "lastUpdated": "2026-02-06T16:43:50.447Z"
 }
