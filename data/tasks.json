@@ -630,7 +630,7 @@
       "id": "m5_005_search_criteria_and_scoring",
       "title": "Define listing search criteria + scoring rubric (must/should/nice)",
       "description": "Turn must-haves/dealbreakers into filters and a scoring rubric: lot size/trees/privacy, garage, baths, commute, taxes, HOA, condition, internet availability, etc. Include a “red flag” list.",
-      "status": "review",
+      "status": "done",
       "project": "m5_real_estate",
       "tags": [
         "decision"
@@ -646,7 +646,8 @@
           "createdAt": "2026-02-05T20:20:31.505283Z"
         }
       ],
-      "subtasks": []
+      "subtasks": [],
+      "completedAt": "2026-02-06T16:42:12.256Z"
     },
     {
       "id": "m5_006_neighborhood_watchlist",
@@ -823,5 +824,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-06T16:42:08.310Z"
+  "lastUpdated": "2026-02-06T16:42:12.256Z"
 }
