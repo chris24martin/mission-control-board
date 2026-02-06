@@ -550,7 +550,7 @@
       "id": "m5_005_search_criteria_and_scoring",
       "title": "Define listing search criteria + scoring rubric (must/should/nice)",
       "description": "Turn must-haves/dealbreakers into filters and a scoring rubric: lot size/trees/privacy, garage, baths, commute, taxes, HOA, condition, internet availability, etc. Include a “red flag” list.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m5_real_estate",
       "tags": [
         "decision"
