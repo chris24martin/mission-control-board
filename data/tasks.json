@@ -552,7 +552,16 @@
       ],
       "priority": "high",
       "dod": "Realtor selected + contact info + working agreement confirmed.",
-      "createdAt": "2026-02-06T01:14:20.256066Z"
+      "createdAt": "2026-02-06T01:14:20.256066Z",
+      "processingStartedAt": "2026-02-05T20:24:10.194994Z",
+      "comments": [
+        {
+          "id": "c_1770341050194",
+          "author": "MoltBot",
+          "text": "🤖 Processing started",
+          "createdAt": "2026-02-05T20:24:10.194994Z"
+        }
+      ]
     },
     {
       "id": "m5_005_search_criteria_and_scoring",
