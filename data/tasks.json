@@ -384,7 +384,7 @@
       "id": "m4_002_weekly_ops_digest",
       "title": "Weekly ops digest (summary-only unless issues)",
       "description": "Create a weekly summary message: uptime, updates, warnings, cost notes. No DM spam if all OK.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m4_ops",
       "tags": [
         "ops",
@@ -511,7 +511,7 @@
       "id": "m5_002_lender_shortlist",
       "title": "Build lender shortlist (local + online) + comparison table",
       "description": "Identify 5–8 lenders, collect: rate, points, lender fees, timeline, communication, pre-approval requirements. Prepare outreach script/email.",
-      "status": "in_progress",
+      "status": "backlog",
       "project": "m5_real_estate",
       "tags": [
         "research"
@@ -537,7 +537,7 @@
       "id": "m5_004_realtor_shortlist",
       "title": "Build realtor shortlist for Holly MI area + interview questions",
       "description": "Find 5 candidates, prep interview: local expertise, negotiation style, availability, preferred lenders/inspectors, experience with wooded lots/secluded properties.",
-      "status": "in_progress",
+      "status": "backlog",
       "project": "m5_real_estate",
       "tags": [
         "research"
@@ -589,7 +589,7 @@
       "id": "m5_008_tour_checklist",
       "title": "Tour checklist for secluded/wooded properties",
       "description": "Checklist: drainage/water, septic/well, basement moisture, roof age, trees near structure, driveway condition, snow plowability, cell signal, internet options, noise sources, neighbors visibility.",
-      "status": "in_progress",
+      "status": "backlog",
       "project": "m5_real_estate",
       "tags": [
         "checklist"
