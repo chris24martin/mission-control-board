@@ -511,14 +511,22 @@
       "id": "m5_002_lender_shortlist",
       "title": "Build lender shortlist (local + online) + comparison table",
       "description": "Identify 5–8 lenders, collect: rate, points, lender fees, timeline, communication, pre-approval requirements. Prepare outreach script/email.",
-      "status": "backlog",
+      "status": "review",
       "project": "m5_real_estate",
       "tags": [
         "research"
       ],
       "priority": "high",
       "dod": "Table + top 2 picks + outreach messages ready.",
-      "createdAt": "2026-02-06T01:14:20.256066Z"
+      "createdAt": "2026-02-06T01:14:20.256066Z",
+      "comments": [
+        {
+          "id": "c1",
+          "author": "MoltBot",
+          "text": "Created lender shortlist + comparison template and outreach scripts. Added file: mission-control-board/data/m5_002_lender_shortlist.md. Includes 8 lenders (local CUs + MI banks + online), apples-to-apples LE request checklist, suggested initial benchmark pair (one CU + Rocket), and email/phone outreach templates. Next step: request same-day Loan Estimates from 3–5 lenders using the provided template; then normalize APR + lender fees to pick the true top 2.",
+          "createdAt": "2026-02-05T20:23:41.267413Z"
+        }
+      ]
     },
     {
       "id": "m5_003_get_preapproved",
