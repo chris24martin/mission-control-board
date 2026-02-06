@@ -557,7 +557,15 @@
       ],
       "priority": "high",
       "dod": "Rubric written + saved; ready to score listings consistently.",
-      "createdAt": "2026-02-06T01:14:20.256066Z"
+      "createdAt": "2026-02-06T01:14:20.256066Z",
+      "comments": [
+        {
+          "id": "c1",
+          "author": "MoltBot",
+          "text": "Rubric drafted and saved: mission-control-board/data/m5_005_listing_scoring_rubric.md. Includes: must-have dealbreaker filters (commute, lot/privacy, garage/baths, condition, internet, taxes/HOA), 0–100 weighted scoring (Location 25, Lot 20, Layout 15, Condition 15, Financial 15, HOA 5, Internet 5, Bonus 5), red-flag list, and a copy/paste scorecard template.",
+          "createdAt": "2026-02-05T20:20:31.505283Z"
+        }
+      ]
     },
     {
       "id": "m5_006_neighborhood_watchlist",
