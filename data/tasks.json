@@ -362,7 +362,7 @@
       "id": "m4_001_openclaw_health_slo",
       "title": "Define OpenClaw health SLO + alert thresholds",
       "description": "Specify what “healthy” means: gateway reachable, telegram OK, cron running, disk space, update window behavior. Keep alerts low-noise.",
-      "status": "in_progress",
+      "status": "review",
       "project": "m4_ops",
       "tags": [
         "ops",
@@ -370,7 +370,15 @@
       ],
       "priority": "high",
       "dod": "One-page checklist + thresholds + “when to DM Chris” rules documented in workspace.",
-      "createdAt": "2026-02-05T23:05:13.430135Z"
+      "createdAt": "2026-02-05T23:05:13.430135Z",
+      "comments": [
+        {
+          "id": "c1",
+          "author": "Charles",
+          "text": "Drafted the one-page OpenClaw health SLO + alert thresholds (low-noise) and documented it at: OPENCLAW_HEALTH_SLO.md. Includes definitions for gateway/telegram/cron/disk/update-window and explicit “when to DM Chris” rules.",
+          "createdAt": "2026-02-05T23:11:41.345574Z"
+        }
+      ]
     },
     {
       "id": "m4_002_weekly_ops_digest",
@@ -470,6 +478,151 @@
       "priority": "high",
       "dod": "Policy doc + approval template ready; no execution enabled until policy accepted.",
       "createdAt": "2026-02-05T23:05:13.430135Z"
+    },
+    {
+      "id": "epic_m5_real_estate",
+      "title": "🏠 EPIC: Module 5 — Real Estate (First home in Holly MI area)",
+      "description": "End-to-end first-home workflow: define budget + criteria, get pre-approved, build neighborhood shortlist, listing triage, touring, offer prep, and closing checklist.\n\n**Location:** Holly, MI area (preferred)\n**Must-haves:** garage, 2 bathrooms, secluded\n**Dealbreakers:** no yard OR no trees (must have yard + trees)\n\nSafety: agent researches/organizes; Chris approves all financial/legal actions.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "epic",
+        "real-estate",
+        "high-stakes"
+      ],
+      "priority": "high",
+      "dod": "You have (1) pre-approval, (2) realtor selected, (3) working listing shortlist + scoring, (4) tour checklist, (5) offer/closing playbooks.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_001_budget_guardrails",
+      "title": "Define budget + monthly payment guardrails (PITI) + down payment plan",
+      "description": "Capture max monthly payment, desired down payment, emergency reserves, credit score range, and comfort bounds. Output should be a 1-page summary used for every decision.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "finance"
+      ],
+      "priority": "high",
+      "dod": "Written guardrails + max purchase price range estimate.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_002_lender_shortlist",
+      "title": "Build lender shortlist (local + online) + comparison table",
+      "description": "Identify 5–8 lenders, collect: rate, points, lender fees, timeline, communication, pre-approval requirements. Prepare outreach script/email.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "research"
+      ],
+      "priority": "high",
+      "dod": "Table + top 2 picks + outreach messages ready.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_003_get_preapproved",
+      "title": "Get pre-approved (human-driven; agent provides checklist + tracking)",
+      "description": "Create doc checklist (W2s/paystubs/bank statements/ID), track requests, and store notes on terms/limits from lender.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "workflow"
+      ],
+      "priority": "high",
+      "dod": "Pre-approval letter obtained + max approved amount recorded.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_004_realtor_shortlist",
+      "title": "Build realtor shortlist for Holly MI area + interview questions",
+      "description": "Find 5 candidates, prep interview: local expertise, negotiation style, availability, preferred lenders/inspectors, experience with wooded lots/secluded properties.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "research"
+      ],
+      "priority": "high",
+      "dod": "Realtor selected + contact info + working agreement confirmed.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_005_search_criteria_and_scoring",
+      "title": "Define listing search criteria + scoring rubric (must/should/nice)",
+      "description": "Turn must-haves/dealbreakers into filters and a scoring rubric: lot size/trees/privacy, garage, baths, commute, taxes, HOA, condition, internet availability, etc. Include a “red flag” list.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "decision"
+      ],
+      "priority": "high",
+      "dod": "Rubric written + saved; ready to score listings consistently.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_006_neighborhood_watchlist",
+      "title": "Neighborhood/area watchlist around Holly (within X-minute radius)",
+      "description": "Define search radius and build an area watchlist (townships/areas) that fit secluded/trees/yard preference. Include property tax notes + utilities/internet considerations.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "research"
+      ],
+      "priority": "medium",
+      "dod": "Shortlist of target areas + notes.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_007_listing_intake_workflow",
+      "title": "Listing intake workflow (send links → get a scored summary back)",
+      "description": "Define a standard format for you to paste listing links. Output: extracted facts, scored rubric, questions to ask, and “tour yes/no”.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "workflow"
+      ],
+      "priority": "medium",
+      "dod": "Template message + sample output created.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_008_tour_checklist",
+      "title": "Tour checklist for secluded/wooded properties",
+      "description": "Checklist: drainage/water, septic/well, basement moisture, roof age, trees near structure, driveway condition, snow plowability, cell signal, internet options, noise sources, neighbors visibility.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "checklist"
+      ],
+      "priority": "medium",
+      "dod": "Printable/checkable list ready before first showing.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_009_offer_playbook",
+      "title": "Offer playbook (contingencies, inspection strategy, escalation policy)",
+      "description": "Define default contingencies, earnest money policy, inspection priorities, and when you’d waive/not waive items. Agent drafts; you approve and realtor executes.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "high-stakes"
+      ],
+      "priority": "medium",
+      "dod": "One-page playbook you can reuse per offer.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
+    },
+    {
+      "id": "m5_010_closing_timeline_template",
+      "title": "Closing timeline + deadline tracker template",
+      "description": "Template that tracks: inspection window, appraisal, financing contingency, title, insurance, utilities, walkthrough. Low-noise reminders.",
+      "status": "backlog",
+      "project": "m5_real_estate",
+      "tags": [
+        "workflow"
+      ],
+      "priority": "medium",
+      "dod": "Template created and ready to fill in once under contract.",
+      "createdAt": "2026-02-06T01:14:20.256066Z"
     }
   ],
   "projects": [
@@ -514,6 +667,12 @@
       "name": "Module 4 — Ops & Savings",
       "color": "#f97316",
       "icon": "🛠️"
+    },
+    {
+      "id": "m5_real_estate",
+      "name": "Module 5 — Real Estate (First Home)",
+      "color": "#14b8a6",
+      "icon": "🏠"
     }
   ],
   "activities": [
@@ -530,5 +689,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-05T23:05:13.430135Z"
+  "lastUpdated": "2026-02-06T01:14:20.256066Z"
 }
