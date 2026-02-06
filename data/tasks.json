@@ -511,7 +511,7 @@
       "id": "m5_002_lender_shortlist",
       "title": "Build lender shortlist (local + online) + comparison table",
       "description": "Identify 5–8 lenders, collect: rate, points, lender fees, timeline, communication, pre-approval requirements. Prepare outreach script/email.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m5_real_estate",
       "tags": [
         "research"
