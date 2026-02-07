@@ -933,7 +933,7 @@
       "id": "m1_003_paper_report_template",
       "title": "Create paper-trading report template + weekly summary format (Module 1)",
       "description": "Template for a paper trade proposal, execution record, and weekly performance summary aligned with the risk policy + audit trail.",
-      "status": "review",
+      "status": "done",
       "project": "m1_investing",
       "tags": [
         "paper",
@@ -957,7 +957,8 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "completedAt": "2026-02-07T22:13:35.493Z"
     },
     {
       "id": "m1_004_watchlist_template",
@@ -1224,5 +1225,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-07T22:13:34.922Z"
+  "lastUpdated": "2026-02-07T22:13:35.493Z"
 }
