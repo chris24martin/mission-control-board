@@ -482,7 +482,14 @@
       "dod": "One end-to-end product shipped + checklist captured so it can be repeated.",
       "createdAt": "2026-02-05T23:05:13.430135Z",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "id": "c_1770502671036",
+          "author": "chris24martin",
+          "text": "be sure to spread load to lm models as needed. Load and unload what you need",
+          "createdAt": "2026-02-07T22:17:51.036Z"
+        }
+      ],
       "sortOrder": 1,
       "parentId": null,
       "storyPoints": null,
