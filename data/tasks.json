@@ -731,7 +731,7 @@
         {
           "id": "sub_001",
           "title": "List initial watchlist categories (indices, sectors, rates, inflation, etc.)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_002",
