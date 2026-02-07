@@ -717,7 +717,7 @@
       "id": "m1_002_monitoring_scope",
       "title": "Define read-only monitoring scope + data sources (Module 1)",
       "description": "Decide what we monitor (tickers, macro indicators), how often, and what data sources are allowed. Output should be a short spec + initial watchlist placeholders.",
-      "status": "in_progress",
+      "status": "review",
       "project": "m1_investing",
       "tags": [
         "monitoring",
@@ -726,7 +726,14 @@
       "priority": "high",
       "dod": "Doc saved + initial watchlist template; no trading actions.",
       "createdAt": "2026-02-07T01:21:07.164012Z",
-      "comments": [],
+      "comments": [
+        {
+          "id": "c1",
+          "author": "MoltBot",
+          "text": "Defined read-only monitoring scope, low-noise alert thresholds, and allowed data sources. Saved as data/m1_002_monitoring_scope.md. Needs your inputs: broker name, ETFs-only vs equities, interest list tickers, and alert window.",
+          "createdAt": "2026-02-06T20:21:44.775511Z"
+        }
+      ],
       "subtasks": [
         {
           "id": "sub_001",
