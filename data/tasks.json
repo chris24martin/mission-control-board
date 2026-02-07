@@ -469,7 +469,7 @@
       "id": "m1_001_define_risk_policy",
       "title": "Define trading risk policy + approval checklist",
       "description": "Hard limits (trade size, daily loss limit), approval timeout rules, paper-trading duration, and what info appears in approval card.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m1_investing",
       "tags": [
         "risk",
