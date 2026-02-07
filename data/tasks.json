@@ -469,7 +469,7 @@
       "id": "m1_001_define_risk_policy",
       "title": "Define trading risk policy + approval checklist",
       "description": "Hard limits (trade size, daily loss limit), approval timeout rules, paper-trading duration, and what info appears in approval card.",
-      "status": "in_progress",
+      "status": "review",
       "project": "m1_investing",
       "tags": [
         "risk",
@@ -485,6 +485,12 @@
           "author": "MoltBot",
           "text": "Drafted risk policy + approval checklist doc: data/m1_001_trading_risk_policy.md. Includes default read-only/paper-only stance, hard risk limits placeholders, approval card template, audit trail storage, paper-trading minimums, and kill-switch behavior. Next: you fill the limit blanks or tell me to apply conservative defaults.",
           "createdAt": "2026-02-06T20:20:46.485183Z"
+        },
+        {
+          "id": "c2",
+          "author": "MoltBot",
+          "text": "Drafted trading risk policy + approval checklist (paper-only by default), plus approval card template, audit trail requirements, and kill-switch rules. Saved as data/m1_001_trading_risk_policy.md.",
+          "createdAt": "2026-02-06T20:20:50.220970Z"
         }
       ],
       "sortOrder": 4
