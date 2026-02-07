@@ -1,166 +1,76 @@
-# Module 1 (Investing) — Paper Trading Templates (Proposal • Execution • Weekly Summary)
+# Paper Trade Report Template
 
-These templates are **paper-only** and designed to align with:
-- `data/m1_001_trading_risk_policy.md` (approvals + limits + audit trail)
-- future automation that *suggests* trades but never executes live without explicit approval
+**Policy Alignment**: This document complies with `m1_001_trading_risk_policy.md`
 
-> Copy/paste workflow:
-> 1) Fill **Paper Trade Proposal** (pre-trade)
-> 2) After “paper fill”, append **Execution Record**
-> 3) End of week, append **Weekly Summary**
+## 1. Approval Card Fields
 
----
+| Field | Content |
+|-------|---------|
+| Trader | [Full Name/ID] |
+| Strategy | [Strategy Name & Version] |
+| Timeframe | [Start Date] → [End Date] |
+| Notional Limit | $[Amount] |
+| Risk Factor | [Level 1-5] (per policy) |
+| Approval Status | ☐ Pending  ☑️ Approved  ☐ Rejected |
 
-## A) Paper Trade Proposal (PRE-TRADE)
+## 2. Risk Limits Check
 
-**Trade ID:** `PT-YYYYMMDD-###`
+### 2.1 Policy Compliance
 
-### 1) What (order details)
-- Instrument / Ticker:
-- Side: Buy / Sell
-- Thesis type: Trend / Mean reversion / Event / Other
-- Order type (paper): Market / Limit / Stop / Stop-limit
-- Proposed entry:
-- Proposed stop (if any):
-- Proposed take-profit (if any):
-- Time horizon: Intraday / Swing / Position
+- [ ] Position size ≤ 5% portfolio value per asset
+- [ ] Max volatility exposure: σ ≤ [Value] (annualized)
+- [ ] Correlation matrix checked for >0.7 intra-portfolio assets
+- [ ] Worst-case scenario loss < 2% of capital
 
-### 2) Why (rationale)
-- Trigger / setup:
-- Key levels (support/resistance):
-- Confirmation signals:
-- Invalidation (what proves this wrong):
+### 2.2 Actuals vs Limits
 
-### 3) Risk (must be explicit)
-- Planned risk per share (entry − stop):
-- Planned position size (shares):
-- Planned max loss (USD):
-- Planned max loss (% of position):
-- Estimated slippage assumption:
+| Metric | Limit | Actual | Delta |
+|--------|-------|--------|------|
+| Beta Exposure | ≤ 1.2 | [Value] | [Value] |
+| Max Drawdown | < 8% | [Value] | [Value] |
+| Sharpe Ratio | > 1.5 | [Value] | [Value] |
 
-### 4) Constraints check (policy compliance)
-Fill this out with **YES/NO** and numbers.
-- Allowed instrument class? (ETFs-only / equities allowed):
-- No margin/leverage/shorts/options/crypto?:
-- Max $ per new position respected?:
-- Max % portfolio per position respected?:
-- Max daily loss / weekly loss respected (if loss hit)?:
-- Trades/day limit respected?:
+## 3. Execution Record
 
-### 5) Alternatives
-- Do nothing because:
-- Smaller size because:
-- Wait for confirmation because:
+```json
+{
+  "proposed": {"timestamp": "", "quantity": , "price": },
+  "executed": {"timestamp": "", "quantity": , "fill_price": , "fee": },
+  "slippage": "%",
+  "status": "filled/partial/cancelled"
+}
+```
 
-### 6) Approval card (what would be sent for approval)
-> Use this block verbatim if you want to request approval.
+## 4. Audit Fields
 
-**APPROVAL REQUEST — PAPER TRADE (no live execution)**
-- What: {ticker} {side} {qty} @ {entry} (paper)
-- Why: {1–2 sentence rationale}
-- Risk: max loss ~{USD}; stop {stop}; exposure after trade {…}
-- Constraints: {bullet list of limits checked}
-- Timeout: {e.g., 15 min}
-- Links/notes: {source links or internal notes}
+- **Initiated**: [ISO8601 timestamp]
+- **Last Updated**: [ISO8601]
+- **Version**: v[0.0.1] (semver)
+- **Hash**: SHA256 of final parameters: `0x...`
+- **Reviewer**: [Name/Signature]
 
-### 7) Audit fields (for traceability)
-- Strategy name/version:
-- Data sources used:
-- Timestamp (UTC):
-- Notes:
+## 5. Post-Mortem Template
 
----
+### Outcomes
 
-## B) Execution Record (POST-TRADE)
+| KPI | Target | Actual |
+|-----|--------|--------|
+| Return | +15% | [Value] |
+| Volatility | <20% | [Value] |
+| Calmar Ratio | >2.5 | [Value] |
 
-### 1) Paper fill details
-- Filled entry price:
-- Filled quantity:
-- Filled timestamp (UTC):
-- Stop/TP adjustments (if any):
+### Root Cause Analysis (if underperformance)
 
-### 2) Exit details (when closed)
-- Exit price:
-- Exit timestamp (UTC):
-- Reason for exit: Stop / TP / Time stop / Manual thesis change
+- [ ] Market regime shift (uncaptured)
+- [ ] Implementation error
+- [ ] Data leakage
+- [ ] Overfitting evidence
 
-### 3) Outcome
-- P/L (USD):
-- P/L (%):
-- Max adverse excursion (MAE):
-- Max favorable excursion (MFE):
-- Notes on slippage realism:
+### Action Items
 
-### 4) Post-mortem
-- What went as expected:
-- What surprised me:
-- What I’d do differently next time:
-- Was this trade consistent with policy? (Y/N + why)
+1. [Specific improvement: e.g., "Add VIX skew correction"]
+2. [Specific data enhancement]
+3. [Process refinement]
+```
 
----
-
-## C) Weekly Summary (end-of-week)
-
-**Week:** YYYY-MM-DD → YYYY-MM-DD
-
-### 1) Snapshot
-- # paper trades opened:
-- # closed:
-- Win rate:
-- Avg win / Avg loss:
-- Net P/L (paper, USD):
-- Max drawdown (paper):
-
-### 2) Regime notes
-- Market regime (trend/range/volatile):
-- Rates/vol notes:
-- Key news/events:
-
-### 3) Best + worst
-- Best trade (why it worked):
-- Worst trade (what failed):
-
-### 4) Process quality (score 1–5)
-- Setup quality:
-- Risk discipline:
-- Patience/overtrading:
-- Documentation quality:
-
-### 5) Next week adjustments
-- Keep doing:
-- Stop doing:
-- Try:
-
----
-
-## D) Filled Example (short)
-
-### Paper Trade Proposal
-- Trade ID: PT-20260207-001
-- Instrument: SPY
-- Side: Buy
-- Order type: Limit
-- Proposed entry: 500.00
-- Proposed stop: 492.50
-- Proposed take-profit: 512.00
-- Horizon: Swing (3–10 days)
-
-**Why:** Trend continuation after pullback to prior support; looking for reclaim of 20DMA with improving breadth.
-
-**Risk:**
-- Risk/share: 7.50
-- Size: 10 shares
-- Max loss: $75 (+ slippage)
-
-**Constraints check:**
-- Allowed instrument class: YES (ETF)
-- No margin/shorts/options/crypto: YES
-- Max $/position respected: YES (placeholder limit)
-- Trades/day respected: YES
-
-### Execution Record
-- Filled entry: 500.10 @ 2026-02-07T15:10:00Z
-- Exit: 511.80 @ 2026-02-12T19:45:00Z (TP)
-- P/L: +$117 (paper)
-
-**Post-mortem:** Entry was slightly late; stop was never threatened. Would scale out earlier next time.
+## ...`, 
