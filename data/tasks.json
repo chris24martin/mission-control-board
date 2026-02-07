@@ -963,7 +963,7 @@
       "id": "m1_004_watchlist_template",
       "title": "Create watchlist file template + categories (Module 1)",
       "description": "Create a structured watchlist JSON template aligned with monitoring scope categories so Chris can fill tickers later. No data keys required.",
-      "status": "review",
+      "status": "done",
       "project": "m1_investing",
       "tags": [
         "monitoring",
@@ -986,7 +986,8 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "completedAt": "2026-02-07T22:13:34.922Z"
     },
     {
       "id": "m4_003_skill_scanner",
@@ -1223,5 +1224,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-07T22:12:38.355Z"
+  "lastUpdated": "2026-02-07T22:13:34.922Z"
 }
