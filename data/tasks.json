@@ -479,7 +479,14 @@
       "dod": "Policy doc + approval template ready; no execution enabled until policy accepted.",
       "createdAt": "2026-02-05T23:05:13.430135Z",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "id": "c1",
+          "author": "MoltBot",
+          "text": "Drafted risk policy + approval checklist doc: data/m1_001_trading_risk_policy.md. Includes default read-only/paper-only stance, hard risk limits placeholders, approval card template, audit trail storage, paper-trading minimums, and kill-switch behavior. Next: you fill the limit blanks or tell me to apply conservative defaults.",
+          "createdAt": "2026-02-06T20:20:46.485183Z"
+        }
+      ],
       "sortOrder": 4
     },
     {
