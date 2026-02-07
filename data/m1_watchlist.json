@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "updatedAt": "",
+  "notes": "Module 1 read-only monitoring watchlist. Fill tickers as desired. No brokerage connectivity implied.",
+  "categories": [
+    {
+      "id": "broad_market",
+      "name": "Broad Market",
+      "items": [
+        {"ticker": "SPY", "label": "S&P 500", "type": "etf", "enabled": true},
+        {"ticker": "QQQ", "label": "Nasdaq 100", "type": "etf", "enabled": true},
+        {"ticker": "IWM", "label": "Russell 2000", "type": "etf", "enabled": true}
+      ]
+    },
+    {
+      "id": "volatility",
+      "name": "Volatility",
+      "items": [
+        {"ticker": "VIX", "label": "CBOE Volatility Index", "type": "index", "enabled": true}
+      ]
+    },
+    {
+      "id": "rates_credit",
+      "name": "Rates & Credit",
+      "items": [
+        {"ticker": "^TNX", "label": "10Y yield (proxy)", "type": "index", "enabled": true},
+        {"ticker": "^IRX", "label": "13W T-bill (proxy)", "type": "index", "enabled": false}
+      ]
+    },
+    {
+      "id": "sectors",
+      "name": "Sectors (optional)",
+      "items": [
+        {"ticker": "XLK", "label": "Technology", "type": "etf", "enabled": false},
+        {"ticker": "XLF", "label": "Financials", "type": "etf", "enabled": false},
+        {"ticker": "XLE", "label": "Energy", "type": "etf", "enabled": false},
+        {"ticker": "XLV", "label": "Healthcare", "type": "etf", "enabled": false},
+        {"ticker": "XLI", "label": "Industrials", "type": "etf", "enabled": false}
+      ]
+    },
+    {
+      "id": "interest_list",
+      "name": "Chris interest list (fill in)",
+      "items": [
+        {"ticker": "", "label": "", "type": "equity_or_etf", "enabled": true}
+      ]
+    }
+  ]
+}
