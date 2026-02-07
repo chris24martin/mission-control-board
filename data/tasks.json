@@ -472,7 +472,7 @@
       "id": "epic_m3_factory",
       "title": "🏭 EPIC: Module 3 — Digital product factory",
       "description": "Repeatable pipeline: research → generate → QA → publish → iterate. Start with one product type (templates or web tool).",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m3_factory",
       "tags": [
         "epic",
@@ -1227,5 +1227,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-07T22:13:37.802Z"
+  "lastUpdated": "2026-02-07T22:16:39.531Z"
 }
