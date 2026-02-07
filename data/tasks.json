@@ -736,7 +736,7 @@
         {
           "id": "sub_002",
           "title": "Define update cadence (daily/weekly) + alert thresholds",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_003",
