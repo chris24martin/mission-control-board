@@ -788,6 +788,22 @@
         }
       ],
       "subtasks": []
+    },
+    {
+      "id": "m1_004_watchlist_template",
+      "title": "Create watchlist file template + categories (Module 1)",
+      "description": "Create a structured watchlist JSON template aligned with monitoring scope categories so Chris can fill tickers later. No data keys required.",
+      "status": "in_progress",
+      "project": "m1_investing",
+      "tags": [
+        "monitoring",
+        "template"
+      ],
+      "priority": "medium",
+      "dod": "data/m1_watchlist.json exists with categories + placeholders + notes.",
+      "createdAt": "2026-02-07T01:25:33.887513Z",
+      "comments": [],
+      "subtasks": []
     }
   ],
   "projects": [
