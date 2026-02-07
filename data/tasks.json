@@ -763,7 +763,7 @@
       "id": "m1_003_paper_report_template",
       "title": "Create paper-trading report template + weekly summary format (Module 1)",
       "description": "Template for a paper trade proposal, execution record, and weekly performance summary aligned with the risk policy + audit trail.",
-      "status": "in_progress",
+      "status": "review",
       "project": "m1_investing",
       "tags": [
         "paper",
@@ -773,7 +773,14 @@
       "priority": "medium",
       "dod": "Markdown template saved + example filled sample.",
       "createdAt": "2026-02-07T01:21:07.164012Z",
-      "comments": [],
+      "comments": [
+        {
+          "id": "c1",
+          "author": "MoltBot",
+          "text": "Created paper-trade proposal + execution record + weekly summary templates aligned with the risk policy. Saved as data/m1_003_paper_report_template.md (includes short filled example).",
+          "createdAt": "2026-02-06T20:25:18.222434Z"
+        }
+      ],
       "subtasks": []
     }
   ],
