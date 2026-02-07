@@ -253,7 +253,7 @@
       "id": "epic_blueprint_platform",
       "title": "🧩 EPIC: Platform primitives (approvals, audit trail, safety)",
       "description": "Core cross-module capabilities the rest of the blueprint depends on. Focus: auditability, safety rails, and repeatable workflows.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "blueprint",
       "tags": [
         "epic",
