@@ -7,10 +7,10 @@
       "scheduleKind": "cron",
       "schedule": "15 */6 * * *",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-07T17:15:00+00:00",
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
+      "nextRunAt": "2026-02-07T23:15:00+00:00",
+      "lastRunAt": "2026-02-07T17:15:00.012000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 7366,
       "sessionTarget": "isolated"
     },
     {
@@ -20,8 +20,8 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-07T17:15:45.249000+00:00",
-      "lastRunAt": "2026-02-07T16:15:45.260000+00:00",
+      "nextRunAt": "2026-02-07T23:15:45.249000+00:00",
+      "lastRunAt": "2026-02-07T22:15:45.261000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 12,
       "sessionTarget": "main"
@@ -33,10 +33,10 @@
       "scheduleKind": "every",
       "schedule": "every 300000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-07T17:17:01.467000+00:00",
-      "lastRunAt": "2026-02-07T17:12:01.479000+00:00",
+      "nextRunAt": "2026-02-07T23:17:01.467000+00:00",
+      "lastRunAt": "2026-02-07T23:12:01.478000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 15039,
+      "lastDurationMs": 3547,
       "sessionTarget": "isolated"
     },
     {
@@ -54,16 +54,16 @@
     },
     {
       "id": "992ab49f-4540-4fce-a6ca-27947a6d04d0",
-      "name": "Daily brief (8am ET)",
+      "name": "Morning brief (8am ET)",
       "enabled": true,
       "scheduleKind": "cron",
       "schedule": "0 8 * * *",
       "timezone": "America/Detroit",
       "nextRunAt": "2026-02-08T13:00:00+00:00",
-      "lastRunAt": "2026-02-05T13:00:00.003000+00:00",
+      "lastRunAt": "2026-02-07T21:46:42.939000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 13,
-      "sessionTarget": "main"
+      "lastDurationMs": 43782,
+      "sessionTarget": "isolated"
     },
     {
       "id": "0f28e648-7519-433f-b31c-8abecdfb4365",
@@ -145,5 +145,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-07T17:15:05.274718+00:00"
+  "lastSyncedAt": "2026-02-07T23:15:05.965284+00:00"
 }
