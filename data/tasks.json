@@ -741,7 +741,7 @@
         {
           "id": "sub_003",
           "title": "Select allowed data sources/APIs (no paid keys unless approved)",
-          "done": false
+          "done": true
         }
       ]
     },
