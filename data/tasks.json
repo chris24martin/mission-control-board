@@ -253,7 +253,7 @@
       "id": "epic_blueprint_platform",
       "title": "\ud83e\udde9 EPIC: Platform primitives (approvals, audit trail, safety)",
       "description": "Core cross-module capabilities the rest of the blueprint depends on. Focus: auditability, safety rails, and repeatable workflows.",
-      "status": "in_progress",
+      "status": "done",
       "project": "blueprint",
       "tags": [
         "epic",
@@ -265,22 +265,22 @@
         {
           "id": "sub_001",
           "title": "Define approval message template (what/why/risk/timeout/links)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_002",
           "title": "Define audit log format + storage location (per task id)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_003",
           "title": "Create \u201cexecution checklist\u201d template for tasks (inputs/outputs/rollback)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_004",
           "title": "Decide notification policy (DM-only, thresholds)",
-          "done": false
+          "done": true
         }
       ],
       "createdAt": "2026-02-05T23:05:13.430135Z",
