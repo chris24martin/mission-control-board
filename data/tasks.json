@@ -554,7 +554,7 @@
       "id": "m1_001_define_risk_policy",
       "title": "Define trading risk policy + approval checklist",
       "description": "Hard limits (trade size, daily loss limit), approval timeout rules, paper-trading duration, and what info appears in approval card.",
-      "status": "review",
+      "status": "done",
       "project": "m1_investing",
       "tags": [
         "risk",
@@ -590,7 +590,8 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "completedAt": "2026-02-07T22:13:37.802Z"
     },
     {
       "id": "epic_m5_real_estate",
@@ -1226,5 +1227,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-07T22:13:35.932Z"
+  "lastUpdated": "2026-02-07T22:13:37.802Z"
 }
