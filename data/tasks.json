@@ -468,6 +468,12 @@
           "author": "MoltBot",
           "text": "Tonight progress: moved m1_001 (risk policy) to Review with draft doc; added child tasks for monitoring scope + paper report template; completed monitoring scope draft and moved it to Review. Next recommended action: review/approve risk policy limits + provide watchlist/broker details so we can stand up daily/weekly read-only reports + paper candidate pipeline.",
           "createdAt": "2026-02-06T20:21:51.117209Z"
+        },
+        {
+          "id": "c2",
+          "author": "MoltBot",
+          "text": "Also completed m1_003 (paper-trade + weekly summary templates) and moved it to Review. File: data/m1_003_paper_report_template.md.",
+          "createdAt": "2026-02-06T20:25:22.231037Z"
         }
       ],
       "sortOrder": 0
