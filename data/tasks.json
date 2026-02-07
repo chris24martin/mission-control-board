@@ -712,6 +712,55 @@
       "subtasks": [],
       "comments": [],
       "sortOrder": 5
+    },
+    {
+      "id": "m1_002_monitoring_scope",
+      "title": "Define read-only monitoring scope + data sources (Module 1)",
+      "description": "Decide what we monitor (tickers, macro indicators), how often, and what data sources are allowed. Output should be a short spec + initial watchlist placeholders.",
+      "status": "backlog",
+      "project": "m1_investing",
+      "tags": [
+        "monitoring",
+        "design"
+      ],
+      "priority": "high",
+      "dod": "Doc saved + initial watchlist template; no trading actions.",
+      "createdAt": "2026-02-07T01:21:07.164012Z",
+      "comments": [],
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "List initial watchlist categories (indices, sectors, rates, inflation, etc.)",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Define update cadence (daily/weekly) + alert thresholds",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Select allowed data sources/APIs (no paid keys unless approved)",
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": "m1_003_paper_report_template",
+      "title": "Create paper-trading report template + weekly summary format (Module 1)",
+      "description": "Template for a paper trade proposal, execution record, and weekly performance summary aligned with the risk policy + audit trail.",
+      "status": "backlog",
+      "project": "m1_investing",
+      "tags": [
+        "paper",
+        "report",
+        "template"
+      ],
+      "priority": "medium",
+      "dod": "Markdown template saved + example filled sample.",
+      "createdAt": "2026-02-07T01:21:07.164012Z",
+      "comments": [],
+      "subtasks": []
     }
   ],
   "projects": [
