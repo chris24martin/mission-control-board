@@ -462,7 +462,14 @@
       "dod": "Read-only monitoring + paper strategy reports running with approvals wired (no live trading).",
       "createdAt": "2026-02-05T23:05:13.430135Z",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "id": "c1",
+          "author": "MoltBot",
+          "text": "Tonight progress: moved m1_001 (risk policy) to Review with draft doc; added child tasks for monitoring scope + paper report template; completed monitoring scope draft and moved it to Review. Next recommended action: review/approve risk policy limits + provide watchlist/broker details so we can stand up daily/weekly read-only reports + paper candidate pipeline.",
+          "createdAt": "2026-02-06T20:21:51.117209Z"
+        }
+      ],
       "sortOrder": 0
     },
     {
