@@ -888,7 +888,7 @@
       "id": "m1_002_monitoring_scope",
       "title": "Define read-only monitoring scope + data sources (Module 1)",
       "description": "Decide what we monitor (tickers, macro indicators), how often, and what data sources are allowed. Output should be a short spec + initial watchlist placeholders.",
-      "status": "review",
+      "status": "done",
       "project": "m1_investing",
       "tags": [
         "monitoring",
@@ -927,7 +927,8 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "completedAt": "2026-02-07T22:13:35.932Z"
     },
     {
       "id": "m1_003_paper_report_template",
@@ -1225,5 +1226,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-07T22:13:35.493Z"
+  "lastUpdated": "2026-02-07T22:13:35.932Z"
 }
