@@ -303,7 +303,9 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": null,
-      "workItemType": "epic"
+      "workItemType": "epic",
+      "archived": true,
+      "archivedAt": "2026-02-07T22:09:35.419Z"
     },
     {
       "id": "epic_m4_ops",
@@ -377,7 +379,9 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "archived": true,
+      "archivedAt": "2026-02-07T22:09:29.337Z"
     },
     {
       "id": "m4_002_weekly_ops_digest",
@@ -413,7 +417,9 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "archived": true,
+      "archivedAt": "2026-02-07T22:09:13.811Z"
     },
     {
       "id": "epic_m2_aas",
@@ -570,6 +576,12 @@
           "author": "MoltBot",
           "text": "Drafted trading risk policy + approval checklist (paper-only by default), plus approval card template, audit trail requirements, and kill-switch rules. Saved as data/m1_001_trading_risk_policy.md.",
           "createdAt": "2026-02-06T20:20:50.220970Z"
+        },
+        {
+          "id": "c_1770502347476",
+          "author": "chris24martin",
+          "text": "I use robinhood and Coinbase. I'm interested in Nvidia tesla and arm since im invested. For crypto I own bitcoin and eth. I also am interest in gold and silver prices",
+          "createdAt": "2026-02-07T22:12:27.476Z"
         }
       ],
       "sortOrder": 4,
@@ -653,7 +665,9 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "archived": true,
+      "archivedAt": "2026-02-07T22:09:23.454Z"
     },
     {
       "id": "m5_003_get_preapproved",
@@ -716,7 +730,9 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "archived": true,
+      "archivedAt": "2026-02-07T22:09:20.475Z"
     },
     {
       "id": "m5_005_search_criteria_and_scoring",
@@ -745,7 +761,9 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "archived": true,
+      "archivedAt": "2026-02-07T22:09:16.620Z"
     },
     {
       "id": "m5_006_neighborhood_watchlist",
@@ -818,7 +836,9 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "archived": true,
+      "archivedAt": "2026-02-07T22:09:11.171Z"
     },
     {
       "id": "m5_009_offer_playbook",
@@ -996,7 +1016,9 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "archived": true,
+      "archivedAt": "2026-02-07T22:08:47.714Z"
     },
     {
       "id": "m4_004_opus46_upgrade",
@@ -1026,7 +1048,9 @@
       "startDate": null,
       "targetDate": null,
       "assignedTo": "charles",
-      "workItemType": "task"
+      "workItemType": "task",
+      "archived": true,
+      "archivedAt": "2026-02-07T22:08:49.944Z"
     }
   ],
   "projects": [
@@ -1080,6 +1104,60 @@
     }
   ],
   "activities": [
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "🧩 EPIC: Platform primitives (approvals, audit trail, safety)",
+      "time": "just now"
+    },
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Define OpenClaw health SLO + alert thresholds",
+      "time": "just now"
+    },
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Build lender shortlist (local + online) + comparison table",
+      "time": "just now"
+    },
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Build realtor shortlist for Holly MI area + interview questions",
+      "time": "just now"
+    },
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Define listing search criteria + scoring rubric (must/should/nice)",
+      "time": "just now"
+    },
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Weekly ops digest (summary-only unless issues)",
+      "time": "just now"
+    },
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Tour checklist for secluded/wooded properties",
+      "time": "just now"
+    },
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Upgrade to Claude Opus 4.6 (released Feb 5)",
+      "time": "just now"
+    },
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Install Cisco AI Skill Scanner + weekly scan cron",
+      "time": "just now"
+    },
     {
       "type": "created",
       "actor": "Agent",
