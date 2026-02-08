@@ -971,7 +971,9 @@
       "targetDate": null,
       "assignedTo": "charles",
       "workItemType": "task",
-      "completedAt": "2026-02-07T22:13:35.493Z"
+      "completedAt": "2026-02-07T22:13:35.493Z",
+      "archived": true,
+      "archivedAt": "2026-02-08T15:17:25.987Z"
     },
     {
       "id": "m1_004_watchlist_template",
@@ -1119,6 +1121,12 @@
     }
   ],
   "activities": [
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Create paper-trading report template + weekly summary format (Module 1)",
+      "time": "just now"
+    },
     {
       "type": "archive",
       "actor": "chris24martin",
