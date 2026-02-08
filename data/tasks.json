@@ -598,7 +598,9 @@
       "targetDate": null,
       "assignedTo": "charles",
       "workItemType": "task",
-      "completedAt": "2026-02-07T22:13:37.802Z"
+      "completedAt": "2026-02-07T22:13:37.802Z",
+      "archived": true,
+      "archivedAt": "2026-02-08T15:17:14.504Z"
     },
     {
       "id": "epic_m5_real_estate",
@@ -1115,6 +1117,12 @@
     }
   ],
   "activities": [
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Define trading risk policy + approval checklist",
+      "time": "just now"
+    },
     {
       "type": "archive",
       "actor": "chris24martin",
