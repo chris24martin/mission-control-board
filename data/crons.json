@@ -7,10 +7,10 @@
       "scheduleKind": "cron",
       "schedule": "15 */6 * * *",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-07T23:15:00+00:00",
-      "lastRunAt": "2026-02-07T17:15:00.012000+00:00",
+      "nextRunAt": "2026-02-08T05:15:00+00:00",
+      "lastRunAt": "2026-02-07T23:15:00.004000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 7366,
+      "lastDurationMs": 9128,
       "sessionTarget": "isolated"
     },
     {
@@ -20,10 +20,10 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-07T23:15:45.249000+00:00",
-      "lastRunAt": "2026-02-07T22:15:45.261000+00:00",
+      "nextRunAt": "2026-02-08T05:15:45.249000+00:00",
+      "lastRunAt": "2026-02-08T04:15:45.260000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 12,
+      "lastDurationMs": 13,
       "sessionTarget": "main"
     },
     {
@@ -33,23 +33,10 @@
       "scheduleKind": "every",
       "schedule": "every 300000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-07T23:17:01.467000+00:00",
-      "lastRunAt": "2026-02-07T23:12:01.478000+00:00",
+      "nextRunAt": "2026-02-08T05:17:01.467000+00:00",
+      "lastRunAt": "2026-02-08T05:12:01.474000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 3547,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
-      "name": "Nightly memory summarization",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-08T04:00:00+00:00",
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
+      "lastDurationMs": 3243,
       "sessionTarget": "isolated"
     },
     {
@@ -105,6 +92,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
+      "name": "Nightly memory summarization",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-09T04:00:00+00:00",
+      "lastRunAt": "2026-02-08T04:00:00.012000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 600504,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "4452b490-bf9a-46d0-9bad-94008fdd5c7e",
       "name": "skill-scanner-weekly",
       "enabled": true,
@@ -145,5 +145,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-07T23:15:05.965284+00:00"
+  "lastSyncedAt": "2026-02-08T05:15:05.660991+00:00"
 }
