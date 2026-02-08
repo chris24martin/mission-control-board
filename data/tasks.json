@@ -781,7 +781,7 @@
       "id": "m5_006_neighborhood_watchlist",
       "title": "Neighborhood/area watchlist around Holly (within X-minute radius)",
       "description": "Define search radius and build an area watchlist (townships/areas) that fit secluded/trees/yard preference. Include property tax notes + utilities/internet considerations.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m5_real_estate",
       "tags": [
         "research"
@@ -1250,5 +1250,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-07T22:17:53.299Z"
+  "lastUpdated": "2026-02-08T16:31:58.422Z"
 }
