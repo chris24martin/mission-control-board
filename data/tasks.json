@@ -425,7 +425,7 @@
       "id": "epic_m2_aas",
       "title": "🏢 EPIC: Module 2 — Automation-as-a-Service (MVP)",
       "description": "Multi-tenant assistant offering email/calendar triage with approvals + audit trail. Start by dogfooding on your own inbox.",
-      "status": "backlog",
+      "status": "in_progress",
       "project": "m2_aas",
       "tags": [
         "epic",
@@ -1250,5 +1250,5 @@
       "time": "just now"
     }
   ],
-  "lastUpdated": "2026-02-08T16:31:58.422Z"
+  "lastUpdated": "2026-02-08T19:00:22.391Z"
 }
