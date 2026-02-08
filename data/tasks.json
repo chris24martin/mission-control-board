@@ -1003,7 +1003,9 @@
       "targetDate": null,
       "assignedTo": "charles",
       "workItemType": "task",
-      "completedAt": "2026-02-07T22:13:34.922Z"
+      "completedAt": "2026-02-07T22:13:34.922Z",
+      "archived": true,
+      "archivedAt": "2026-02-08T15:17:27.404Z"
     },
     {
       "id": "m4_003_skill_scanner",
@@ -1121,6 +1123,12 @@
     }
   ],
   "activities": [
+    {
+      "type": "archive",
+      "actor": "chris24martin",
+      "task": "Create watchlist file template + categories (Module 1)",
+      "time": "just now"
+    },
     {
       "type": "archive",
       "actor": "chris24martin",
