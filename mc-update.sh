@@ -1,5 +1,5 @@
 #!/bin/bash
-# Mission Control Task Update Script
+# Mission Control Task Update Script v2.2.1
 # Usage: mc-update.sh <command> <task_id> [args...]
 #
 # Commands:

@@ -3740,14 +3740,14 @@
                      ondragend="handleDragEnd(event)"
                      onclick="openTaskDetail('${task.id}')">
                     <div class="task-title">
-                        <span class="task-title-text">${task.title}</span>
+                        <span class="task-title-text">${escapeHtml(task.title)}</span>
                         ${archivedBadge}
                     </div>
                     ${processingIndicator}
-                    <div class="task-description">${task.description}</div>
+                    <div class="task-description">${escapeHtml(task.description)}</div>
                     <div class="task-meta">
                         <div class="task-tags">
-                            ${task.tags.map(tag => `<span class="task-tag ${tag}">${tag}</span>`).join('')}
+                            ${task.tags.map(tag => `<span class="task-tag ${escapeHtml(tag)}">${escapeHtml(tag)}</span>`).join('')}
                         </div>
                         ${commentIndicator}
                     </div>
@@ -4362,7 +4362,7 @@
                           archivedTasks.map(task => `
                             <div style="padding: 0.75rem; background: var(--bg-secondary); border-radius: 6px; margin-bottom: 0.5rem; display: flex; justify-content: space-between; align-items: center;">
                                 <div>
-                                    <strong>${task.title}</strong>
+                                    <strong>${escapeHtml(task.title)}</strong>
                                     <div style="font-size: 0.8rem; color: var(--text-secondary);">
                                         Archived: ${new Date(task.archivedAt).toLocaleDateString()}
                                     </div>
@@ -5564,7 +5564,7 @@
                 
                 return `
                     <div class="scheduled-card ${isOverdue ? 'overdue' : ''}" data-task-id="${task.id}" onclick="openTaskDetail('${task.id}')">
-                        <div class="scheduled-name">${task.title}</div>
+                        <div class="scheduled-name">${escapeHtml(task.title)}</div>
                         <div class="scheduled-time">
                             <span class="countdown ${isOverdue ? 'overdue' : ''}">
                                 ${isOverdue ? '⚠️ Overdue' : '⏰ ' + countdown}
