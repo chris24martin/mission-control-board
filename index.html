@@ -3037,10 +3037,36 @@
             ],
             lastUpdated: new Date().toISOString()
         };
+        function saveToLocalStorage() {
+            try {
+                localStorage.setItem('mc_tasks_data', JSON.stringify(STATE.data));
+                console.log('Saved to localStorage');
+            } catch (e) {
+                console.warn('localStorage save failed:', e);
+            }
+        }
+
+        function loadFromLocalStorage() {
+            try {
+                const stored = localStorage.getItem('mc_tasks_data');
+                if (stored) {
+                    const data = JSON.parse(stored);
+                    if (data && data.tasks && data.tasks.length > 0) {
+                        console.log('Loaded from localStorage:', data.tasks.length, 'tasks');
+                        return data;
+                    }
+                }
+            } catch (e) {
+                console.warn('localStorage load failed:', e);
+            }
+            return null;
+        }
+
         async function loadTasksFromGitHub() {
             if (!STATE.token) {
-                console.log('No token, using fallback data');
-                STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
+                console.log('No token, trying localStorage then fallback');
+                const cached = loadFromLocalStorage();
+                STATE.data = cached || JSON.parse(JSON.stringify(FALLBACK_DATA));
                 return;
             }
 
@@ -3068,17 +3094,39 @@
                 const content = new TextDecoder().decode(bytes);
                 const data = JSON.parse(content);
 
+                // Merge localStorage overrides (archived flags) into GitHub data
+                const cached = loadFromLocalStorage();
+                if (cached && cached.tasks) {
+                    const archivedMap = {};
+                    cached.tasks.forEach(t => {
+                        if (t.archived) archivedMap[t.id] = t.archivedAt || true;
+                    });
+                    data.tasks.forEach(t => {
+                        if (archivedMap[t.id]) {
+                            t.archived = true;
+                            t.archivedAt = archivedMap[t.id];
+                        }
+                    });
+                }
+
                 STATE.data = data;
                 STATE.originalData = JSON.parse(JSON.stringify(data));
                 STATE.fileSha = fileData.sha;  // Needed for updates
+                saveToLocalStorage();
 
                 console.log('Loaded tasks from GitHub:', data.tasks.length, 'tasks');
                 showToast('success', `✓ Loaded ${data.tasks.length} tasks from GitHub`);
 
             } catch (error) {
                 console.error('Error loading from GitHub:', error);
-                showToast('error', 'Could not load from GitHub, using cached data');
-                STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
+                const cached = loadFromLocalStorage();
+                if (cached) {
+                    STATE.data = cached;
+                    showToast('error', 'Could not load from GitHub, using local cache');
+                } else {
+                    STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
+                    showToast('error', 'Could not load from GitHub, using fallback data');
+                }
             }
 
             STATE.isLoading = false;
@@ -4047,8 +4095,11 @@
 
         // === AUTO-SAVE FUNKTION ===
         async function autoSave(action) {
+            // Always persist to localStorage regardless of GitHub auth
+            saveToLocalStorage();
+
             if (!STATE.token || !STATE.user) {
-                showToast('warning', 'Not logged in - changes not saved');
+                showToast('info', '💾 Saved locally (connect GitHub to sync)');
                 markAsChanged();
                 return;
             }
@@ -4134,7 +4185,8 @@
                 task.archivedAt = new Date().toISOString();
                 addActivity(`📦 Archived: ${task.title}`, 'archive');
                 renderTasks();
-                saveToGitHub();
+                saveToLocalStorage();
+                autoSave(`Archive "${task.title}"`);
             }
         }
 
@@ -4143,11 +4195,11 @@
             if (task) {
                 delete task.archived;
                 delete task.archivedAt;
-                // Move back to done or backlog
                 task.status = 'done';
                 addActivity(`📤 Unarchived: ${task.title}`, 'unarchive');
                 renderTasks();
-                saveToGitHub();
+                saveToLocalStorage();
+                autoSave(`Unarchive "${task.title}"`);
             }
         }
 
