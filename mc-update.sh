@@ -1,5 +1,5 @@
 #!/bin/bash
-# Mission Control Task Update Script v2.2.1
+# Mission Control Task Update Script v2.3.0
 # Usage: mc-update.sh <command> <task_id> [args...]
 #
 # Commands:
@@ -130,7 +130,7 @@ for t in data['tasks']:
             t['comments'] = []
         comment = {
             'id': f'c{len(t[\"comments\"])+1}',
-            'author': 'MoltBot',
+            'author': 'Charles',
             'text': comment_text,
             'createdAt': datetime.now().isoformat() + 'Z'
         }
@@ -215,7 +215,7 @@ for t in data['tasks']:
             t['comments'] = []
         comment = {
             'id': f'c{len(t[\"comments\"])+1}',
-            'author': 'MoltBot',
+            'author': 'Charles',
             'text': summary,
             'createdAt': datetime.now().isoformat() + 'Z'
         }
@@ -266,7 +266,7 @@ for t in data['tasks']:
             t['comments'] = []
         comment = {
             'id': f'c_{int(datetime.now().timestamp()*1000)}',
-            'author': 'MoltBot',
+            'author': 'Charles',
             'text': '🤖 Processing started',
             'createdAt': now
         }

@@ -1,9 +1,17 @@
 <!DOCTYPE html>
+<!--
+  Mission Control Board
+  Version: v2.3.0 (2026-02-09)
+  Changelog:
+  - v2.3.0: Security hardening (CSP + safe URL markdown), theme toggle, bulk actions, advanced filters, enhanced stats, keyboard shortcuts, footer last-updated
+-->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission Control - MoltBot</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://api.github.com https://raw.githubusercontent.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self' https://api.github.com https://raw.githubusercontent.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'">
+    <title>Mission Control — Charles 🐙</title>
     <style>
         :root {
             --bg-primary: #0d0d0d;
@@ -19,6 +27,118 @@
             --accent-purple: #8b5cf6;
             --border: #333333;
         }
+
+        /* === v2.3.0 UI additions === */
+        body.theme-light {
+            --bg-primary: #f7f7fb;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --bg-modal: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --border: #e2e8f0;
+        }
+
+        .notify-badge {
+            display: none;
+            min-width: 22px;
+            height: 22px;
+            padding: 0 6px;
+            border-radius: 999px;
+            background: var(--accent-red);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            align-items: center;
+            justify-content: center;
+        }
+        .notify-badge.visible { display: inline-flex; }
+
+        .quick-filters {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .quick-filters .form-input {
+            height: 34px;
+            padding: 0.35rem 0.6rem;
+            font-size: 0.85rem;
+            background: var(--bg-card);
+        }
+        .quick-filters .filter-pill {
+            padding: 0.35rem 0.6rem;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--bg-card);
+            cursor: pointer;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .quick-filters .filter-pill.active {
+            color: var(--text-primary);
+            border-color: var(--accent-blue);
+        }
+
+        .bulk-toolbar {
+            margin: 0 2rem;
+            padding: 0.6rem 0.75rem;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .bulk-toolbar .bulk-left, .bulk-toolbar .bulk-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .task-select {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+        }
+        body.bulk-mode .task-select { display: inline-block; }
+        .task-card { position: relative; }
+        .task-card.selected { outline: 2px solid var(--accent-blue); }
+        .task-select.checked {
+            background: var(--accent-blue);
+            border-color: var(--accent-blue);
+        }
+
+        .footer {
+            position: sticky;
+            bottom: 0;
+            z-index: 50;
+            border-top: 1px solid var(--border);
+            background: color-mix(in srgb, var(--bg-secondary) 85%, transparent);
+            backdrop-filter: blur(6px);
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 900px) {
+            .header { padding: 0.75rem 1rem; }
+            .header-left { flex-wrap: wrap; gap: 0.75rem; }
+            .search-container { width: 100%; }
+            .bulk-toolbar { margin: 0 1rem; flex-wrap: wrap; }
+            .footer { flex-direction: column; align-items: flex-start; }
+        }
+
 
         * {
             margin: 0;
@@ -2190,6 +2310,9 @@
             </div>
         </div>
         <div class="header-right">
+            <span class="notify-badge" id="stuck-badge" title="Tasks stuck >48h">0</span>
+            <button class="btn btn-secondary" id="btn-bulk" onclick="toggleBulkMode()" title="Bulk select (B)">☑ Bulk</button>
+            <button class="btn btn-secondary" id="btn-theme-toggle" onclick="toggleTheme()" title="Toggle theme (T)">🌙</button>
             <span class="live-indicator live" id="live-indicator">Live</span>
             <button class="btn btn-secondary" onclick="pollForUpdates(); window.location.reload()">↻ Refresh</button>
 
@@ -2235,27 +2358,54 @@
     <!-- TASKS VIEW -->
     <div id="view-tasks" class="view active">
 
-    <div class="stats-bar">
+    <div class="stats-bar" aria-label="Board stats">
         <div class="stat">
-            <span class="stat-value" id="stat-week">0</span>
-            <span class="stat-label">This week</span>
+            <span class="stat-value" id="stat-total">0</span>
+            <span class="stat-label">Active</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value" id="stat-backlog">0</span>
+            <span class="stat-label">Backlog</span>
         </div>
         <div class="stat">
             <span class="stat-value" id="stat-progress">0</span>
             <span class="stat-label">In progress</span>
         </div>
         <div class="stat">
-            <span class="stat-value" id="stat-total">0</span>
-            <span class="stat-label">Total</span>
+            <span class="stat-value" id="stat-review">0</span>
+            <span class="stat-label">Review</span>
+        </div>
+        <div class="stat">
+            <span class="stat-value" id="stat-overdue">0</span>
+            <span class="stat-label">Overdue</span>
         </div>
         <div class="stat">
             <span class="stat-value stat-highlight" id="stat-completion">0%</span>
-            <span class="stat-label">Completion</span>
+            <span class="stat-label">Done rate</span>
         </div>
     </div>
 
     <div class="filters" id="filters">
+        <div class="quick-filters" id="quick-filters" aria-label="Quick filters"></div>
         <button class="filter-btn active" data-filter="all">All projects</button>
+    </div>
+
+    <div class="bulk-toolbar" id="bulk-toolbar" style="display:none;">
+        <div class="bulk-left">
+            <strong id="bulk-count">0 selected</strong>
+            <button class="btn btn-secondary btn-small" onclick="bulkClearSelection()">Clear</button>
+        </div>
+        <div class="bulk-right">
+            <select class="form-input" id="bulk-move-status" style="max-width:180px;">
+                <option value="">Move to…</option>
+                <option value="backlog">Backlog</option>
+                <option value="in_progress">In Progress</option>
+                <option value="review">Review</option>
+                <option value="done">Done</option>
+            </select>
+            <button class="btn btn-primary btn-small" onclick="bulkMove()">Apply</button>
+            <button class="btn btn-secondary btn-small" onclick="bulkArchiveDoneOnly()" title="Archive selected done tasks">📦 Archive</button>
+        </div>
     </div>
 
     <main class="main">
@@ -2374,7 +2524,7 @@
 
                 <h3 style="margin: 1rem 0 0.5rem;">Installation</h3>
                 <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Add Mission Control to your existing MoltBot workspace:
+                    Add Mission Control to your existing Charles workspace:
                 </p>
                 <ol style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem;">
                     <li><strong>Fork</strong> this repository to your GitHub account</li>
@@ -2433,7 +2583,7 @@
 
                 <h3 style="margin: 1.5rem 0 0.5rem;">Comments</h3>
                 <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Add comments to tasks for context or feedback. Comments on <strong>Review</strong> tasks trigger notifications to MoltBot.
+                    Add comments to tasks for context or feedback. Comments on <strong>Review</strong> tasks trigger notifications to Charles.
                 </p>
 
                 <h3 style="margin: 1.5rem 0 0.5rem;">Projects & Tags</h3>
@@ -2443,18 +2593,18 @@
             </div>
 
             <div class="docs-section" style="margin-bottom: 2rem;">
-                <h2 style="color: var(--accent); margin-bottom: 1rem;">🤖 MoltBot Integration</h2>
+                <h2 style="color: var(--accent); margin-bottom: 1rem;">🤖 Charles Integration</h2>
                 <p style="color: var(--text-secondary); line-height: 1.6;">
-                    Mission Control is connected to MoltBot via webhooks. When you make changes:
+                    Mission Control is connected to Charles via webhooks. When you make changes:
                 </p>
                 <ul style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem;">
-                    <li><strong>Move task to "In Progress"</strong> → MoltBot receives a work order and starts processing</li>
-                    <li><strong>Add comment on Review task</strong> → MoltBot sees your feedback</li>
-                    <li><strong>MoltBot completes work</strong> → Task moves to "Review" automatically</li>
+                    <li><strong>Move task to "In Progress"</strong> → Charles receives a work order and starts processing</li>
+                    <li><strong>Add comment on Review task</strong> → Charles sees your feedback</li>
+                    <li><strong>Charles completes work</strong> → Task moves to "Review" automatically</li>
                 </ul>
 
                 <div style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-                    <strong>💡 Pro Tip:</strong> Write clear task descriptions and subtasks. The more detail you provide, the better MoltBot can execute the task.
+                    <strong>💡 Pro Tip:</strong> Write clear task descriptions and subtasks. The more detail you provide, the better Charles can execute the task.
                 </div>
             </div>
 
@@ -2468,6 +2618,22 @@
                     <tr style="border-bottom: 1px solid var(--border-color);">
                         <td style="padding: 0.5rem; color: var(--text-secondary);"><code>Escape</code></td>
                         <td style="padding: 0.5rem;">Close modals</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 0.5rem; color: var(--text-secondary);"><code>/</code></td>
+                        <td style="padding: 0.5rem;">Focus search</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 0.5rem; color: var(--text-secondary);"><code>n</code></td>
+                        <td style="padding: 0.5rem;">New task (Backlog)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 0.5rem; color: var(--text-secondary);"><code>b</code></td>
+                        <td style="padding: 0.5rem;">Toggle bulk mode</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 0.5rem; color: var(--text-secondary);"><code>t</code></td>
+                        <td style="padding: 0.5rem;">Toggle theme</td>
                     </tr>
                     <tr style="border-bottom: 1px solid var(--border-color);">
                         <td style="padding: 0.5rem; color: var(--text-secondary);"><code>Enter</code></td>
@@ -2588,6 +2754,11 @@
         </div>
     </div>
 
+    <div class="footer" id="footer">
+        <div class="footer-left">Mission Control — Charles • <span id="footer-version">v2.3.0</span></div>
+        <div class="footer-right">Last updated: <span id="footer-last-updated">—</span></div>
+    </div>
+
     <!-- Settings Modal -->
     <div class="modal-overlay" id="settings-modal" onclick="if(event.target===this)hideSettingsModal()">
         <div class="modal" style="max-width: 500px;">
@@ -2632,6 +2803,30 @@
                             <button class="btn btn-primary" id="btn-save-project" onclick="saveProject()" style="flex: 1;">+ Add Project</button>
                         </div>
                     </div>
+                </div>
+
+                <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 12px; font-size: 1rem;">Appearance</h3>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <button class="btn btn-secondary" onclick="applyTheme('dark')">🌙 Dark</button>
+                        <button class="btn btn-secondary" onclick="applyTheme('light')">☀️ Light</button>
+                    </div>
+                </div>
+
+                <div style="margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+                    <h3 style="margin-bottom: 12px; font-size: 1rem;">Import / Export</h3>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+                        <button class="btn btn-secondary" onclick="exportBoard('json')">Export JSON</button>
+                        <button class="btn btn-secondary" onclick="exportBoard('csv')">Export CSV</button>
+                        <button class="btn btn-secondary" onclick="exportBoard('md')">Export Markdown</button>
+                        <label class="btn btn-primary" style="cursor:pointer;">
+                            Import JSON
+                            <input type="file" id="import-json" accept="application/json" style="display:none" onchange="importBoardFromFile(this.files[0])">
+                        </label>
+                    </div>
+                    <p style="margin-top:10px; color: var(--text-secondary); font-size: 0.85rem; line-height: 1.4;">
+                        Import expects the same schema as <code>data/tasks.json</code>. This will replace your current board in-memory; save/commit to persist.
+                    </p>
                 </div>
             </div>
         </div>
@@ -3046,15 +3241,130 @@
             }
         }
 
+        function stripDangerousKeys(obj) {
+            if (!obj || typeof obj !== 'object') return obj;
+            if (Array.isArray(obj)) return obj.map(stripDangerousKeys);
+            const clean = {};
+            for (const [k, v] of Object.entries(obj)) {
+                if (k === '__proto__' || k === 'constructor' || k === 'prototype') continue;
+                clean[k] = stripDangerousKeys(v);
+            }
+            return clean;
+        }
+
+        function validateTasksData(data) {
+            if (!data || typeof data !== 'object') return null;
+            const clean = stripDangerousKeys(data);
+            if (!Array.isArray(clean.tasks)) return null;
+            // Minimal validation for each task
+            clean.tasks = clean.tasks.filter(t => t && typeof t === 'object' && typeof t.id === 'string' && typeof t.title === 'string');
+            if (clean.tasks.length === 0) return null;
+            if (!Array.isArray(clean.projects)) clean.projects = (FALLBACK_DATA.projects || []);
+            if (!Array.isArray(clean.activities)) clean.activities = [];
+            return clean;
+        }
+
+        function downloadText(filename, text, mime = 'text/plain') {
+            const blob = new Blob([text], { type: `${mime};charset=utf-8` });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            setTimeout(() => URL.revokeObjectURL(url), 2000);
+        }
+
+        function exportBoard(format) {
+            const data = STATE.data || FALLBACK_DATA;
+            if (!data) return;
+
+            if (format === 'json') {
+                downloadText('mission-control-board.json', JSON.stringify(data, null, 2), 'application/json');
+                showToast('success', 'Exported JSON');
+                return;
+            }
+
+            if (format === 'csv') {
+                const cols = ['id','title','status','priority','project','assignedTo','createdAt','targetDate','completedAt','tags'];
+                const esc = (v) => '"' + String(v ?? '').replace(/"/g, '""') + '"';
+                const rows = [cols.map(esc).join(',')];
+                (data.tasks || []).forEach(t => {
+                    rows.push(cols.map(c => {
+                        const v = c === 'tags' ? (t.tags || []).join('|') : t[c];
+                        return esc(v);
+                    }).join(','));
+                });
+                downloadText('mission-control-board.csv', rows.join('
+'), 'text/csv');
+                showToast('success', 'Exported CSV');
+                return;
+            }
+
+            if (format === 'md') {
+                const order = ['permanent','backlog','in_progress','review','done'];
+                const label = {
+                    permanent: 'Permanent',
+                    backlog: 'Backlog',
+                    in_progress: 'In Progress',
+                    review: 'Review',
+                    done: 'Done'
+                };
+                const by = {};
+                (data.tasks || []).forEach(t => {
+                    const k = t.status || 'unknown';
+                    if (!by[k]) by[k] = [];
+                    by[k].push(t);
+                });
+                const lines = ['# Mission Control Board
+'];
+                for (const st of order) {
+                    const list = (by[st] || []).filter(t => !t.archived);
+                    lines.push(`## ${label[st] || st} (${list.length})`);
+                    list.forEach(t => {
+                        const tags = (t.tags && t.tags.length) ? ` [${t.tags.join(', ')}]` : '';
+                        lines.push(`- **${t.title}**${tags} (id: \`${t.id}\`)`);
+                    });
+                    lines.push('');
+                }
+                downloadText('mission-control-board.md', lines.join('
+'), 'text/markdown');
+                showToast('success', 'Exported Markdown');
+                return;
+            }
+        }
+
+        async function importBoardFromFile(file) {
+            if (!file) return;
+            try {
+                const text = await file.text();
+                const parsed = JSON.parse(text);
+                const validated = validateTasksData(parsed);
+                if (!validated) throw new Error('Invalid schema');
+                STATE.data = validated;
+                STATE.originalData = JSON.parse(JSON.stringify(validated));
+                STATE.hasUnsavedChanges = true;
+                document.getElementById('unsaved-banner')?.classList.add('visible');
+                addActivity(`📥 Imported board from ${file.name}`, 'updated');
+                saveToLocalStorage();
+                renderAll();
+                showToast('success', 'Imported board (remember to commit)');
+            } catch (e) {
+                console.error(e);
+                showToast('error', `Import failed: ${e.message}`);
+            }
+        }
+
         function loadFromLocalStorage() {
             try {
                 const stored = localStorage.getItem('mc_tasks_data');
-                if (stored) {
-                    const data = JSON.parse(stored);
-                    if (data && data.tasks && data.tasks.length > 0) {
-                        console.log('Loaded from localStorage:', data.tasks.length, 'tasks');
-                        return data;
-                    }
+                if (!stored) return null;
+                const parsed = JSON.parse(stored);
+                const data = validateTasksData(parsed);
+                if (data) {
+                    console.log('Loaded from localStorage:', data.tasks.length, 'tasks');
+                    return data;
                 }
             } catch (e) {
                 console.warn('localStorage load failed:', e);
@@ -3092,7 +3402,7 @@
                 // UTF-8 safe base64 decode
                 const bytes = Uint8Array.from(atob(fileData.content), c => c.charCodeAt(0));
                 const content = new TextDecoder().decode(bytes);
-                const data = JSON.parse(content);
+                const data = validateTasksData(JSON.parse(content)) || JSON.parse(JSON.stringify(FALLBACK_DATA));
 
                 // Merge localStorage overrides (archived flags) into GitHub data
                 const cached = loadFromLocalStorage();
@@ -3190,6 +3500,7 @@
             renderActivity();
             updateStats();
             updateProjectDropdown();
+            updateFooter();
         }
 
         // === CRON RENDERING ===
@@ -3486,6 +3797,13 @@
             }, 3000);
         }
 
+        function sanitizeUrl(url) {
+            const u = String(url || '').trim();
+            // allow http(s) + mailto only
+            if (/^(https?:\/\/|mailto:)/i.test(u)) return u;
+            return '#';
+        }
+
         // === MARKDOWN RENDERER ===
         function renderMarkdown(text) {
             if (!text) return '';
@@ -3508,10 +3826,10 @@
             html = html.replace(/`([^`]+)`/g, '<code style="background: var(--bg-secondary); padding: 2px 6px; border-radius: 3px; font-family: monospace; font-size: 0.9em;">$1</code>');
             
             // Links: [text](url)
-            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color: var(--accent-blue);">$1</a>');
+            html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (m, text, url) => `<a href="${sanitizeUrl(url)}" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue);">${text}</a>`);
             
             // URLs without markdown (auto-link)
-            html = html.replace(/(^|[^"=])(https?:\/\/[^\s<]+)/g, '$1<a href="$2" target="_blank" style="color: var(--accent-blue);">$2</a>');
+            html = html.replace(/(^|[^"=])(https?:\/\/[^\s<]+)/g, (m, prefix, url) => `${prefix}<a href="${sanitizeUrl(url)}" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue);">${url}</a>`);
             
             // Checkboxes: ✅ and ☑️ (already rendered, just style them)
             // Keep emojis as-is
@@ -3590,8 +3908,20 @@
                 }
 
                 // Apply project filter
-                if (currentFilter !== 'all') {
-                    tasks = tasks.filter(t => t.project === currentFilter || (t.tags && t.tags.includes(currentFilter)));
+                if (FILTERS.project !== 'all') {
+                    tasks = tasks.filter(t => t.project === FILTERS.project || (t.tags && t.tags.includes(FILTERS.project)));
+                }
+
+                if (FILTERS.priority !== 'all') {
+                    tasks = tasks.filter(t => (t.priority || 'medium') === FILTERS.priority);
+                }
+
+                if (FILTERS.assignee !== 'all') {
+                    tasks = tasks.filter(t => (t.assignedTo || 'unassigned') === FILTERS.assignee);
+                }
+
+                if (FILTERS.workItemType !== 'all') {
+                    tasks = tasks.filter(t => (t.workItemType || 'task') === FILTERS.workItemType);
                 }
 
                 // Sort: Done column by completedAt (newest first), others by priority + sortOrder
@@ -3734,11 +4064,13 @@
             }
 
             return `
-                <div class="task-card priority-${task.priority}${isArchived ? ' archived' : ''}${processingCardClass ? ' ' + processingCardClass : ''}" data-task-id="${task.id}"
+                <div class="task-card priority-${task.priority}${isArchived ? ' archived' : ''}${processingCardClass ? ' ' + processingCardClass : ''}${(typeof BULK !== 'undefined' && BULK.enabled && BULK.selected.has(task.id)) ? ' selected' : ''}" data-task-id="${task.id}"
+                     data-selected="${BULK.selected.has(task.id) ? 'true' : 'false'}"
                      draggable="${!isArchived}"
                      ondragstart="handleDragStart(event, '${task.id}')"
                      ondragend="handleDragEnd(event)"
-                     onclick="openTaskDetail('${task.id}')">
+                     onclick="handleTaskCardClick(event, '${task.id}')">
+                    <span class="task-select ${BULK.enabled && BULK.selected.has(task.id) ? 'checked' : ''}" aria-hidden="true"></span>
                     <div class="task-title">
                         <span class="task-title-text">${escapeHtml(task.title)}</span>
                         ${archivedBadge}
@@ -4022,8 +4354,20 @@
                 let tasks = data.tasks.filter(t => t.status === status);
 
                 // Apply project filter
-                if (currentFilter !== 'all') {
-                    tasks = tasks.filter(t => t.project === currentFilter || (t.tags && t.tags.includes(currentFilter)));
+                if (FILTERS.project !== 'all') {
+                    tasks = tasks.filter(t => t.project === FILTERS.project || (t.tags && t.tags.includes(FILTERS.project)));
+                }
+
+                if (FILTERS.priority !== 'all') {
+                    tasks = tasks.filter(t => (t.priority || 'medium') === FILTERS.priority);
+                }
+
+                if (FILTERS.assignee !== 'all') {
+                    tasks = tasks.filter(t => (t.assignedTo || 'unassigned') === FILTERS.assignee);
+                }
+
+                if (FILTERS.workItemType !== 'all') {
+                    tasks = tasks.filter(t => (t.workItemType || 'task') === FILTERS.workItemType);
                 }
 
                 // Sort: Done column by completedAt (newest first), others by priority + sortOrder
@@ -4162,20 +4506,81 @@
 
         function renderFilters() {
             const container = document.getElementById('filters');
+            const quick = document.getElementById('quick-filters');
             const data = STATE.data || FALLBACK_DATA;
             const projects = data.projects || FALLBACK_DATA.projects;
+
             const projectButtons = projects.map(p =>
-                `<button class="filter-btn" data-filter="${p.id}" onclick="filterByProject('${p.id}')">${p.icon} ${p.name}</button>`
+                `<button class="filter-btn" data-filter="${p.id}" onclick="filterByProject('${p.id}')">${escapeHtml(p.icon)} ${escapeHtml(p.name)}</button>`
             ).join('');
+
             container.innerHTML = `
-                <button class="filter-btn active" data-filter="all" onclick="filterByProject('all')">All projects</button>
+                <button class="filter-btn ${FILTERS.project==='all'?'active':''}" data-filter="all" onclick="filterByProject('all')">All projects</button>
                 ${projectButtons}
+            `;
+
+            // Quick filters
+            const assignees = Array.from(new Set((data.tasks||[]).map(t => t.assignedTo || 'unassigned'))).sort();
+            const types = Array.from(new Set((data.tasks||[]).map(t => t.workItemType || 'task'))).sort();
+
+            const select = (id,label,options,value,onchange) => `
+                <label style="display:flex; align-items:center; gap:6px;">
+                    <span style="color: var(--text-secondary); font-size:0.8rem;">${label}</span>
+                    <select class="form-input" id="${id}" onchange="${onchange}">
+                        ${options.map(o => `<option value="${escapeHtml(o.value)}" ${o.value===value?'selected':''}>${escapeHtml(o.label)}</option>`).join('')}
+                    </select>
+                </label>`;
+
+            quick.innerHTML = `
+                ${select('filter-priority','Priority',[
+                    {value:'all',label:'All'},
+                    {value:'high',label:'High'},
+                    {value:'medium',label:'Medium'},
+                    {value:'low',label:'Low'}
+                ], FILTERS.priority, "setQuickFilter('priority', this.value)")}
+
+                ${select('filter-assignee','Assignee',
+                    [{value:'all',label:'All'}].concat(assignees.map(a=>({value:a,label:a==='unassigned'?'Unassigned':a}))),
+                    FILTERS.assignee,
+                    "setQuickFilter('assignee', this.value)")}
+
+                ${select('filter-type','Type',
+                    [{value:'all',label:'All'}].concat(types.map(t=>({value:t,label:t}))),
+                    FILTERS.workItemType,
+                    "setQuickFilter('workItemType', this.value)")}
+
+                <button class="btn btn-secondary btn-small" onclick="clearAllFilters()" title="Clear filters">Clear</button>
             `;
         }
 
-        let currentFilter = 'all';
+        function setQuickFilter(key, value) {
+            FILTERS[key] = value;
+            renderTasks();
+        }
+
+        function clearAllFilters() {
+            FILTERS.priority = 'all';
+            FILTERS.assignee = 'all';
+            FILTERS.workItemType = 'all';
+            filterByProject('all');
+            renderFilters();
+            renderTasks();
+        }
+
+        let FILTERS = {
+            project: 'all',
+            priority: 'all',
+            assignee: 'all',
+            workItemType: 'all'
+        };
         let searchQuery = '';
         let showArchivedInSearch = false;
+
+        const BULK = {
+            enabled: false,
+            selected: new Set()
+        };
+
 
         // === ARCHIVE FUNCTIONS ===
         function archiveTask(taskId) {
@@ -4481,7 +4886,7 @@
         }
 
         function filterByProject(projectId) {
-            currentFilter = projectId;
+            FILTERS.project = projectId;
 
             // Update active state
             document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -4493,22 +4898,153 @@
 
         function updateStats() {
             const data = STATE.data || FALLBACK_DATA;
-            // Exclude archived tasks from stats
-            const activeTasks = data.tasks.filter(t => !t.archived);
-            const total = activeTasks.filter(t => t.status !== 'permanent').length;
-            const inProgress = activeTasks.filter(t => t.status === 'in_progress').length;
-            const review = activeTasks.filter(t => t.status === 'review').length;
-            const completion = total > 0 ? Math.round((review / total) * 100) : 0;
+            const tasks = (data.tasks || []).filter(t => !t.archived);
 
-            document.getElementById('stat-total').textContent = total;
-            document.getElementById('stat-progress').textContent = inProgress;
-            document.getElementById('stat-week').textContent = review;
-            document.getElementById('stat-completion').textContent = completion + '%';
+            const active = tasks.filter(t => !['permanent','done'].includes(t.status)).length;
+            const backlog = tasks.filter(t => t.status === 'backlog').length;
+            const inProgress = tasks.filter(t => t.status === 'in_progress').length;
+            const review = tasks.filter(t => t.status === 'review').length;
+            const done = tasks.filter(t => t.status === 'done').length;
+
+            // Overdue based on targetDate (if present)
+            const now = new Date();
+            const overdue = tasks.filter(t => {
+                if (!t.targetDate) return false;
+                try {
+                    return new Date(t.targetDate) < now && t.status !== 'done';
+                } catch (e) {
+                    return false;
+                }
+            }).length;
+
+            // Stuck >48h in progress: use startDate, else createdAt
+            const stuck = tasks.filter(t => {
+                if (t.status !== 'in_progress') return false;
+                const ts = t.startDate || t.processingStartedAt || t.createdAt;
+                if (!ts) return false;
+                try {
+                    return (now - new Date(ts)) > (48 * 60 * 60 * 1000);
+                } catch (e) {
+                    return false;
+                }
+            }).length;
+
+            const totalVisible = active + done; // excludes permanent
+            const doneRate = totalVisible > 0 ? Math.round((done / totalVisible) * 100) : 0;
+
+            const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = String(val); };
+            set('stat-total', active);
+            set('stat-backlog', backlog);
+            set('stat-progress', inProgress);
+            set('stat-review', review);
+            set('stat-overdue', overdue);
+            set('stat-completion', doneRate + '%');
+
+            const badge = document.getElementById('stuck-badge');
+            if (badge) {
+                badge.textContent = String(stuck);
+                badge.classList.toggle('visible', stuck > 0);
+            }
         }
 
         // === TASK EDITING ===
         let currentEditingTaskId = null;
         let currentTaskTags = [];
+
+        // === THEME (dark by default) ===
+        const THEME_KEY = 'mc_theme';
+        function applyTheme(theme) {
+            const t = theme === 'light' ? 'light' : 'dark';
+            document.body.classList.toggle('theme-light', t === 'light');
+            const btn = document.getElementById('btn-theme-toggle');
+            if (btn) btn.textContent = t === 'light' ? '☀️' : '🌙';
+            try { localStorage.setItem(THEME_KEY, t); } catch(e) {}
+        }
+        function initTheme() {
+            let t = null;
+            try { t = localStorage.getItem(THEME_KEY); } catch(e) {}
+            if (!t) {
+                t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            applyTheme(t);
+        }
+        function toggleTheme() {
+            const isLight = document.body.classList.contains('theme-light');
+            applyTheme(isLight ? 'dark' : 'light');
+        }
+
+        // === BULK MODE ===
+        function toggleBulkMode(force) {
+            BULK.enabled = typeof force === 'boolean' ? force : !BULK.enabled;
+            document.body.classList.toggle('bulk-mode', BULK.enabled);
+            const toolbar = document.getElementById('bulk-toolbar');
+            if (toolbar) toolbar.style.display = BULK.enabled ? 'flex' : 'none';
+            if (!BULK.enabled) BULK.selected.clear();
+            updateBulkUI();
+            renderTasks();
+        }
+
+        function handleTaskCardClick(event, taskId) {
+            if (BULK.enabled) {
+                event.preventDefault();
+                event.stopPropagation();
+                if (BULK.selected.has(taskId)) BULK.selected.delete(taskId);
+                else BULK.selected.add(taskId);
+                updateBulkUI();
+                renderTasks();
+                return;
+            }
+            openTaskDetail(taskId);
+        }
+
+        function updateBulkUI() {
+            const count = BULK.selected.size;
+            const el = document.getElementById('bulk-count');
+            if (el) el.textContent = `${count} selected`;
+        }
+
+        function bulkClearSelection() {
+            BULK.selected.clear();
+            updateBulkUI();
+            renderTasks();
+        }
+
+        function bulkMove() {
+            const sel = document.getElementById('bulk-move-status');
+            const status = sel ? sel.value : '';
+            if (!status) return;
+            const ids = listSelectedTaskIds();
+            if (ids.length === 0) return;
+            ids.forEach(id => {
+                const t = STATE.data.tasks.find(x => x.id === id);
+                if (!t) return;
+                const old = t.status;
+                t.status = status;
+                if (status == 'done') t.completedAt = new Date().toISOString();
+                else if (old == 'done') delete t.completedAt;
+            });
+            STATE.data.lastUpdated = new Date().toISOString();
+            addActivity(`☑ Bulk moved ${ids.length} task${ids.length>1?'s':''} → ${status}`, 'moved');
+            autoSave(`Bulk move ${ids.length} tasks → ${status}`);
+            bulkClearSelection();
+            if (sel) sel.value='';
+        }
+
+        function bulkArchiveDoneOnly() {
+            const ids = listSelectedTaskIds();
+            const done = ids.filter(id => {
+                const t = STATE.data.tasks.find(x => x.id === id);
+                return t && t.status === 'done' && !t.archived;
+            });
+            if (done.length === 0) return;
+            done.forEach(id => archiveTask(id));
+            addActivity(`📦 Bulk archived ${done.length} done task${done.length>1?'s':''}`, 'archive');
+            bulkClearSelection();
+        }
+
+        function listSelectedTaskIds() {
+            return Array.from(BULK.selected);
+        }
 
         // === TAG FUNCTIONS ===
         function renderTagChips() {
@@ -5563,7 +6099,7 @@
                 const countdown = formatScheduledCountdown(scheduledDate);
                 
                 return `
-                    <div class="scheduled-card ${isOverdue ? 'overdue' : ''}" data-task-id="${task.id}" onclick="openTaskDetail('${task.id}')">
+                    <div class="scheduled-card ${isOverdue ? 'overdue' : ''}" data-task-id="${task.id}" onclick="handleTaskCardClick(event, '${task.id}')">
                         <div class="scheduled-name">${escapeHtml(task.title)}</div>
                         <div class="scheduled-time">
                             <span class="countdown ${isOverdue ? 'overdue' : ''}">
@@ -6071,7 +6607,8 @@
             return text.replace(/&/g, '&amp;')
                        .replace(/</g, '&lt;')
                        .replace(/>/g, '&gt;')
-                       .replace(/"/g, '&quot;');
+                       .replace(/"/g, '&quot;')
+                       .replace(/'/g, '&#39;');
         }
         
         function validateCronSchedule(schedule) {
@@ -6790,8 +7327,76 @@
             }
         };
 
+        function updateFooter() {
+            const v = document.getElementById('footer-version');
+            if (v) v.textContent = 'v2.3.0';
+            const el = document.getElementById('footer-last-updated');
+            const ts = (STATE.data && STATE.data.lastUpdated) ? STATE.data.lastUpdated : null;
+            if (el) {
+                if (!ts) { el.textContent = '—'; return; }
+                try {
+                    el.textContent = new Date(ts).toLocaleString();
+                } catch(e) {
+                    el.textContent = ts;
+                }
+            }
+        }
+
+        function closeVisibleModal() {
+            const ids = ['task-modal','settings-modal','commit-modal','auth-modal'];
+            for (const id of ids) {
+                const m = document.getElementById(id);
+                if (m && m.classList.contains('visible')) {
+                    m.classList.remove('visible');
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function setupKeyboardShortcuts() {
+            document.addEventListener('keydown', (e) => {
+                const tag = (e.target && e.target.tagName) ? e.target.tagName.toLowerCase() : '';
+                const typing = tag === 'input' || tag === 'textarea' || e.target?.isContentEditable;
+
+                if (e.key === 'Escape') {
+                    if (closeVisibleModal()) e.preventDefault();
+                    if (BULK.enabled && BULK.selected.size) { bulkClearSelection(); e.preventDefault(); }
+                    return;
+                }
+
+                if (typing) return;
+
+                if (e.key === '/' ) {
+                    const si = document.getElementById('search-input');
+                    if (si) { e.preventDefault(); si.focus(); }
+                    return;
+                }
+
+                if (e.key.toLowerCase() === 'n') {
+                    e.preventDefault();
+                    openNewTask('backlog');
+                    return;
+                }
+
+                if (e.key.toLowerCase() === 'b') {
+                    e.preventDefault();
+                    toggleBulkMode();
+                    return;
+                }
+
+                if (e.key.toLowerCase() === 't') {
+                    e.preventDefault();
+                    toggleTheme();
+                    return;
+                }
+            });
+        }
+
         // === INIT ===
         document.addEventListener('DOMContentLoaded', async () => {
+            initTheme();
+            setupKeyboardShortcuts();
             // Restore activity sidebar state
             if (localStorage.getItem('activity-collapsed') === 'true') {
                 const sidebar = document.getElementById('activity-sidebar');
