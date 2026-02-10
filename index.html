@@ -2246,28 +2246,21 @@
                     <div class="login-step">
                         <span class="login-step-num">3</span>
                         <div>
-                            <strong>Paste your token below</strong>
+                            <strong>Paste your token in the next dialog</strong>
                             <span class="login-hint">Starts with "ghp_"</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="login-form">
-                    <input type="password" id="login-token-input" class="login-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
-                    <button id="login-btn" class="login-btn" onclick="handleLogin()">
+                    <button class="login-btn" onclick="showAuthModal()">
                         <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
                         </svg>
                         Connect with GitHub
                     </button>
-                    <div id="login-error" class="login-error"></div>
-                    <div id="login-loading" class="login-loading">
-                        <div class="spinner"></div>
-                        <span>Validating...</span>
-                    </div>
+                    <p class="login-security" style="margin-top: 12px;">🔒 Your token is stored locally and never sent anywhere except GitHub.</p>
                 </div>
-
-                <p class="login-security">🔒 Your token is stored locally and never sent anywhere except GitHub.</p>
             </div>
         </div>
     </div>
@@ -3506,7 +3499,7 @@
         // === CRON RENDERING ===
         window.loadCronsFromGitHub = async function() {
             try {
-                const token = STATE.token || localStorage.getItem('gh_token');
+                const token = STATE.token || localStorage.getItem('github_token') || localStorage.getItem('gh_token');
                 const response = await fetch(
                     `https://api.github.com/repos/${CONFIG.owner}/${CONFIG.repo}/contents/data/crons.json`,
                     { headers: { 'Authorization': `token ${token}` } }
@@ -3712,9 +3705,10 @@
                 // Update UI and load data
                 setTimeout(async () => {
                     hideAuthModal();
-                    updateAuthUI();
+                    showDashboard();
                     await loadTasksFromGitHub();
                     await loadCronsFromGitHub();
+                    renderAll();
                 }, 1000);
 
             } catch (error) {
@@ -3729,22 +3723,44 @@
             document.getElementById('btn-save-token').disabled = false;
         }
 
-        function logout() {
+        window.showLoginScreen = function showLoginScreen() {
+            const login = document.getElementById('login-screen');
+            const dash = document.getElementById('dashboard');
+            if (login) login.style.display = 'flex';
+            if (dash) dash.style.display = 'none';
+            updateAuthUI();
+        }
+
+        window.showDashboard = function showDashboard() {
+            const login = document.getElementById('login-screen');
+            const dash = document.getElementById('dashboard');
+            if (login) login.style.display = 'none';
+            if (dash) dash.style.display = 'block';
+            updateAuthUI();
+        }
+
+        window.logout = function logout() {
             localStorage.removeItem('github_token');
             localStorage.removeItem('github_user');
+            // legacy key cleanup
+            localStorage.removeItem('gh_token');
+
             STATE.token = null;
             STATE.user = null;
             STATE.data = JSON.parse(JSON.stringify(FALLBACK_DATA));
             STATE.hasUnsavedChanges = false;
-            document.getElementById('unsaved-banner').classList.remove('visible');
-            updateAuthUI();
+            document.getElementById('unsaved-banner')?.classList.remove('visible');
+
             renderAll();
+            showLoginScreen();
             showToast('success', 'Logged out');
         }
 
         function updateAuthUI() {
             const connectBtn = document.getElementById('btn-connect');
             const userProfile = document.getElementById('user-profile');
+
+            if (!connectBtn || !userProfile) return;
 
             if (STATE.user) {
                 connectBtn.style.display = 'none';
@@ -3757,14 +3773,78 @@
             }
         }
 
+        function migrateStoredToken() {
+            const legacy = localStorage.getItem('gh_token');
+            const current = localStorage.getItem('github_token');
+            if (legacy && !current) {
+                localStorage.setItem('github_token', legacy);
+            }
+        }
+
         function checkSavedAuth() {
+            migrateStoredToken();
+
             const token = localStorage.getItem('github_token');
             const userJson = localStorage.getItem('github_user');
 
-            if (token && userJson) {
-                STATE.token = token;
-                STATE.user = JSON.parse(userJson);
-                updateAuthUI();
+            if (token) STATE.token = token;
+            if (userJson) {
+                try { STATE.user = JSON.parse(userJson); } catch (e) {}
+            }
+
+            updateAuthUI();
+        }
+
+        async function initAuthGate() {
+            checkSavedAuth();
+
+            if (!STATE.token) {
+                showLoginScreen();
+                return;
+            }
+
+            // Validate token / refresh user (but allow offline fallback)
+            try {
+                const response = await fetch('https://api.github.com/user', {
+                    headers: {
+                        'Authorization': `token ${STATE.token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (response.status === 401) {
+                    // Invalid token
+                    localStorage.removeItem('github_token');
+                    localStorage.removeItem('github_user');
+                    localStorage.removeItem('gh_token');
+                    STATE.token = null;
+                    STATE.user = null;
+                    showLoginScreen();
+                    return;
+                }
+
+                if (response.ok) {
+                    const user = await response.json();
+                    STATE.user = user;
+                    localStorage.setItem('github_user', JSON.stringify({
+                        login: user.login,
+                        avatar_url: user.avatar_url,
+                        name: user.name || user.login
+                    }));
+                }
+            } catch (e) {
+                console.warn('Auth validation failed (offline?):', e);
+                showToast('error', 'GitHub API unreachable — using local cache if available');
+            }
+
+            showDashboard();
+
+            try {
+                await loadTasksFromGitHub();
+                await loadCronsFromGitHub();
+                renderAll();
+            } catch (e) {
+                console.warn('Initial data load failed:', e);
             }
         }
 
@@ -7406,7 +7486,7 @@
                 if (icon) icon.textContent = '☰';
                 if (reopen) reopen.style.display = 'flex';
             }
-            // Auth is now handled by checkAuth() in the login script below
+            await initAuthGate();
         });
 
         // Pause polling when tab not visible
@@ -7530,121 +7610,6 @@
 
     </div><!-- End Dashboard -->
 
-    <script>
-        // === LOGIN/AUTH GATE ===
-        async function checkAuth() {
-            // Check both old and new token keys, migrate if needed
-            let token = localStorage.getItem('gh_token');
-            if (!token) {
-                const oldToken = localStorage.getItem('github_token');
-                if (oldToken) {
-                    // Migrate old token to new key
-                    localStorage.setItem('gh_token', oldToken);
-                    localStorage.removeItem('github_token');
-                    localStorage.removeItem('github_user'); // Clean up old user data
-                    token = oldToken;
-                    console.log('Migrated token from github_token to gh_token');
-                }
-            }
-
-            if (!token) {
-                showLoginScreen();
-                return;
-            }
-
-            // Validate token
-            try {
-                const response = await fetch('https://api.github.com/user', {
-                    headers: { 'Authorization': `token ${token}` }
-                });
-
-                if (response.ok) {
-                    const user = await response.json();
-                    STATE.token = token;
-                    STATE.user = user;
-                    showDashboard();
-                    await loadTasksFromGitHub();
-                    await loadCronsFromGitHub(); // Load data after auth
-                } else {
-                    localStorage.removeItem('gh_token');
-                    showLoginScreen();
-                }
-            } catch (e) {
-                console.error('Auth check failed:', e);
-                showLoginScreen();
-            }
-        }
-
-        function showLoginScreen() {
-            document.getElementById('login-screen').style.display = 'flex';
-            document.getElementById('dashboard').style.display = 'none';
-        }
-
-        function showDashboard() {
-            document.getElementById('login-screen').style.display = 'none';
-            document.getElementById('dashboard').style.display = 'block';
-
-            // Update UI with user info
-            if (STATE.user) {
-                document.getElementById('btn-connect').style.display = 'none';
-                document.getElementById('user-profile').style.display = 'flex';
-                document.getElementById('user-avatar').src = STATE.user.avatar_url;
-                document.getElementById('user-name').textContent = STATE.user.login;
-            }
-        }
-
-        async function handleLogin() {
-            const tokenInput = document.getElementById('login-token-input');
-            const token = tokenInput.value.trim();
-            const errorDiv = document.getElementById('login-error');
-            const loadingDiv = document.getElementById('login-loading');
-            const btn = document.getElementById('login-btn');
-
-            if (!token) {
-                errorDiv.textContent = 'Please enter a token';
-                errorDiv.style.display = 'block';
-                return;
-            }
-
-            // Show loading
-            errorDiv.style.display = 'none';
-            loadingDiv.style.display = 'flex';
-            btn.disabled = true;
-
-            try {
-                const response = await fetch('https://api.github.com/user', {
-                    headers: { 'Authorization': `token ${token}` }
-                });
-
-                if (response.ok) {
-                    const user = await response.json();
-                    localStorage.setItem('gh_token', token);
-                    STATE.token = token;
-                    STATE.user = user;
-                    showDashboard();
-                    await loadTasksFromGitHub();
-                    await loadCronsFromGitHub();
-                } else {
-                    errorDiv.textContent = 'Invalid token. Please check and try again.';
-                    errorDiv.style.display = 'block';
-                }
-            } catch (e) {
-                errorDiv.textContent = 'Connection error: ' + (e.message || 'Network request failed. Check your internet or try a classic token (ghp_...).');
-                errorDiv.style.display = 'block';
-            } finally {
-                loadingDiv.style.display = 'none';
-                btn.disabled = false;
-            }
-        }
-
-        // Handle Enter key on login input
-        document.getElementById('login-token-input').addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') handleLogin();
-        });
-
-        // Check auth on page load
-        checkAuth();
-    </script>
 </body>
 </html>
 <!-- test Wed Jan 28 19:46:49 CET 2026 -->
