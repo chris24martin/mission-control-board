@@ -2,7 +2,7 @@
   "tasks": [
     {
       "id": "guide_onboarding",
-      "title": "🚀 Onboarding Guide — Set Up Mission Control",
+      "title": "\ud83d\ude80 Onboarding Guide \u2014 Set Up Mission Control",
       "description": "Welcome to Mission Control! Follow these steps to complete your setup. Work through each subtask in order.\n\n**Tip:** Click on a subtask to see detailed instructions. Check it off when done.",
       "status": "permanent",
       "project": "guides",
@@ -13,17 +13,17 @@
       "subtasks": [
         {
           "id": "sub_001",
-          "title": "1. Enable GitHub Pages: Settings → Pages → Branch: main → Save",
+          "title": "1. Enable GitHub Pages: Settings \u2192 Pages \u2192 Branch: main \u2192 Save",
           "done": false
         },
         {
           "id": "sub_002",
-          "title": "2. Create GitHub Token: github.com/settings/tokens → Generate (classic) → Scope: repo",
+          "title": "2. Create GitHub Token: github.com/settings/tokens \u2192 Generate (classic) \u2192 Scope: repo",
           "done": false
         },
         {
           "id": "sub_003",
-          "title": "3. Connect Dashboard: Open your GitHub Pages URL → Click 'Connect GitHub' → Paste token",
+          "title": "3. Connect Dashboard: Open your GitHub Pages URL \u2192 Click 'Connect GitHub' \u2192 Paste token",
           "done": false
         },
         {
@@ -33,17 +33,17 @@
         },
         {
           "id": "sub_005",
-          "title": "5. Enable Funnel: tailscale funnel 18789 → Copy your URL",
+          "title": "5. Enable Funnel: tailscale funnel 18789 \u2192 Copy your URL",
           "done": false
         },
         {
           "id": "sub_006",
-          "title": "6. Generate Webhook Token: openssl rand -hex 32 → Save it",
+          "title": "6. Generate Webhook Token: openssl rand -hex 32 \u2192 Save it",
           "done": false
         },
         {
           "id": "sub_007",
-          "title": "7. Add GitHub Webhook: Settings → Webhooks → Add → URL: https://YOUR-TAILSCALE-URL/hooks/github?token=YOUR-TOKEN",
+          "title": "7. Add GitHub Webhook: Settings \u2192 Webhooks \u2192 Add \u2192 URL: https://YOUR-TAILSCALE-URL/hooks/github?token=YOUR-TOKEN",
           "done": false
         },
         {
@@ -70,8 +70,8 @@
     },
     {
       "id": "guide_user",
-      "title": "📖 User Guide — How to Use Mission Control",
-      "description": "Learn how to use Mission Control effectively. Both you AND MoltBot can manage tasks!\n\n**Two ways to manage tasks:**\n• 👤 **You** — Use the Dashboard UI (drag & drop, buttons, forms)\n• 🤖 **MoltBot** — Uses CLI scripts or edits tasks.json directly",
+      "title": "\ud83d\udcd6 User Guide \u2014 How to Use Mission Control",
+      "description": "Learn how to use Mission Control effectively. Both you AND MoltBot can manage tasks!\n\n**Two ways to manage tasks:**\n\u2022 \ud83d\udc64 **You** \u2014 Use the Dashboard UI (drag & drop, buttons, forms)\n\u2022 \ud83e\udd16 **MoltBot** \u2014 Uses CLI scripts or edits tasks.json directly",
       "status": "permanent",
       "project": "guides",
       "tags": [
@@ -81,12 +81,12 @@
       "subtasks": [
         {
           "id": "sub_001",
-          "title": "— THE BOARD —",
+          "title": "\u2014 THE BOARD \u2014",
           "done": false
         },
         {
           "id": "sub_002",
-          "title": "Columns: Permanent (recurring) → Backlog → In Progress → Review → Done",
+          "title": "Columns: Permanent (recurring) \u2192 Backlog \u2192 In Progress \u2192 Review \u2192 Done",
           "done": false
         },
         {
@@ -101,22 +101,22 @@
         },
         {
           "id": "sub_005",
-          "title": "— CREATING TASKS —",
+          "title": "\u2014 CREATING TASKS \u2014",
           "done": false
         },
         {
           "id": "sub_006",
-          "title": "👤 You: Click '+' button in any column header",
+          "title": "\ud83d\udc64 You: Click '+' button in any column header",
           "done": false
         },
         {
           "id": "sub_007",
-          "title": "🤖 MoltBot: Edits data/tasks.json or uses CLI",
+          "title": "\ud83e\udd16 MoltBot: Edits data/tasks.json or uses CLI",
           "done": false
         },
         {
           "id": "sub_008",
-          "title": "— TASK DETAILS —",
+          "title": "\u2014 TASK DETAILS \u2014",
           "done": false
         },
         {
@@ -141,7 +141,7 @@
         },
         {
           "id": "sub_013",
-          "title": "Priority: High (🔴) / Medium (🟡) / Low (🟢)",
+          "title": "Priority: High (\ud83d\udd34) / Medium (\ud83d\udfe1) / Low (\ud83d\udfe2)",
           "done": false
         },
         {
@@ -151,7 +151,7 @@
         },
         {
           "id": "sub_015",
-          "title": "— WORKFLOW WITH MOLTBOT —",
+          "title": "\u2014 WORKFLOW WITH MOLTBOT \u2014",
           "done": false
         },
         {
@@ -161,7 +161,7 @@
         },
         {
           "id": "sub_017",
-          "title": "2. Move to 'In Progress' → MoltBot gets notified via webhook",
+          "title": "2. Move to 'In Progress' \u2192 MoltBot gets notified via webhook",
           "done": false
         },
         {
@@ -176,72 +176,72 @@
         },
         {
           "id": "sub_020",
-          "title": "5. You review: Approve → Done, or add feedback → back to In Progress",
+          "title": "5. You review: Approve \u2192 Done, or add feedback \u2192 back to In Progress",
           "done": false
         },
         {
           "id": "sub_021",
-          "title": "— DASHBOARD FEATURES —",
+          "title": "\u2014 DASHBOARD FEATURES \u2014",
           "done": false
         },
         {
           "id": "sub_022",
-          "title": "🔍 Search: Filter tasks by text",
+          "title": "\ud83d\udd0d Search: Filter tasks by text",
           "done": false
         },
         {
           "id": "sub_023",
-          "title": "📁 Project filter: Click project buttons to filter",
+          "title": "\ud83d\udcc1 Project filter: Click project buttons to filter",
           "done": false
         },
         {
           "id": "sub_024",
-          "title": "⚙️ Settings: Add/edit projects",
+          "title": "\u2699\ufe0f Settings: Add/edit projects",
           "done": false
         },
         {
           "id": "sub_025",
-          "title": "📦 Archive: Store completed tasks out of sight",
+          "title": "\ud83d\udce6 Archive: Store completed tasks out of sight",
           "done": false
         },
         {
           "id": "sub_026",
-          "title": "👥 Team: See repo collaborators (if public)",
+          "title": "\ud83d\udc65 Team: See repo collaborators (if public)",
           "done": false
         },
         {
           "id": "sub_027",
-          "title": "📚 Docs: Built-in documentation",
+          "title": "\ud83d\udcda Docs: Built-in documentation",
           "done": false
         },
         {
           "id": "sub_028",
-          "title": "— MOLTBOT CAPABILITIES —",
+          "title": "\u2014 MOLTBOT CAPABILITIES \u2014",
           "done": false
         },
         {
           "id": "sub_029",
-          "title": "🤖 Can CREATE tasks (via CLI or JSON)",
+          "title": "\ud83e\udd16 Can CREATE tasks (via CLI or JSON)",
           "done": false
         },
         {
           "id": "sub_030",
-          "title": "🤖 Can UPDATE task status, subtasks, comments",
+          "title": "\ud83e\udd16 Can UPDATE task status, subtasks, comments",
           "done": false
         },
         {
           "id": "sub_031",
-          "title": "🤖 Can MOVE tasks between columns",
+          "title": "\ud83e\udd16 Can MOVE tasks between columns",
           "done": false
         },
         {
           "id": "sub_032",
-          "title": "🤖 Can DELETE/archive tasks",
+          "title": "\ud83e\udd16 Can DELETE/archive tasks",
           "done": false
         },
         {
           "id": "sub_033",
-          "title": "🤖 Receives WEBHOOK when you move tasks to In Progress",
+          "title": "\ud83e\udd16 Receives WEBHOOK when you move tasks to In Progress",
           "done": false
         }
       ],
@@ -249,7 +249,7 @@
       "comments": [
         {
           "author": "Mission Control",
-          "text": "This guide stays in Permanent so you can always reference it. The subtasks aren't meant to be 'completed' — they're documentation!",
+          "text": "This guide stays in Permanent so you can always reference it. The subtasks aren't meant to be 'completed' \u2014 they're documentation!",
           "timestamp": "2026-01-01T00:00:00Z"
         }
       ],
@@ -263,7 +263,7 @@
     },
     {
       "id": "epic_blueprint_platform",
-      "title": "🧩 EPIC: Platform primitives (approvals, audit trail, safety)",
+      "title": "\ud83e\udde9 EPIC: Platform primitives (approvals, audit trail, safety)",
       "description": "Core cross-module capabilities the rest of the blueprint depends on. Focus: auditability, safety rails, and repeatable workflows.",
       "status": "done",
       "project": "blueprint",
@@ -286,7 +286,7 @@
         },
         {
           "id": "sub_003",
-          "title": "Create “execution checklist” template for tasks (inputs/outputs/rollback)",
+          "title": "Create \u201cexecution checklist\u201d template for tasks (inputs/outputs/rollback)",
           "done": true
         },
         {
@@ -309,7 +309,7 @@
     },
     {
       "id": "epic_m4_ops",
-      "title": "🛠️ EPIC: Module 4 — Ops & cost savings automation",
+      "title": "\ud83d\udee0\ufe0f EPIC: Module 4 \u2014 Ops & cost savings automation",
       "description": "Low-risk, always-on automations: monitoring, billing anomalies, subscription audit, backup verification.",
       "status": "backlog",
       "project": "m4_ops",
@@ -354,7 +354,7 @@
     {
       "id": "m4_001_openclaw_health_slo",
       "title": "Define OpenClaw health SLO + alert thresholds",
-      "description": "Specify what “healthy” means: gateway reachable, telegram OK, cron running, disk space, update window behavior. Keep alerts low-noise.",
+      "description": "Specify what \u201chealthy\u201d means: gateway reachable, telegram OK, cron running, disk space, update window behavior. Keep alerts low-noise.",
       "status": "done",
       "project": "m4_ops",
       "tags": [
@@ -362,13 +362,13 @@
         "safety"
       ],
       "priority": "high",
-      "dod": "One-page checklist + thresholds + “when to DM Chris” rules documented in workspace.",
+      "dod": "One-page checklist + thresholds + \u201cwhen to DM Chris\u201d rules documented in workspace.",
       "createdAt": "2026-02-05T23:05:13.430135Z",
       "comments": [
         {
           "id": "c1",
           "author": "Charles",
-          "text": "Drafted the one-page OpenClaw health SLO + alert thresholds (low-noise) and documented it at: OPENCLAW_HEALTH_SLO.md. Includes definitions for gateway/telegram/cron/disk/update-window and explicit “when to DM Chris” rules.",
+          "text": "Drafted the one-page OpenClaw health SLO + alert thresholds (low-noise) and documented it at: OPENCLAW_HEALTH_SLO.md. Includes definitions for gateway/telegram/cron/disk/update-window and explicit \u201cwhen to DM Chris\u201d rules.",
           "createdAt": "2026-02-05T23:11:41.345574Z"
         }
       ],
@@ -406,7 +406,7 @@
         {
           "id": "c2",
           "author": "MoltBot",
-          "text": "DRAFT (example output — no delivery):\n\nWEEKLY OPS DIGEST — 2026-01-30 → 2026-02-05 (America/Detroit)\nUptime: Gateway service running (LaunchAgent, pid 58399); RPC probe OK; gateway is loopback-only (127.0.0.1:18789).\nUpdates: Channel=stable; Update toolchain pnpm; npm latest 2026.2.3-1 (per │\n◇  Doctor warnings ───────────────────────────────────────────────────╮\n│                                                                     │\n│  - State dir migration skipped: target already exists               │\n│    (/Users/christophermartin/.openclaw). Remove or merge manually.  │\n│                                                                     │\n├─────────────────────────────────────────────────────────────────────╯\nOpenClaw status\n\nOverview\n┌─────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────┐\n│ Item            │ Value                                                                                             │\n├─────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤\n│ Dashboard       │ http://127.0.0.1:18789/                                                                           │\n│ OS              │ macos 26.2 (arm64) · node 25.5.0                                                                  │\n│ Tailscale       │ off                                                                                               │\n│ Channel         │ stable (default)                                                                                  │\n│ Update          │ pnpm · npm latest 2026.2.3-1                                                                      │\n│ Gateway         │ local · ws://127.0.0.1:18789 (local loopback) · reachable 8ms · auth token · ChristohersMini      │\n│                 │ (192.168.50.172) app unknown macos 26.2                                                           │\n│ Gateway service │ LaunchAgent installed · loaded · running (pid 58399, state active)                                │\n│ Node service    │ LaunchAgent not installed                                                                         │\n│ Agents          │ 1 · no bootstraps · sessions 14 · default main active 2m ago                                      │\n│ Memory          │ 0 files · 0 chunks · dirty · sources memory, sessions · plugin memory-core · vector ready · fts   │\n│                 │ ready · cache on (0)                                                                              │\n│ Probes          │ skipped (use --deep)                                                                              │\n│ Events          │ none                                                                                              │\n│ Heartbeat       │ 1h (main)                                                                                         │\n│ Sessions        │ 14 active · default gpt-5.2 (400k ctx) · ~/.openclaw/agents/main/sessions/sessions.json           │\n└─────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────┘\n\nSecurity audit\nSummary: 0 critical · 2 warn · 2 info\n  WARN Reverse proxy headers are not trusted\n    gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client c…\n    Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.\n  WARN Some configured models are below recommended tiers\n    Smaller/older models are generally more susceptible to prompt injection and tool misuse. - anthropic/claude-haiku-4-5 (Haiku tier (smaller model)) @ agents.def…\n    Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.\nFull report: openclaw security audit\nDeep probe: openclaw security audit --deep\n\nChannels\n┌──────────┬─────────┬────────┬───────────────────────────────────────────────────────────────────────────────────────┐\n│ Channel  │ Enabled │ State  │ Detail                                                                                │\n├──────────┼─────────┼────────┼───────────────────────────────────────────────────────────────────────────────────────┤\n│ Telegram │ ON      │ OK     │ token config (8237…38Wc · len 46) · accounts 1/1                                      │\n└──────────┴─────────┴────────┴───────────────────────────────────────────────────────────────────────────────────────┘\n\nSessions\n┌─────────────────────────────────────────────────────────────┬────────┬─────────┬──────────────────┬─────────────────┐\n│ Key                                                         │ Kind   │ Age     │ Model            │ Tokens          │\n├─────────────────────────────────────────────────────────────┼────────┼─────────┼──────────────────┼─────────────────┤\n│ agent:main:hook:mission-control…                            │ direct │ 2m ago  │ gpt-5.2          │ 0.0k/400k (0%)  │\n│ agent:main:main                                             │ direct │ 10m ago │ gpt-5.2          │ 144k/400k (36%) │\n│ agent:main:hook:mission-control…                            │ direct │ 10m ago │ gpt-5.2          │ 0.0k/400k (0%)  │\n│ agent:main:hook:mission-control…                            │ direct │ 10m ago │ gpt-5.2          │ 47k/400k (12%)  │\n│ agent:main:hook:mission-control…                            │ direct │ 10m ago │ gpt-5.2          │ 33k/400k (8%)   │\n│ agent:main:hook:mission-control…                            │ direct │ 10m ago │ gpt-5.2          │ 15k/400k (4%)   │\n│ agent:main:hook:mission-control…                            │ direct │ 10m ago │ gpt-5.2          │ 16k/400k (4%)   │\n│ agent:main:hook:mission-control…                            │ direct │ 2h ago  │ gpt-5.2          │ 18k/400k (4%)   │\n│ agent:main:hook:mission-control…                            │ direct │ 3h ago  │ gpt-5.2          │ 20k/400k (5%)   │\n│ agent:main:subagent:e531e1c0-ee…                            │ direct │ 7h ago  │ claude-haiku-4-5 │ 0.0k/200k (0%)  │\n└─────────────────────────────────────────────────────────────┴────────┴─────────┴──────────────────┴─────────────────┘\n\nFAQ: https://docs.openclaw.ai/faq\nTroubleshooting: https://docs.openclaw.ai/troubleshooting\n\nNext steps:\n  Need to share?      openclaw status --all\n  Need to debug live? openclaw logs --follow\n  Need to test channels? openclaw status --deep).\nWarnings: │\n◇  Doctor warnings ───────────────────────────────────────────────────╮\n│                                                                     │\n│  - State dir migration skipped: target already exists               │\n│    (/Users/christophermartin/.openclaw). Remove or merge manually.  │\n│                                                                     │\n├─────────────────────────────────────────────────────────────────────╯\nOpenClaw status\n\nOverview\n┌─────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────┐\n│ Item            │ Value                                                                                             │\n├─────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────┤\n│ Dashboard       │ http://127.0.0.1:18789/                                                                           │\n│ OS              │ macos 26.2 (arm64) · node 25.5.0                                                                  │\n│ Tailscale       │ off                                                                                               │\n│ Channel         │ stable (default)                                                                                  │\n│ Update          │ pnpm · npm latest 2026.2.3-1                                                                      │\n│ Gateway         │ local · ws://127.0.0.1:18789 (local loopback) · reachable 8ms · auth token · ChristohersMini      │\n│                 │ (192.168.50.172) app unknown macos 26.2                                                           │\n│ Gateway service │ LaunchAgent installed · loaded · running (pid 58399, state active)                                │\n│ Node service    │ LaunchAgent not installed                                                                         │\n│ Agents          │ 1 · no bootstraps · sessions 14 · default main active 2m ago                                      │\n│ Memory          │ 0 files · 0 chunks · dirty · sources memory, sessions · plugin memory-core · vector ready · fts   │\n│                 │ ready · cache on (0)                                                                              │\n│ Probes          │ skipped (use --deep)                                                                              │\n│ Events          │ none                                                                                              │\n│ Heartbeat       │ 1h (main)                                                                                         │\n│ Sessions        │ 14 active · default gpt-5.2 (400k ctx) · ~/.openclaw/agents/main/sessions/sessions.json           │\n└─────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────┘\n\nSecurity audit\nSummary: 0 critical · 2 warn · 2 info\n  WARN Reverse proxy headers are not trusted\n    gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client c…\n    Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.\n  WARN Some configured models are below recommended tiers\n    Smaller/older models are generally more susceptible to prompt injection and tool misuse. - anthropic/claude-haiku-4-5 (Haiku tier (smaller model)) @ agents.def…\n    Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.\nFull report: openclaw security audit\nDeep probe: openclaw security audit --deep\n\nChannels\n┌──────────┬─────────┬────────┬───────────────────────────────────────────────────────────────────────────────────────┐\n│ Channel  │ Enabled │ State  │ Detail                                                                                │\n├──────────┼─────────┼────────┼───────────────────────────────────────────────────────────────────────────────────────┤\n│ Telegram │ ON      │ OK     │ token config (8237…38Wc · len 46) · accounts 1/1                                      │\n└──────────┴─────────┴────────┴───────────────────────────────────────────────────────────────────────────────────────┘\n\nSessions\n┌─────────────────────────────────────────────────────────────┬────────┬─────────┬──────────────────┬─────────────────┐\n│ Key                                                         │ Kind   │ Age     │ Model            │ Tokens          │\n├─────────────────────────────────────────────────────────────┼────────┼─────────┼──────────────────┼─────────────────┤\n│ agent:main:hook:mission-control…                            │ direct │ 2m ago  │ gpt-5.2          │ 0.0k/400k (0%)  │\n│ agent:main:main                                             │ direct │ 10m ago │ gpt-5.2          │ 144k/400k (36%) │\n│ agent:main:hook:mission-control…                            │ direct │ 10m ago │ gpt-5.2          │ 0.0k/400k (0%)  │\n│ agent:main:hook:mission-control…                            │ direct │ 10m ago │ gpt-5.2          │ 47k/400k (12%)  │\n│ agent:main:hook:mission-control…                            │ direct │ 10m ago │ gpt-5.2          │ 33k/400k (8%)   │\n│ agent:main:hook:mission-control…                            │ direct │ 10m ago │ gpt-5.2          │ 15k/400k (4%)   │\n│ agent:main:hook:mission-control…                            │ direct │ 11m ago │ gpt-5.2          │ 16k/400k (4%)   │\n│ agent:main:hook:mission-control…                            │ direct │ 2h ago  │ gpt-5.2          │ 18k/400k (4%)   │\n│ agent:main:hook:mission-control…                            │ direct │ 3h ago  │ gpt-5.2          │ 20k/400k (5%)   │\n│ agent:main:subagent:e531e1c0-ee…                            │ direct │ 7h ago  │ claude-haiku-4-5 │ 0.0k/200k (0%)  │\n└─────────────────────────────────────────────────────────────┴────────┴─────────┴──────────────────┴─────────────────┘\n\nFAQ: https://docs.openclaw.ai/faq\nTroubleshooting: https://docs.openclaw.ai/troubleshooting\n\nNext steps:\n  Need to share?      openclaw status --all\n  Need to debug live? openclaw logs --follow\n  Need to test channels? openclaw status --deep security audit = 0 critical, 2 warn (trustedProxies empty; some models below recommended tiers). Gateway log warns hook token in URL query is deprecated (prefer Authorization/X-OpenClaw-Token).\nCost notes: Cost data not available in this run (no cost/usage exporter configured in this digest yet).\n\nIssues:\n- None detected in quick check.\n\nNext:\n- Optional hardening: set gateway.trustedProxies if/when reverse proxying the UI; update webhook callers to send token via header instead of URL query.\n",
+          "text": "DRAFT (example output \u2014 no delivery):\n\nWEEKLY OPS DIGEST \u2014 2026-01-30 \u2192 2026-02-05 (America/Detroit)\nUptime: Gateway service running (LaunchAgent, pid 58399); RPC probe OK; gateway is loopback-only (127.0.0.1:18789).\nUpdates: Channel=stable; Update toolchain pnpm; npm latest 2026.2.3-1 (per \u2502\n\u25c7  Doctor warnings \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                     \u2502\n\u2502  - State dir migration skipped: target already exists               \u2502\n\u2502    (/Users/christophermartin/.openclaw). Remove or merge manually.  \u2502\n\u2502                                                                     \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\nOpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item            \u2502 Value                                                                                             \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard       \u2502 http://127.0.0.1:18789/                                                                           \u2502\n\u2502 OS              \u2502 macos 26.2 (arm64) \u00b7 node 25.5.0                                                                  \u2502\n\u2502 Tailscale       \u2502 off                                                                                               \u2502\n\u2502 Channel         \u2502 stable (default)                                                                                  \u2502\n\u2502 Update          \u2502 pnpm \u00b7 npm latest 2026.2.3-1                                                                      \u2502\n\u2502 Gateway         \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 reachable 8ms \u00b7 auth token \u00b7 ChristohersMini      \u2502\n\u2502                 \u2502 (192.168.50.172) app unknown macos 26.2                                                           \u2502\n\u2502 Gateway service \u2502 LaunchAgent installed \u00b7 loaded \u00b7 running (pid 58399, state active)                                \u2502\n\u2502 Node service    \u2502 LaunchAgent not installed                                                                         \u2502\n\u2502 Agents          \u2502 1 \u00b7 no bootstraps \u00b7 sessions 14 \u00b7 default main active 2m ago                                      \u2502\n\u2502 Memory          \u2502 0 files \u00b7 0 chunks \u00b7 dirty \u00b7 sources memory, sessions \u00b7 plugin memory-core \u00b7 vector ready \u00b7 fts   \u2502\n\u2502                 \u2502 ready \u00b7 cache on (0)                                                                              \u2502\n\u2502 Probes          \u2502 skipped (use --deep)                                                                              \u2502\n\u2502 Events          \u2502 none                                                                                              \u2502\n\u2502 Heartbeat       \u2502 1h (main)                                                                                         \u2502\n\u2502 Sessions        \u2502 14 active \u00b7 default gpt-5.2 (400k ctx) \u00b7 ~/.openclaw/agents/main/sessions/sessions.json           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\nSecurity audit\nSummary: 0 critical \u00b7 2 warn \u00b7 2 info\n  WARN Reverse proxy headers are not trusted\n    gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client c\u2026\n    Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.\n  WARN Some configured models are below recommended tiers\n    Smaller/older models are generally more susceptible to prompt injection and tool misuse. - anthropic/claude-haiku-4-5 (Haiku tier (smaller model)) @ agents.def\u2026\n    Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.\nFull report: openclaw security audit\nDeep probe: openclaw security audit --deep\n\nChannels\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Channel  \u2502 Enabled \u2502 State  \u2502 Detail                                                                                \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Telegram \u2502 ON      \u2502 OK     \u2502 token config (8237\u202638Wc \u00b7 len 46) \u00b7 accounts 1/1                                      \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\nSessions\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Key                                                         \u2502 Kind   \u2502 Age     \u2502 Model            \u2502 Tokens          \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 2m ago  \u2502 gpt-5.2          \u2502 0.0k/400k (0%)  \u2502\n\u2502 agent:main:main                                             \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 144k/400k (36%) \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 0.0k/400k (0%)  \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 47k/400k (12%)  \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 33k/400k (8%)   \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 15k/400k (4%)   \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 16k/400k (4%)   \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 2h ago  \u2502 gpt-5.2          \u2502 18k/400k (4%)   \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 3h ago  \u2502 gpt-5.2          \u2502 20k/400k (5%)   \u2502\n\u2502 agent:main:subagent:e531e1c0-ee\u2026                            \u2502 direct \u2502 7h ago  \u2502 claude-haiku-4-5 \u2502 0.0k/200k (0%)  \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\nFAQ: https://docs.openclaw.ai/faq\nTroubleshooting: https://docs.openclaw.ai/troubleshooting\n\nNext steps:\n  Need to share?      openclaw status --all\n  Need to debug live? openclaw logs --follow\n  Need to test channels? openclaw status --deep).\nWarnings: \u2502\n\u25c7  Doctor warnings \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502                                                                     \u2502\n\u2502  - State dir migration skipped: target already exists               \u2502\n\u2502    (/Users/christophermartin/.openclaw). Remove or merge manually.  \u2502\n\u2502                                                                     \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256f\nOpenClaw status\n\nOverview\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Item            \u2502 Value                                                                                             \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Dashboard       \u2502 http://127.0.0.1:18789/                                                                           \u2502\n\u2502 OS              \u2502 macos 26.2 (arm64) \u00b7 node 25.5.0                                                                  \u2502\n\u2502 Tailscale       \u2502 off                                                                                               \u2502\n\u2502 Channel         \u2502 stable (default)                                                                                  \u2502\n\u2502 Update          \u2502 pnpm \u00b7 npm latest 2026.2.3-1                                                                      \u2502\n\u2502 Gateway         \u2502 local \u00b7 ws://127.0.0.1:18789 (local loopback) \u00b7 reachable 8ms \u00b7 auth token \u00b7 ChristohersMini      \u2502\n\u2502                 \u2502 (192.168.50.172) app unknown macos 26.2                                                           \u2502\n\u2502 Gateway service \u2502 LaunchAgent installed \u00b7 loaded \u00b7 running (pid 58399, state active)                                \u2502\n\u2502 Node service    \u2502 LaunchAgent not installed                                                                         \u2502\n\u2502 Agents          \u2502 1 \u00b7 no bootstraps \u00b7 sessions 14 \u00b7 default main active 2m ago                                      \u2502\n\u2502 Memory          \u2502 0 files \u00b7 0 chunks \u00b7 dirty \u00b7 sources memory, sessions \u00b7 plugin memory-core \u00b7 vector ready \u00b7 fts   \u2502\n\u2502                 \u2502 ready \u00b7 cache on (0)                                                                              \u2502\n\u2502 Probes          \u2502 skipped (use --deep)                                                                              \u2502\n\u2502 Events          \u2502 none                                                                                              \u2502\n\u2502 Heartbeat       \u2502 1h (main)                                                                                         \u2502\n\u2502 Sessions        \u2502 14 active \u00b7 default gpt-5.2 (400k ctx) \u00b7 ~/.openclaw/agents/main/sessions/sessions.json           \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\nSecurity audit\nSummary: 0 critical \u00b7 2 warn \u00b7 2 info\n  WARN Reverse proxy headers are not trusted\n    gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client c\u2026\n    Fix: Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only.\n  WARN Some configured models are below recommended tiers\n    Smaller/older models are generally more susceptible to prompt injection and tool misuse. - anthropic/claude-haiku-4-5 (Haiku tier (smaller model)) @ agents.def\u2026\n    Fix: Use the latest, top-tier model for any bot with tools or untrusted inboxes. Avoid Haiku tiers; prefer GPT-5+ and Claude 4.5+.\nFull report: openclaw security audit\nDeep probe: openclaw security audit --deep\n\nChannels\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Channel  \u2502 Enabled \u2502 State  \u2502 Detail                                                                                \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 Telegram \u2502 ON      \u2502 OK     \u2502 token config (8237\u202638Wc \u00b7 len 46) \u00b7 accounts 1/1                                      \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\nSessions\n\u250c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u252c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2510\n\u2502 Key                                                         \u2502 Kind   \u2502 Age     \u2502 Model            \u2502 Tokens          \u2502\n\u251c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u253c\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2524\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 2m ago  \u2502 gpt-5.2          \u2502 0.0k/400k (0%)  \u2502\n\u2502 agent:main:main                                             \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 144k/400k (36%) \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 0.0k/400k (0%)  \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 47k/400k (12%)  \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 33k/400k (8%)   \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 10m ago \u2502 gpt-5.2          \u2502 15k/400k (4%)   \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 11m ago \u2502 gpt-5.2          \u2502 16k/400k (4%)   \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 2h ago  \u2502 gpt-5.2          \u2502 18k/400k (4%)   \u2502\n\u2502 agent:main:hook:mission-control\u2026                            \u2502 direct \u2502 3h ago  \u2502 gpt-5.2          \u2502 20k/400k (5%)   \u2502\n\u2502 agent:main:subagent:e531e1c0-ee\u2026                            \u2502 direct \u2502 7h ago  \u2502 claude-haiku-4-5 \u2502 0.0k/200k (0%)  \u2502\n\u2514\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2534\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2518\n\nFAQ: https://docs.openclaw.ai/faq\nTroubleshooting: https://docs.openclaw.ai/troubleshooting\n\nNext steps:\n  Need to share?      openclaw status --all\n  Need to debug live? openclaw logs --follow\n  Need to test channels? openclaw status --deep security audit = 0 critical, 2 warn (trustedProxies empty; some models below recommended tiers). Gateway log warns hook token in URL query is deprecated (prefer Authorization/X-OpenClaw-Token).\nCost notes: Cost data not available in this run (no cost/usage exporter configured in this digest yet).\n\nIssues:\n- None detected in quick check.\n\nNext:\n- Optional hardening: set gateway.trustedProxies if/when reverse proxying the UI; update webhook callers to send token via header instead of URL query.\n",
           "createdAt": "2026-02-05T20:29:42.517795Z"
         }
       ],
@@ -423,7 +423,7 @@
     },
     {
       "id": "epic_m2_aas",
-      "title": "🏢 EPIC: Module 2 — Automation-as-a-Service (MVP)",
+      "title": "\ud83c\udfe2 EPIC: Module 2 \u2014 Automation-as-a-Service (MVP)",
       "description": "Multi-tenant assistant offering email/calendar triage with approvals + audit trail. Start by dogfooding on your own inbox.",
       "status": "in_progress",
       "project": "m2_aas",
@@ -433,7 +433,7 @@
         "security"
       ],
       "priority": "medium",
-      "dod": "Single-tenant MVP running on Chris’s own accounts with clear isolation plan and rollback.",
+      "dod": "Single-tenant MVP running on Chris\u2019s own accounts with clear isolation plan and rollback.",
       "createdAt": "2026-02-05T23:05:13.430135Z",
       "subtasks": [],
       "comments": [],
@@ -448,7 +448,7 @@
     {
       "id": "m2_001_tenant_model",
       "title": "Design tenant model + credential isolation plan",
-      "description": "Define what a “tenant” is (config, auth profiles, storage paths, tool allowlists). Include threat model + data separation approach.",
+      "description": "Define what a \u201ctenant\u201d is (config, auth profiles, storage paths, tool allowlists). Include threat model + data separation approach.",
       "status": "backlog",
       "project": "m2_aas",
       "tags": [
@@ -470,8 +470,8 @@
     },
     {
       "id": "epic_m3_factory",
-      "title": "🏭 EPIC: Module 3 — Digital product factory",
-      "description": "Repeatable pipeline: research → generate → QA → publish → iterate. Start with one product type (templates or web tool).",
+      "title": "\ud83c\udfed EPIC: Module 3 \u2014 Digital product factory",
+      "description": "Repeatable pipeline: research \u2192 generate \u2192 QA \u2192 publish \u2192 iterate. Start with one product type (templates or web tool).",
       "status": "backlog",
       "project": "m3_factory",
       "tags": [
@@ -522,7 +522,7 @@
     },
     {
       "id": "epic_m1_investing",
-      "title": "📈 EPIC: Module 1 — Investing automation (alerts → paper → approvals)",
+      "title": "\ud83d\udcc8 EPIC: Module 1 \u2014 Investing automation (alerts \u2192 paper \u2192 approvals)",
       "description": "Market intelligence + portfolio monitoring with explicit approvals. Execution comes last. Start with read-only + paper trading + journaling.",
       "status": "done",
       "project": "m1_investing",
@@ -606,8 +606,8 @@
     },
     {
       "id": "epic_m5_real_estate",
-      "title": "🏠 EPIC: Module 5 — Real Estate (First home in Holly MI area)",
-      "description": "End-to-end first-home workflow: define budget + criteria, get pre-approved, build neighborhood shortlist, listing triage, touring, offer prep, and closing checklist.\n\n**Location:** Holly, MI area (preferred)\n**Must-haves:** garage, 2 bathrooms, secluded\n**Dealbreakers:** no yard OR no trees (must have yard + trees)\n\nSafety: agent researches/organizes; Chris approves all financial/legal actions.",
+      "title": "\ud83c\udfe0 EPIC: Module 5 \u2014 Real Estate (First home in Holly/Fenton MI area)",
+      "description": "End-to-end first-home workflow: define budget + criteria, get pre-approved, build neighborhood shortlist, listing triage, touring, offer prep, and closing checklist.\n\n**Location:** Holly/Fenton, MI area (preferred)\n**Must-haves:** garage, 2 bathrooms, secluded\n**Dealbreakers:** no yard OR no trees (must have yard + trees)\n\nSafety: agent researches/organizes; Chris approves all financial/legal actions.",
       "status": "backlog",
       "project": "m5_real_estate",
       "tags": [
@@ -653,7 +653,7 @@
     {
       "id": "m5_002_lender_shortlist",
       "title": "Build lender shortlist (local + online) + comparison table",
-      "description": "Identify 5–8 lenders, collect: rate, points, lender fees, timeline, communication, pre-approval requirements. Prepare outreach script/email.",
+      "description": "Identify 5\u20138 lenders, collect: rate, points, lender fees, timeline, communication, pre-approval requirements. Prepare outreach script/email.",
       "status": "done",
       "project": "m5_real_estate",
       "tags": [
@@ -666,7 +666,7 @@
         {
           "id": "c1",
           "author": "MoltBot",
-          "text": "Created lender shortlist + comparison template and outreach scripts. Added file: mission-control-board/data/m5_002_lender_shortlist.md. Includes 8 lenders (local CUs + MI banks + online), apples-to-apples LE request checklist, suggested initial benchmark pair (one CU + Rocket), and email/phone outreach templates. Next step: request same-day Loan Estimates from 3–5 lenders using the provided template; then normalize APR + lender fees to pick the true top 2.",
+          "text": "Created lender shortlist + comparison template and outreach scripts. Added file: mission-control-board/data/m5_002_lender_shortlist.md. Includes 8 lenders (local CUs + MI banks + online), apples-to-apples LE request checklist, suggested initial benchmark pair (one CU + Rocket), and email/phone outreach templates. Next step: request same-day Loan Estimates from 3\u20135 lenders using the provided template; then normalize APR + lender fees to pick the true top 2.",
           "createdAt": "2026-02-05T20:23:41.267413Z"
         }
       ],
@@ -705,7 +705,7 @@
     },
     {
       "id": "m5_004_realtor_shortlist",
-      "title": "Build realtor shortlist for Holly MI area + interview questions",
+      "title": "Build realtor shortlist for Holly/Fenton MI area + interview questions",
       "description": "Find 5 candidates, prep interview: local expertise, negotiation style, availability, preferred lenders/inspectors, experience with wooded lots/secluded properties.",
       "status": "done",
       "project": "m5_real_estate",
@@ -719,7 +719,7 @@
         {
           "id": "c_1770341050194",
           "author": "MoltBot",
-          "text": "🤖 Processing started",
+          "text": "\ud83e\udd16 Processing started",
           "createdAt": "2026-02-05T20:24:10.194994Z"
         },
         {
@@ -749,7 +749,7 @@
     {
       "id": "m5_005_search_criteria_and_scoring",
       "title": "Define listing search criteria + scoring rubric (must/should/nice)",
-      "description": "Turn must-haves/dealbreakers into filters and a scoring rubric: lot size/trees/privacy, garage, baths, commute, taxes, HOA, condition, internet availability, etc. Include a “red flag” list.",
+      "description": "Turn must-haves/dealbreakers into filters and a scoring rubric: lot size/trees/privacy, garage, baths, commute, taxes, HOA, condition, internet availability, etc. Include a \u201cred flag\u201d list.",
       "status": "done",
       "project": "m5_real_estate",
       "tags": [
@@ -762,7 +762,7 @@
         {
           "id": "c1",
           "author": "MoltBot",
-          "text": "Rubric drafted and saved: mission-control-board/data/m5_005_listing_scoring_rubric.md. Includes: must-have dealbreaker filters (commute, lot/privacy, garage/baths, condition, internet, taxes/HOA), 0–100 weighted scoring (Location 25, Lot 20, Layout 15, Condition 15, Financial 15, HOA 5, Internet 5, Bonus 5), red-flag list, and a copy/paste scorecard template.",
+          "text": "Rubric drafted and saved: mission-control-board/data/m5_005_listing_scoring_rubric.md. Includes: must-have dealbreaker filters (commute, lot/privacy, garage/baths, condition, internet, taxes/HOA), 0\u2013100 weighted scoring (Location 25, Lot 20, Layout 15, Condition 15, Financial 15, HOA 5, Internet 5, Bonus 5), red-flag list, and a copy/paste scorecard template.",
           "createdAt": "2026-02-05T20:20:31.505283Z"
         }
       ],
@@ -779,7 +779,7 @@
     },
     {
       "id": "m5_006_neighborhood_watchlist",
-      "title": "Neighborhood/area watchlist around Holly (within X-minute radius)",
+      "title": "Neighborhood/area watchlist around Holly & Fenton (within X-minute radius)",
       "description": "Define search radius and build an area watchlist (townships/areas) that fit secluded/trees/yard preference. Include property tax notes + utilities/internet considerations.",
       "status": "in_progress",
       "project": "m5_real_estate",
@@ -801,8 +801,8 @@
     },
     {
       "id": "m5_007_listing_intake_workflow",
-      "title": "Listing intake workflow (send links → get a scored summary back)",
-      "description": "Define a standard format for you to paste listing links. Output: extracted facts, scored rubric, questions to ask, and “tour yes/no”.",
+      "title": "Listing intake workflow (send links \u2192 get a scored summary back)",
+      "description": "Define a standard format for you to paste listing links. Output: extracted facts, scored rubric, questions to ask, and \u201ctour yes/no\u201d.",
       "status": "backlog",
       "project": "m5_real_estate",
       "tags": [
@@ -855,7 +855,7 @@
     {
       "id": "m5_009_offer_playbook",
       "title": "Offer playbook (contingencies, inspection strategy, escalation policy)",
-      "description": "Define default contingencies, earnest money policy, inspection priorities, and when you’d waive/not waive items. Agent drafts; you approve and realtor executes.",
+      "description": "Define default contingencies, earnest money policy, inspection priorities, and when you\u2019d waive/not waive items. Agent drafts; you approve and realtor executes.",
       "status": "backlog",
       "project": "m5_real_estate",
       "tags": [
@@ -1079,62 +1079,62 @@
       "id": "blueprint",
       "name": "Blueprint",
       "color": "#8b5cf6",
-      "icon": "🧩"
+      "icon": "\ud83e\udde9"
     },
     {
       "id": "default",
       "name": "My Project",
       "color": "#3b82f6",
-      "icon": "📁"
+      "icon": "\ud83d\udcc1"
     },
     {
       "id": "guides",
       "name": "Guides",
       "color": "#10b981",
-      "icon": "📚"
+      "icon": "\ud83d\udcda"
     },
     {
       "id": "m1_investing",
-      "name": "Module 1 — Investing",
+      "name": "Module 1 \u2014 Investing",
       "color": "#ef4444",
-      "icon": "📈"
+      "icon": "\ud83d\udcc8"
     },
     {
       "id": "m2_aas",
-      "name": "Module 2 — Automation-as-a-Service",
+      "name": "Module 2 \u2014 Automation-as-a-Service",
       "color": "#06b6d4",
-      "icon": "🏢"
+      "icon": "\ud83c\udfe2"
     },
     {
       "id": "m3_factory",
-      "name": "Module 3 — Product Factory",
+      "name": "Module 3 \u2014 Product Factory",
       "color": "#22c55e",
-      "icon": "🏭"
+      "icon": "\ud83c\udfed"
     },
     {
       "id": "m4_ops",
-      "name": "Module 4 — Ops & Savings",
+      "name": "Module 4 \u2014 Ops & Savings",
       "color": "#f97316",
-      "icon": "🛠️"
+      "icon": "\ud83d\udee0\ufe0f"
     },
     {
       "id": "m5_real_estate",
-      "name": "Module 5 — Real Estate (First Home)",
+      "name": "Module 5 \u2014 Real Estate (First Home)",
       "color": "#14b8a6",
-      "icon": "🏠"
+      "icon": "\ud83c\udfe0"
     }
   ],
   "activities": [
     {
       "type": "archive",
       "actor": "chris24martin",
-      "task": "📈 EPIC: Module 1 — Investing automation (alerts → paper → approvals)",
+      "task": "\ud83d\udcc8 EPIC: Module 1 \u2014 Investing automation (alerts \u2192 paper \u2192 approvals)",
       "time": "just now"
     },
     {
       "type": "archive",
       "actor": "chris24martin",
-      "task": "🧩 EPIC: Platform primitives (approvals, audit trail, safety)",
+      "task": "\ud83e\udde9 EPIC: Platform primitives (approvals, audit trail, safety)",
       "time": "just now"
     },
     {
@@ -1216,7 +1216,7 @@
     {
       "type": "moved",
       "actor": "chris24martin",
-      "task": "🛠️ EPIC: Module 4 — Ops & cost savings automation",
+      "task": "\ud83d\udee0\ufe0f EPIC: Module 4 \u2014 Ops & cost savings automation",
       "from": "in_progress",
       "to": "backlog",
       "time": "just now"
@@ -1224,7 +1224,7 @@
     {
       "type": "moved",
       "actor": "chris24martin",
-      "task": "📈 EPIC: Module 1 — Investing automation (alerts → paper → approvals)",
+      "task": "\ud83d\udcc8 EPIC: Module 1 \u2014 Investing automation (alerts \u2192 paper \u2192 approvals)",
       "from": "backlog",
       "to": "in_progress",
       "time": "just now"
@@ -1232,7 +1232,7 @@
     {
       "type": "moved",
       "actor": "chris24martin",
-      "task": "🛠️ EPIC: Module 4 — Ops & cost savings automation",
+      "task": "\ud83d\udee0\ufe0f EPIC: Module 4 \u2014 Ops & cost savings automation",
       "from": "backlog",
       "to": "in_progress",
       "time": "just now"
