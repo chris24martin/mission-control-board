@@ -7629,7 +7629,7 @@
                     errorDiv.style.display = 'block';
                 }
             } catch (e) {
-                errorDiv.textContent = 'Connection error. Please try again.';
+                errorDiv.textContent = 'Connection error: ' + (e.message || 'Network request failed. Check your internet or try a classic token (ghp_...).');
                 errorDiv.style.display = 'block';
             } finally {
                 loadingDiv.style.display = 'none';
