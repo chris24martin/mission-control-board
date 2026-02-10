@@ -3630,24 +3630,24 @@
         }
 
         // === AUTH FUNCTIONS ===
-        function showAuthModal() {
+        window.showAuthModal = function() {
             document.getElementById('auth-modal').classList.add('visible');
             document.getElementById('token-input').focus();
         }
 
-        function hideAuthModal() {
+        window.hideAuthModal = function() {
             document.getElementById('auth-modal').classList.remove('visible');
             document.getElementById('token-input').value = '';
             hideValidationStates();
         }
 
-        function hideValidationStates() {
+        window.hideValidationStates = function() {
             document.getElementById('validation-loading').classList.remove('visible');
             document.getElementById('validation-success').classList.remove('visible');
             document.getElementById('validation-error').classList.remove('visible');
         }
 
-        async function validateAndSaveToken() {
+        window.validateAndSaveToken = async function() {
             const token = document.getElementById('token-input').value.trim();
 
             if (!token) {
@@ -3716,7 +3716,7 @@
             }
         }
 
-        function showValidationError(message) {
+        window.showValidationError = function(message) {
             document.getElementById('validation-loading').classList.remove('visible');
             document.getElementById('validation-error').classList.add('visible');
             document.getElementById('error-message').textContent = message;
@@ -3739,7 +3739,7 @@
             updateAuthUI();
         }
 
-        window.logout = function logout() {
+        window.logout = window.logout = function() {
             localStorage.removeItem('github_token');
             localStorage.removeItem('github_user');
             // legacy key cleanup
@@ -3756,7 +3756,7 @@
             showToast('success', 'Logged out');
         }
 
-        function updateAuthUI() {
+        window.updateAuthUI = function() {
             const connectBtn = document.getElementById('btn-connect');
             const userProfile = document.getElementById('user-profile');
 
@@ -5771,7 +5771,7 @@
         }
 
         // === VIEW SWITCHING ===
-        function switchView(viewName) {
+        window.switchView = function(viewName) {
             // Hide all views
             document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
             document.querySelectorAll('.view').forEach(v => v.style.display = 'none');
