@@ -2956,7 +2956,7 @@
         };
 
         // === STATE ===
-        let STATE = {
+        window.STATE = {
             user: null,
             token: null,
             data: null,  // Loaded from GitHub or fallback
@@ -3372,7 +3372,7 @@
             return null;
         }
 
-        async function loadTasksFromGitHub() {
+        window.loadTasksFromGitHub = async function() {
             if (!STATE.token) {
                 console.log('No token, trying localStorage then fallback');
                 const cached = loadFromLocalStorage();
@@ -3491,7 +3491,7 @@
             }
         }
 
-        function renderAll() {
+        window.renderAll = function() {
             renderFilters();
             renderTasks();
             renderCrons();
@@ -3504,7 +3504,7 @@
         }
 
         // === CRON RENDERING ===
-        async function loadCronsFromGitHub() {
+        window.loadCronsFromGitHub = async function() {
             try {
                 const token = STATE.token || localStorage.getItem('gh_token');
                 const response = await fetch(
