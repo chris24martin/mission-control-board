@@ -7,24 +7,11 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-12T17:15:45.249000+00:00",
-      "lastRunAt": "2026-02-12T16:15:45.266000+00:00",
+      "nextRunAt": "2026-02-12T23:15:45.249000+00:00",
+      "lastRunAt": "2026-02-12T22:15:45.264000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 14,
+      "lastDurationMs": 13,
       "sessionTarget": "main"
-    },
-    {
-      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
-      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "15 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-12T23:15:00+00:00",
-      "lastRunAt": "2026-02-12T11:15:00.013000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 9872,
-      "sessionTarget": "isolated"
     },
     {
       "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
@@ -37,6 +24,19 @@
       "lastRunAt": "2026-02-12T04:00:00.014000+00:00",
       "lastStatus": "error",
       "lastDurationMs": 600021,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
+      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "15 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-13T05:15:00+00:00",
+      "lastRunAt": "2026-02-12T17:15:00.019000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 9465,
       "sessionTarget": "isolated"
     },
     {
@@ -79,6 +79,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "ed6086a3-89fa-4dc4-81c8-82999b833ac3",
+      "name": "sonnet-polish",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "15 3 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-13T08:15:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "9c845d48-ddac-417e-a617-aa9efdc05228",
       "name": "Morning brief (4am ET)",
       "enabled": true,
@@ -89,6 +102,19 @@
       "lastRunAt": "2026-02-12T09:00:00.013000+00:00",
       "lastStatus": "error",
       "lastDurationMs": 600021,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "93afe997-49d8-4285-8b8f-b7c7ac3c1694",
+      "name": "goal-tasks-daily",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 7 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-13T12:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
       "sessionTarget": "isolated"
     },
     {
@@ -275,5 +301,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-12T17:15:06.578756+00:00"
+  "lastSyncedAt": "2026-02-12T23:15:05.352121+00:00"
 }
