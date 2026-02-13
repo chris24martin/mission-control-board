@@ -7,37 +7,11 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-12T23:15:45.249000+00:00",
-      "lastRunAt": "2026-02-12T22:15:45.264000+00:00",
+      "nextRunAt": "2026-02-13T05:15:45.249000+00:00",
+      "lastRunAt": "2026-02-13T04:15:45.265000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 13,
+      "lastDurationMs": 12,
       "sessionTarget": "main"
-    },
-    {
-      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
-      "name": "Nightly memory summarization",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-13T04:00:00+00:00",
-      "lastRunAt": "2026-02-12T04:00:00.014000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 600021,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
-      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "15 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-13T05:15:00+00:00",
-      "lastRunAt": "2026-02-12T17:15:00.019000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 9465,
-      "sessionTarget": "isolated"
     },
     {
       "id": "14136695-6c57-4af1-8f1e-06cccda5ccf2",
@@ -92,6 +66,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "5be075f2-f477-438b-a2bf-83bff12358e6",
+      "name": "CRM daily ingest",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 3 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-13T08:30:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "9c845d48-ddac-417e-a617-aa9efdc05228",
       "name": "Morning brief (4am ET)",
       "enabled": true,
@@ -105,6 +92,32 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
+      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "15 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-13T11:15:00+00:00",
+      "lastRunAt": "2026-02-12T23:15:00.016000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 8372,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "f4dd4640-8f7d-4194-8b44-227061915891",
+      "name": "Daily meeting prep",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-13T11:30:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "93afe997-49d8-4285-8b8f-b7c7ac3c1694",
       "name": "goal-tasks-daily",
       "enabled": true,
@@ -112,6 +125,19 @@
       "schedule": "0 7 * * *",
       "timezone": "America/Detroit",
       "nextRunAt": "2026-02-13T12:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "ae8699b5-21d0-41dd-bd4e-c9bd7e185343",
+      "name": "WSB & Reddit investment monitor",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "15 7 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-13T12:15:00+00:00",
       "lastRunAt": null,
       "lastStatus": null,
       "lastDurationMs": null,
@@ -129,6 +155,19 @@
       "lastStatus": "ok",
       "lastDurationMs": 27147,
       "sessionTarget": "main"
+    },
+    {
+      "id": "41b24e55-5625-436d-9940-066b2c47ca5b",
+      "name": "Reminder: Sync Comerica Outlook to Google Calendar",
+      "enabled": true,
+      "scheduleKind": "at",
+      "schedule": "2026-02-13T14:00:00.000Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-13T14:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
     },
     {
       "id": "0f28e648-7519-433f-b31c-8abecdfb4365",
@@ -154,6 +193,19 @@
       "lastRunAt": "2026-02-12T15:00:00.014000+00:00",
       "lastStatus": "error",
       "lastDurationMs": 120025,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
+      "name": "Nightly memory summarization",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-14T04:00:00+00:00",
+      "lastRunAt": "2026-02-13T04:00:00.005000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 83875,
       "sessionTarget": "isolated"
     },
     {
@@ -190,6 +242,32 @@
       "schedule": "0 22 * * 0",
       "timezone": "America/Detroit",
       "nextRunAt": "2026-02-16T03:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "314d53c6-d646-4c7a-ba4a-94036547e66e",
+      "name": "Weekly embedding update",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * 0",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T04:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "5e4ac1d2-6591-4d37-8038-ac22e54e5135",
+      "name": "Weekly usage report",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 7 * * 1",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T12:30:00+00:00",
       "lastRunAt": null,
       "lastStatus": null,
       "lastDurationMs": null,
@@ -237,6 +315,32 @@
     {
       "id": "a9af4277-3fcb-416e-a386-8b9b4c5de82e",
       "name": "Weekly Nate B Jones monitor",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 8 * * 1",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T13:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "a7bdb573-ed71-4c3e-a283-b0aef5c6ecd2",
+      "name": "Weekly Matthew Berman monitor",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 8 * * 1",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T13:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "e0ba41cc-3ff5-4dd1-a208-d3e395c26c02",
+      "name": "Weekly Dave Shap monitor",
       "enabled": true,
       "scheduleKind": "cron",
       "schedule": "0 8 * * 1",
@@ -301,5 +405,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-12T23:15:05.352121+00:00"
+  "lastSyncedAt": "2026-02-13T05:15:06.156942+00:00"
 }
