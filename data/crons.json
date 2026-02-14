@@ -33,50 +33,11 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-14T17:15:45.249000+00:00",
-      "lastRunAt": "2026-02-14T16:15:45.262000+00:00",
+      "nextRunAt": "2026-02-14T23:15:45.249000+00:00",
+      "lastRunAt": "2026-02-14T22:15:45.266000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 8,
+      "lastDurationMs": 10,
       "sessionTarget": "main"
-    },
-    {
-      "id": "d3aa9e73-5a61-4b3c-950d-d22a69711bf9",
-      "name": "Reminder: Sign into Amazon in debug Chrome",
-      "enabled": true,
-      "scheduleKind": "at",
-      "schedule": "2026-02-14T18:00:00.000Z",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-14T18:00:00+00:00",
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
-      "sessionTarget": "main"
-    },
-    {
-      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
-      "name": "Auto snapshot (every 6h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-14T23:00:00+00:00",
-      "lastRunAt": "2026-02-14T17:00:00.025000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 7570,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
-      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "15 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-14T23:15:00+00:00",
-      "lastRunAt": "2026-02-14T11:15:00.014000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 8814,
-      "sessionTarget": "isolated"
     },
     {
       "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
@@ -102,6 +63,32 @@
       "lastRunAt": "2026-02-14T04:00:00.030000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 5832,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-15T05:00:00+00:00",
+      "lastRunAt": "2026-02-14T23:00:00.025000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 7743,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
+      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "15 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-15T05:15:00+00:00",
+      "lastRunAt": "2026-02-14T17:15:00.019000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 7237,
       "sessionTarget": "isolated"
     },
     {
@@ -313,6 +300,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "41896a10-132c-494f-9aaf-32f24eb29355",
+      "name": "Remind Chris: Install Claude Code on LM Studio server",
+      "enabled": true,
+      "scheduleKind": "at",
+      "schedule": "2026-02-15T15:00:00.000Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-15T15:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "main"
+    },
+    {
       "id": "cc478995-7ede-454d-b023-3c602038a617",
       "name": "Topic Monitor weekly digest (Sun 6pm)",
       "enabled": true,
@@ -495,6 +495,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "0dda3f94-e0c4-474d-a090-42221ebb1f5b",
+      "name": "Weekly Alex Ziskind monitor",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 8 * * 1",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T13:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "4452b490-bf9a-46d0-9bad-94008fdd5c7e",
       "name": "skill-scanner-weekly",
       "enabled": true,
@@ -652,5 +665,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-14T17:15:04.039154+00:00"
+  "lastSyncedAt": "2026-02-14T23:15:05.517727+00:00"
 }
