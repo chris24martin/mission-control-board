@@ -7,37 +7,11 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-13T18:15:45.249000+00:00",
-      "lastRunAt": "2026-02-13T17:50:56.122000+00:00",
+      "nextRunAt": "2026-02-14T05:15:45.249000+00:00",
+      "lastRunAt": "2026-02-14T04:15:45.265000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 0,
+      "lastDurationMs": 8,
       "sessionTarget": "main"
-    },
-    {
-      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
-      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "15 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-13T23:15:00+00:00",
-      "lastRunAt": "2026-02-13T17:50:56.123000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 25615,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
-      "name": "Nightly memory summarization",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-14T04:00:00+00:00",
-      "lastRunAt": "2026-02-13T04:00:00.005000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 83875,
-      "sessionTarget": "isolated"
     },
     {
       "id": "14136695-6c57-4af1-8f1e-06cccda5ccf2",
@@ -105,19 +79,6 @@
       "sessionTarget": "isolated"
     },
     {
-      "id": "9c845d48-ddac-417e-a617-aa9efdc05228",
-      "name": "Morning brief (4am ET)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 4 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-14T09:00:00+00:00",
-      "lastRunAt": "2026-02-13T09:00:00.016000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 63214,
-      "sessionTarget": "isolated"
-    },
-    {
       "id": "937a6726-4d5e-4698-a41a-c5405ff6ae1b",
       "name": "Rotate Anthropic API keys",
       "enabled": true,
@@ -128,6 +89,32 @@
       "lastRunAt": null,
       "lastStatus": null,
       "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-14T11:00:00+00:00",
+      "lastRunAt": "2026-02-14T05:00:00.014000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 12324,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
+      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "15 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-14T11:15:00+00:00",
+      "lastRunAt": "2026-02-13T23:15:00.020000+00:00",
+      "lastStatus": "error",
+      "lastDurationMs": 18,
       "sessionTarget": "isolated"
     },
     {
@@ -154,6 +141,19 @@
       "lastRunAt": "2026-02-13T12:22:31.835000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 68161,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "879987c8-03d3-45ae-9417-84f5a4c3a169",
+      "name": "Morning brief (Sat 7am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 7 * * 6",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-14T12:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
       "sessionTarget": "isolated"
     },
     {
@@ -222,6 +222,71 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "8854ed8f-b3a7-4d5d-9961-eb33d3d94e1d",
+      "name": "Pi 5 + Claude Phone setup day",
+      "enabled": true,
+      "scheduleKind": "at",
+      "schedule": "2026-02-14T15:00:00.000Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-14T15:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "main"
+    },
+    {
+      "id": "c6fd6b4f-582a-41a0-bd17-774d82db083f",
+      "name": "Reminder: Send Comerica job description",
+      "enabled": true,
+      "scheduleKind": "at",
+      "schedule": "2026-02-14T17:00:00.000Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-14T17:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "d3aa9e73-5a61-4b3c-950d-d22a69711bf9",
+      "name": "Reminder: Sign into Amazon in debug Chrome",
+      "enabled": true,
+      "scheduleKind": "at",
+      "schedule": "2026-02-14T18:00:00.000Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-14T18:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "main"
+    },
+    {
+      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
+      "name": "Nightly memory summarization",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-15T04:00:00+00:00",
+      "lastRunAt": "2026-02-14T04:00:00.018000+00:00",
+      "lastStatus": "error",
+      "lastDurationMs": 12,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "c061294c-cae6-4568-82cb-8ece1810081c",
+      "name": "Daily DB backup + git commit",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-15T04:00:00+00:00",
+      "lastRunAt": "2026-02-14T04:00:00.030000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 5832,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "9793c1f0-06e1-4058-95e9-f1edcc90e268",
       "name": "API key rotation reminder (Feb 15)",
       "enabled": true,
@@ -229,6 +294,19 @@
       "schedule": "2026-02-15T10:00:00.000Z",
       "timezone": "America/Detroit",
       "nextRunAt": "2026-02-15T10:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "24c22e59-ba7a-43b1-8f42-72bd3a10d9b2",
+      "name": "Morning brief (Sun 7am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 7 * * 0",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-15T12:00:00+00:00",
       "lastRunAt": null,
       "lastStatus": null,
       "lastDurationMs": null,
@@ -268,6 +346,19 @@
       "schedule": "0 23 * * 0",
       "timezone": "America/Detroit",
       "nextRunAt": "2026-02-16T04:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "5b90671d-ffdc-4030-95fa-beb8aa4c01ab",
+      "name": "Morning brief (Mon 6:30am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 6 * * 1",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T11:30:00+00:00",
       "lastRunAt": null,
       "lastStatus": null,
       "lastDurationMs": null,
@@ -365,6 +456,32 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "cbc8eb6b-24ca-442b-82bb-df2306d32300",
+      "name": "Weekly Outlook ICS Re-Export Reminder",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 8 * * 1",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T13:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "main"
+    },
+    {
+      "id": "b5cb1b21-378a-458d-bb6b-c6f6bde0518e",
+      "name": "Weekly A Life After Layoff monitor (Employment Watch)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 8 * * 1",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T13:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "4452b490-bf9a-46d0-9bad-94008fdd5c7e",
       "name": "skill-scanner-weekly",
       "enabled": true,
@@ -375,6 +492,19 @@
       "lastRunAt": "2026-02-09T17:47:50.031000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 301158,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "07274075-2226-4a61-bc52-32e10a820eff",
+      "name": "S26 Ultra deal watch",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 9 * * 1,4",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T14:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
       "sessionTarget": "isolated"
     },
     {
@@ -391,6 +521,45 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "d9b93eeb-158a-49a9-beca-ae49ae5a1a89",
+      "name": "Daily portfolio rebalance check",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 16 * * 1-5",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T21:30:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "03c75e54-be8b-4cd0-892f-6e7347276f32",
+      "name": "Morning brief (Tue 4am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 4 * * 2",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-17T09:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "152c13e3-0ffe-4445-905a-c072234bf672",
+      "name": "Morning brief (Wed 6:30am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 6 * * 3",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-18T11:30:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "1e5d45ef-f3f0-4f75-a406-1b819434eb54",
       "name": "Tax return upload reminder",
       "enabled": true,
@@ -401,6 +570,32 @@
       "lastRunAt": "2026-02-11T23:00:00.015000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 12025,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "85fb3aec-56ff-40bc-8c18-5a567f77dcdb",
+      "name": "Morning brief (Thu 4am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 4 * * 4",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-19T09:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "e73c81cb-acc3-4c8c-bf51-67da07bef97d",
+      "name": "Morning brief (Fri 6:30am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 6 * * 5",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-20T11:30:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
       "sessionTarget": "isolated"
     },
     {
@@ -418,5 +613,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-13T17:51:21.791206+00:00"
+  "lastSyncedAt": "2026-02-14T05:15:05.199451+00:00"
 }
