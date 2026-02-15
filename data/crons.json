@@ -1,6 +1,19 @@
 {
   "crons": [
     {
+      "id": "9793c1f0-06e1-4058-95e9-f1edcc90e268",
+      "name": "API key rotation reminder (Feb 15)",
+      "enabled": false,
+      "scheduleKind": "at",
+      "schedule": "2026-02-15T10:00:00.000Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": null,
+      "lastRunAt": "2026-02-15T10:00:00.019000+00:00",
+      "lastStatus": "error",
+      "lastDurationMs": 9,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "937a6726-4d5e-4698-a41a-c5405ff6ae1b",
       "name": "Rotate Anthropic API keys",
       "enabled": false,
@@ -33,128 +46,11 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T05:15:45.249000+00:00",
-      "lastRunAt": "2026-02-15T04:15:45.264000+00:00",
+      "nextRunAt": "2026-02-15T11:15:45.249000+00:00",
+      "lastRunAt": "2026-02-15T10:15:45.264000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 7,
-      "sessionTarget": "main"
-    },
-    {
-      "id": "14136695-6c57-4af1-8f1e-06cccda5ccf2",
-      "name": "Daily markdown audit",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 2 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T07:00:00+00:00",
-      "lastRunAt": "2026-02-14T07:00:00.017000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 13,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "c3f21400-23d8-44e2-b11c-dc9e6cbc5ddc",
-      "name": "Security scan (daily 2:30am)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "30 2 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T07:30:00+00:00",
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "dcb91430-ed8c-43de-96a7-8e3ba2fe90e0",
-      "name": "Overnight QC review (3am)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 3 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T08:00:00+00:00",
-      "lastRunAt": "2026-02-14T08:00:00.013000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 7,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "a38a7186-f27c-44e8-a7a0-6c610f48c75f",
-      "name": "Life Scanner (daily 3am)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 3 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T08:00:00+00:00",
-      "lastRunAt": "2026-02-14T08:00:00.020000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 2,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "ed6086a3-89fa-4dc4-81c8-82999b833ac3",
-      "name": "sonnet-polish",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "15 3 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T08:15:00+00:00",
-      "lastRunAt": "2026-02-14T08:15:00.018000+00:00",
-      "lastStatus": "error",
       "lastDurationMs": 10,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "5be075f2-f477-438b-a2bf-83bff12358e6",
-      "name": "CRM daily ingest",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "30 3 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T08:30:00+00:00",
-      "lastRunAt": "2026-02-14T08:30:00.016000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 12,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "9793c1f0-06e1-4058-95e9-f1edcc90e268",
-      "name": "API key rotation reminder (Feb 15)",
-      "enabled": true,
-      "scheduleKind": "at",
-      "schedule": "2026-02-15T10:00:00.000Z",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T10:00:00+00:00",
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
-      "name": "Auto snapshot (every 6h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T11:00:00+00:00",
-      "lastRunAt": "2026-02-15T05:00:00.023000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 13186,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
-      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "15 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-15T11:15:00+00:00",
-      "lastRunAt": "2026-02-14T23:15:00.015000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 8388,
-      "sessionTarget": "isolated"
+      "sessionTarget": "main"
     },
     {
       "id": "f4dd4640-8f7d-4194-8b44-227061915891",
@@ -274,6 +170,32 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-15T17:00:00+00:00",
+      "lastRunAt": "2026-02-15T11:00:00.018000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 7786,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
+      "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "15 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-15T17:15:00+00:00",
+      "lastRunAt": "2026-02-15T05:15:00.017000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 7538,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "cc478995-7ede-454d-b023-3c602038a617",
       "name": "Topic Monitor weekly digest (Sun 6pm)",
       "enabled": true,
@@ -349,6 +271,84 @@
       "lastRunAt": "2026-02-15T04:00:15.727000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 5540,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "14136695-6c57-4af1-8f1e-06cccda5ccf2",
+      "name": "Daily markdown audit",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 2 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T07:00:00+00:00",
+      "lastRunAt": "2026-02-15T07:00:00.019000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 4695,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "c3f21400-23d8-44e2-b11c-dc9e6cbc5ddc",
+      "name": "Security scan (daily 2:30am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 2 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T07:30:00+00:00",
+      "lastRunAt": "2026-02-15T07:30:00.017000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 49696,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "dcb91430-ed8c-43de-96a7-8e3ba2fe90e0",
+      "name": "Overnight QC review (3am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 3 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T08:00:00+00:00",
+      "lastRunAt": "2026-02-15T08:00:00.018000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 15918,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "a38a7186-f27c-44e8-a7a0-6c610f48c75f",
+      "name": "Life Scanner (daily 3am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 3 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T08:00:00+00:00",
+      "lastRunAt": "2026-02-15T08:00:15.936000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 14581,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "ed6086a3-89fa-4dc4-81c8-82999b833ac3",
+      "name": "sonnet-polish",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "15 3 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T08:15:00+00:00",
+      "lastRunAt": "2026-02-15T08:15:00.019000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 36617,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "5be075f2-f477-438b-a2bf-83bff12358e6",
+      "name": "CRM daily ingest",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 3 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-16T08:30:00+00:00",
+      "lastRunAt": "2026-02-15T08:30:00.017000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 8047,
       "sessionTarget": "isolated"
     },
     {
@@ -652,5 +652,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-15T05:15:04.941862+00:00"
+  "lastSyncedAt": "2026-02-15T11:15:05.188250+00:00"
 }
