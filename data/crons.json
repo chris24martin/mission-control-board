@@ -235,29 +235,29 @@
       "sessionTarget": "main"
     },
     {
+      "id": "4a0da733-569d-4aaf-ac38-0ab346ec6871",
+      "name": "Repair missing skills (ClawHub retry)",
+      "enabled": false,
+      "scheduleKind": "cron",
+      "schedule": "15 12 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": null,
+      "lastRunAt": "2026-02-19T17:15:05.850000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 74425,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
       "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
       "enabled": true,
       "scheduleKind": "cron",
       "schedule": "15 */6 * * *",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-19T17:15:00+00:00",
-      "lastRunAt": "2026-02-19T11:15:00.022000+00:00",
+      "nextRunAt": "2026-02-19T23:15:00+00:00",
+      "lastRunAt": "2026-02-19T17:15:00.019000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 6640,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "4a0da733-569d-4aaf-ac38-0ab346ec6871",
-      "name": "Repair missing skills (ClawHub retry)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "15 12 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-19T17:15:00+00:00",
-      "lastRunAt": "2026-02-19T13:28:49.401000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 260514,
+      "lastDurationMs": 5831,
       "sessionTarget": "isolated"
     },
     {
@@ -267,50 +267,11 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-19T17:15:45.249000+00:00",
-      "lastRunAt": "2026-02-19T16:15:45.276000+00:00",
+      "nextRunAt": "2026-02-19T23:15:45.249000+00:00",
+      "lastRunAt": "2026-02-19T22:15:45.297000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 11,
+      "lastDurationMs": 18,
       "sessionTarget": "main"
-    },
-    {
-      "id": "d9b93eeb-158a-49a9-beca-ae49ae5a1a89",
-      "name": "Daily portfolio rebalance check",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "30 16 * * 1-5",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-19T21:30:00+00:00",
-      "lastRunAt": "2026-02-18T21:30:00.006000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 14205,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "4a3b1411-841f-4878-aaa3-22e3bb14aada",
-      "name": "Stock watchlist alert check (weekdays 4:30pm)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "30 16 * * 1-5",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-19T21:30:00+00:00",
-      "lastRunAt": "2026-02-18T21:30:14.211000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 8408,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
-      "name": "Auto snapshot (every 6h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-19T23:03:20.011000+00:00",
-      "lastRunAt": "2026-02-19T17:03:20.038000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 15401,
-      "sessionTarget": "isolated"
     },
     {
       "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
@@ -339,6 +300,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-20T05:03:20.011000+00:00",
+      "lastRunAt": "2026-02-19T23:03:20.038000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 22651,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "14136695-6c57-4af1-8f1e-06cccda5ccf2",
       "name": "Daily markdown audit",
       "enabled": true,
@@ -362,19 +336,6 @@
       "lastRunAt": "2026-02-19T07:00:05.474000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 168673,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "c3f21400-23d8-44e2-b11c-dc9e6cbc5ddc",
-      "name": "Security scan (daily 2:30am)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "30 2 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T07:30:00+00:00",
-      "lastRunAt": "2026-02-19T07:30:00.024000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 52027,
       "sessionTarget": "isolated"
     },
     {
@@ -414,6 +375,19 @@
       "lastRunAt": "2026-02-19T08:01:19.975000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 36188,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "34da9a8c-8d10-42fa-ae73-6784aaab97bf",
+      "name": "OpenClaw Shield Scan",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 3 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-20T08:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
       "sessionTarget": "isolated"
     },
     {
@@ -544,6 +518,32 @@
       "lastRunAt": "2026-02-19T15:00:00.022000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 5433,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "d9b93eeb-158a-49a9-beca-ae49ae5a1a89",
+      "name": "Daily portfolio rebalance check",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 16 * * 1-5",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-20T21:30:00+00:00",
+      "lastRunAt": "2026-02-19T22:16:52.488000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 8352,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "4a3b1411-841f-4878-aaa3-22e3bb14aada",
+      "name": "Stock watchlist alert check (weekdays 4:30pm)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 16 * * 1-5",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-20T21:30:00+00:00",
+      "lastRunAt": "2026-02-19T21:30:11.008000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 9085,
       "sessionTarget": "isolated"
     },
     {
@@ -912,5 +912,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-19T17:15:03.209135+00:00"
+  "lastSyncedAt": "2026-02-19T23:15:03.199888+00:00"
 }
