@@ -254,10 +254,10 @@
       "scheduleKind": "cron",
       "schedule": "15 */6 * * *",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-19T23:15:00+00:00",
-      "lastRunAt": "2026-02-19T17:15:00.019000+00:00",
+      "nextRunAt": "2026-02-20T05:15:00+00:00",
+      "lastRunAt": "2026-02-19T23:15:00.029000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 5831,
+      "lastDurationMs": 6374,
       "sessionTarget": "isolated"
     },
     {
@@ -267,50 +267,11 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-19T23:15:45.249000+00:00",
-      "lastRunAt": "2026-02-19T22:15:45.297000+00:00",
+      "nextRunAt": "2026-02-20T05:15:45.249000+00:00",
+      "lastRunAt": "2026-02-20T04:15:45.273000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 18,
+      "lastDurationMs": 15,
       "sessionTarget": "main"
-    },
-    {
-      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
-      "name": "Nightly memory summarization",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T04:00:00+00:00",
-      "lastRunAt": "2026-02-19T04:00:00.026000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 47484,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "c061294c-cae6-4568-82cb-8ece1810081c",
-      "name": "Daily DB backup + git commit",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T04:00:00+00:00",
-      "lastRunAt": "2026-02-19T04:00:47.510000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 6671,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
-      "name": "Auto snapshot (every 6h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T05:03:20.011000+00:00",
-      "lastRunAt": "2026-02-19T23:03:20.038000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 22651,
-      "sessionTarget": "isolated"
     },
     {
       "id": "14136695-6c57-4af1-8f1e-06cccda5ccf2",
@@ -430,6 +391,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-20T11:03:20.011000+00:00",
+      "lastRunAt": "2026-02-20T05:03:20.035000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 43536,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "f4dd4640-8f7d-4194-8b44-227061915891",
       "name": "Daily meeting prep",
       "enabled": true,
@@ -544,6 +518,32 @@
       "lastRunAt": "2026-02-19T21:30:11.008000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 9085,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
+      "name": "Nightly memory summarization",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-21T04:00:00+00:00",
+      "lastRunAt": "2026-02-20T04:00:00.028000+00:00",
+      "lastStatus": "error",
+      "lastDurationMs": 32773,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "c061294c-cae6-4568-82cb-8ece1810081c",
+      "name": "Daily DB backup + git commit",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-21T04:00:00+00:00",
+      "lastRunAt": "2026-02-20T04:00:32.801000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 7648,
       "sessionTarget": "isolated"
     },
     {
@@ -912,5 +912,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-19T23:15:03.199888+00:00"
+  "lastSyncedAt": "2026-02-20T05:15:03.914719+00:00"
 }
