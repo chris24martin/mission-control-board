@@ -254,10 +254,10 @@
       "scheduleKind": "cron",
       "schedule": "15 */6 * * *",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T17:15:00+00:00",
-      "lastRunAt": "2026-02-20T11:15:00.027000+00:00",
+      "nextRunAt": "2026-02-20T23:15:00+00:00",
+      "lastRunAt": "2026-02-20T17:15:00.026000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 8019,
+      "lastDurationMs": 6116,
       "sessionTarget": "isolated"
     },
     {
@@ -267,49 +267,10 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T17:15:45.249000+00:00",
-      "lastRunAt": "2026-02-20T16:15:45.275000+00:00",
+      "nextRunAt": "2026-02-20T23:15:45.249000+00:00",
+      "lastRunAt": "2026-02-20T22:15:45.262000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 16,
-      "sessionTarget": "main"
-    },
-    {
-      "id": "d9b93eeb-158a-49a9-beca-ae49ae5a1a89",
-      "name": "Daily portfolio rebalance check",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "30 16 * * 1-5",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T21:30:00+00:00",
-      "lastRunAt": "2026-02-19T22:16:52.488000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 8352,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "4a3b1411-841f-4878-aaa3-22e3bb14aada",
-      "name": "Stock watchlist alert check (weekdays 4:30pm)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "30 16 * * 1-5",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T21:30:00+00:00",
-      "lastRunAt": "2026-02-19T21:30:11.008000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 9085,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
-      "name": "Auto snapshot (every 6h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T23:03:20.011000+00:00",
-      "lastRunAt": "2026-02-20T17:03:20.036000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 7056,
+      "lastDurationMs": 26157,
       "sessionTarget": "isolated"
     },
     {
@@ -336,6 +297,19 @@
       "lastRunAt": "2026-02-20T04:00:32.801000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 7648,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-21T05:03:20.011000+00:00",
+      "lastRunAt": "2026-02-20T23:03:20.036000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 4994,
       "sessionTarget": "isolated"
     },
     {
@@ -794,6 +768,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "873042cc-3c81-4bbb-a80d-8cdee7f8baae",
+      "name": "Weekly This Week in Startups monitor",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 8 * * 1",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T13:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "4452b490-bf9a-46d0-9bad-94008fdd5c7e",
       "name": "skill-scanner-weekly",
       "enabled": true,
@@ -830,6 +817,32 @@
       "lastRunAt": "2026-02-16T14:20:00.025000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 10,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "d9b93eeb-158a-49a9-beca-ae49ae5a1a89",
+      "name": "Daily portfolio rebalance check",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 16 * * 1-5",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T21:30:00+00:00",
+      "lastRunAt": "2026-02-20T21:30:00.024000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 23695,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "4a3b1411-841f-4878-aaa3-22e3bb14aada",
+      "name": "Stock watchlist alert check (weekdays 4:30pm)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 16 * * 1-5",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T21:30:00+00:00",
+      "lastRunAt": "2026-02-20T21:30:23.719000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 6575,
       "sessionTarget": "isolated"
     },
     {
@@ -899,5 +912,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-20T17:15:03.398406+00:00"
+  "lastSyncedAt": "2026-02-20T23:15:04.278424+00:00"
 }
