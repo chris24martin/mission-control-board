@@ -254,10 +254,10 @@
       "scheduleKind": "cron",
       "schedule": "15 */6 * * *",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T23:15:00+00:00",
-      "lastRunAt": "2026-02-20T17:15:00.026000+00:00",
+      "nextRunAt": "2026-02-21T05:15:00+00:00",
+      "lastRunAt": "2026-02-20T23:15:00.025000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 6116,
+      "lastDurationMs": 7090,
       "sessionTarget": "isolated"
     },
     {
@@ -267,49 +267,10 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-20T23:15:45.249000+00:00",
-      "lastRunAt": "2026-02-20T22:15:45.262000+00:00",
+      "nextRunAt": "2026-02-21T05:15:45.249000+00:00",
+      "lastRunAt": "2026-02-21T04:15:45.266000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 26157,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
-      "name": "Nightly memory summarization",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-21T04:00:00+00:00",
-      "lastRunAt": "2026-02-20T04:00:00.028000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 32773,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "c061294c-cae6-4568-82cb-8ece1810081c",
-      "name": "Daily DB backup + git commit",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-21T04:00:00+00:00",
-      "lastRunAt": "2026-02-20T04:00:32.801000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 7648,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
-      "name": "Auto snapshot (every 6h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-21T05:03:20.011000+00:00",
-      "lastRunAt": "2026-02-20T23:03:20.036000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 4994,
+      "lastDurationMs": 34351,
       "sessionTarget": "isolated"
     },
     {
@@ -359,9 +320,9 @@
       "schedule": "0 3 * * *",
       "timezone": "America/Detroit",
       "nextRunAt": "2026-02-21T08:00:00+00:00",
-      "lastRunAt": "2026-02-20T08:00:00.017000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 90098,
+      "lastRunAt": "2026-02-20T23:36:19.382000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 135710,
       "sessionTarget": "isolated"
     },
     {
@@ -372,9 +333,9 @@
       "schedule": "0 3 * * *",
       "timezone": "America/Detroit",
       "nextRunAt": "2026-02-21T08:00:00+00:00",
-      "lastRunAt": "2026-02-20T08:01:30.115000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 17017,
+      "lastRunAt": "2026-02-20T23:35:57.574000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 15022,
       "sessionTarget": "isolated"
     },
     {
@@ -404,6 +365,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-21T11:03:20.011000+00:00",
+      "lastRunAt": "2026-02-21T05:03:20.034000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 6452,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "f4dd4640-8f7d-4194-8b44-227061915891",
       "name": "Daily meeting prep",
       "enabled": true,
@@ -411,9 +385,9 @@
       "schedule": "30 6 * * *",
       "timezone": "America/Detroit",
       "nextRunAt": "2026-02-21T11:30:00+00:00",
-      "lastRunAt": "2026-02-20T11:30:00.026000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 13429,
+      "lastRunAt": "2026-02-20T23:36:13.268000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 5430,
       "sessionTarget": "isolated"
     },
     {
@@ -495,6 +469,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "da33baa1-49a2-4f43-a5d1-2f44dfd1ce05",
+      "name": "Retry ClawHub skill updates",
+      "enabled": true,
+      "scheduleKind": "at",
+      "schedule": "2026-02-21T14:20:00.000Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-21T14:20:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "67a7878e-0451-4174-9035-3a5bd331b02d",
       "name": "Review nudge (tasks stuck >48h)",
       "enabled": true,
@@ -505,6 +492,45 @@
       "lastRunAt": "2026-02-20T15:00:00.026000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 27023,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "1dbcc2f9-8834-45c2-a6d3-8983ec294b80",
+      "name": "Reminder: set Gemini API key for nano-banana",
+      "enabled": true,
+      "scheduleKind": "at",
+      "schedule": "2026-02-21T15:00:00.000Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-21T15:00:00+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
+      "name": "Nightly memory summarization",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-22T04:00:00+00:00",
+      "lastRunAt": "2026-02-21T04:00:00.015000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 2693,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "c061294c-cae6-4568-82cb-8ece1810081c",
+      "name": "Daily DB backup + git commit",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-22T04:00:00+00:00",
+      "lastRunAt": "2026-02-21T04:00:02.708000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 5868,
       "sessionTarget": "isolated"
     },
     {
@@ -912,5 +938,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-20T23:15:04.278424+00:00"
+  "lastSyncedAt": "2026-02-21T05:15:04.021635+00:00"
 }
