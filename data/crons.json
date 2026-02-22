@@ -248,29 +248,16 @@
       "sessionTarget": "isolated"
     },
     {
-      "id": "e05dbf72-12d4-4b15-9c6e-7aca974a619d",
-      "name": "remind-chrismartin-ai-pages",
-      "enabled": false,
-      "scheduleKind": "at",
-      "schedule": "2026-02-21T23:09:55.366Z",
-      "timezone": "America/Detroit",
-      "nextRunAt": null,
-      "lastRunAt": "2026-02-21T23:09:55.387000+00:00",
-      "lastStatus": "error",
-      "lastDurationMs": 42003,
-      "sessionTarget": "isolated"
-    },
-    {
       "id": "4dcb99c6-c09e-4e27-9817-4b04490eb1be",
       "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
       "enabled": true,
       "scheduleKind": "cron",
       "schedule": "15 */6 * * *",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-21T23:15:00+00:00",
-      "lastRunAt": "2026-02-21T17:15:00.015000+00:00",
+      "nextRunAt": "2026-02-22T05:15:00+00:00",
+      "lastRunAt": "2026-02-21T23:15:00.019000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 6067,
+      "lastDurationMs": 5350,
       "sessionTarget": "isolated"
     },
     {
@@ -280,49 +267,10 @@
       "scheduleKind": "every",
       "schedule": "every 3600000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-21T23:15:45.249000+00:00",
-      "lastRunAt": "2026-02-21T22:15:45.264000+00:00",
+      "nextRunAt": "2026-02-22T05:15:45.249000+00:00",
+      "lastRunAt": "2026-02-22T04:15:45.271000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 22914,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
-      "name": "Nightly memory summarization",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T04:00:00+00:00",
-      "lastRunAt": "2026-02-21T04:00:00.015000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 2693,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "c061294c-cae6-4568-82cb-8ece1810081c",
-      "name": "Daily DB backup + git commit",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T04:00:00+00:00",
-      "lastRunAt": "2026-02-21T04:00:02.708000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 5868,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
-      "name": "Auto snapshot (every 6h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T05:03:20.011000+00:00",
-      "lastRunAt": "2026-02-21T23:03:20.030000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 11165,
+      "lastDurationMs": 28549,
       "sessionTarget": "isolated"
     },
     {
@@ -414,6 +362,19 @@
       "lastRunAt": "2026-02-21T08:30:00.016000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 7337,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-22T11:03:20.011000+00:00",
+      "lastRunAt": "2026-02-22T05:03:20.038000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 5747,
       "sessionTarget": "isolated"
     },
     {
@@ -534,6 +495,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "c78496fc-e7dc-427d-9bcf-3527884ec5fd",
+      "name": "remind-chrismartin-ai-pages",
+      "enabled": true,
+      "scheduleKind": "at",
+      "schedule": "2026-02-22T23:09:55.366Z",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-22T23:09:55.366000+00:00",
+      "lastRunAt": null,
+      "lastStatus": null,
+      "lastDurationMs": null,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "d0d9fabb-99f0-438a-a469-b1110e0bc0a7",
       "name": "Weekly self-optimization review",
       "enabled": true,
@@ -560,6 +534,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
+      "name": "Nightly memory summarization",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T04:00:00+00:00",
+      "lastRunAt": "2026-02-22T04:00:00.024000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 25211,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "314d53c6-d646-4c7a-ba4a-94036547e66e",
       "name": "Weekly embedding update",
       "enabled": true,
@@ -570,6 +557,19 @@
       "lastRunAt": "2026-02-16T04:00:00.035000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 2,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "c061294c-cae6-4568-82cb-8ece1810081c",
+      "name": "Daily DB backup + git commit",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T04:00:00+00:00",
+      "lastRunAt": "2026-02-22T04:00:25.235000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 34489,
       "sessionTarget": "isolated"
     },
     {
@@ -925,5 +925,5 @@
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-21T23:15:03.103677+00:00"
+  "lastSyncedAt": "2026-02-22T05:15:03.127140+00:00"
 }
