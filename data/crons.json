@@ -252,12 +252,12 @@
       "name": "Sync Mission Control crons.json from OpenClaw cron scheduler",
       "enabled": true,
       "scheduleKind": "cron",
-      "schedule": "15 */6 * * *",
+      "schedule": "15 */12 * * *",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T11:15:00+00:00",
-      "lastRunAt": "2026-02-22T05:15:00.025000+00:00",
+      "nextRunAt": "2026-02-22T17:15:00+00:00",
+      "lastRunAt": "2026-02-22T11:15:00.016000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 5449,
+      "lastDurationMs": 10439,
       "sessionTarget": "isolated"
     },
     {
@@ -265,142 +265,12 @@
       "name": "System health check (immediate alerts)",
       "enabled": true,
       "scheduleKind": "every",
-      "schedule": "every 3600000ms",
+      "schedule": "every 10800000ms",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T11:15:45.249000+00:00",
-      "lastRunAt": "2026-02-22T10:15:45.264000+00:00",
+      "nextRunAt": "2026-02-22T19:45:55.990000+00:00",
+      "lastRunAt": "2026-02-22T16:50:48.834000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 20201,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "f4dd4640-8f7d-4194-8b44-227061915891",
-      "name": "Daily meeting prep",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "30 6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T11:30:00+00:00",
-      "lastRunAt": "2026-02-21T11:30:00.020000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 8815,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "93afe997-49d8-4285-8b8f-b7c7ac3c1694",
-      "name": "goal-tasks-daily",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 7 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T12:00:00+00:00",
-      "lastRunAt": "2026-02-21T12:00:00.019000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 72521,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "59d9f17d-2345-438e-b9d6-769ae9a4291f",
-      "name": "Morning brief (Weekend 7am)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 7 * * 0,6",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T12:00:00+00:00",
-      "lastRunAt": "2026-02-21T13:59:24.570000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 144621,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "ae8699b5-21d0-41dd-bd4e-c9bd7e185343",
-      "name": "WSB & Reddit investment monitor",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "15 7 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T12:15:00+00:00",
-      "lastRunAt": "2026-02-21T12:15:00.021000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 16229,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "dd10827a-e176-44ef-be52-f577a874efd5",
-      "name": "Topic Monitor (daily 7:30am)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "30 7 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T12:30:00+00:00",
-      "lastRunAt": "2026-02-21T12:30:00.021000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 41473,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "8f3f3b4c-5ab5-44b3-96ad-f0fcbb729770",
-      "name": "Hardware deal check (ASUS GX10 / GPU)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 8 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T13:00:00+00:00",
-      "lastRunAt": "2026-02-21T13:00:00.022000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 14237,
-      "sessionTarget": "main"
-    },
-    {
-      "id": "9b068a8f-bfc9-44e9-abec-5600a1381726",
-      "name": "Daily standup (8am ET)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 8 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T13:00:00+00:00",
-      "lastRunAt": "2026-02-21T13:00:14.259000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 32070,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "67a7878e-0451-4174-9035-3a5bd331b02d",
-      "name": "Review nudge (tasks stuck >48h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 10 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T15:00:00+00:00",
-      "lastRunAt": "2026-02-21T15:00:00.021000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 4837,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
-      "name": "Auto snapshot (every 6h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 */6 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T17:03:20.011000+00:00",
-      "lastRunAt": "2026-02-22T11:03:20.025000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 11040,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "cc478995-7ede-454d-b023-3c602038a617",
-      "name": "Topic Monitor weekly digest (Sun 6pm)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 18 * * 0",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T23:00:00+00:00",
-      "lastRunAt": "2026-02-15T23:00:08.466000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 1,
+      "lastDurationMs": 9953,
       "sessionTarget": "isolated"
     },
     {
@@ -479,6 +349,19 @@
       "lastRunAt": "2026-02-22T04:00:25.235000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 34489,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */12 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T05:03:20.011000+00:00",
+      "lastRunAt": "2026-02-22T17:03:20.028000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 8391,
       "sessionTarget": "isolated"
     },
     {
@@ -586,6 +469,45 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "f4dd4640-8f7d-4194-8b44-227061915891",
+      "name": "Daily meeting prep",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 6 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T11:30:00+00:00",
+      "lastRunAt": "2026-02-22T11:30:00.021000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 11916,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "93afe997-49d8-4285-8b8f-b7c7ac3c1694",
+      "name": "goal-tasks-daily",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 7 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T12:00:00+00:00",
+      "lastRunAt": "2026-02-21T12:00:00.019000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 72521,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "ae8699b5-21d0-41dd-bd4e-c9bd7e185343",
+      "name": "WSB & Reddit investment monitor",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "15 7 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T12:15:00+00:00",
+      "lastRunAt": "2026-02-22T12:15:00.008000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 30977,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "5e4ac1d2-6591-4d37-8038-ac22e54e5135",
       "name": "Weekly usage report",
       "enabled": true,
@@ -599,6 +521,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "dd10827a-e176-44ef-be52-f577a874efd5",
+      "name": "Topic Monitor (daily 7:30am)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "30 7 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T12:30:00+00:00",
+      "lastRunAt": "2026-02-22T12:30:00.019000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 176649,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "fcf2b255-326b-4eb0-811f-da5b976f218d",
       "name": "Weekly subscription audit",
       "enabled": true,
@@ -609,6 +544,19 @@
       "lastRunAt": null,
       "lastStatus": null,
       "lastDurationMs": null,
+      "sessionTarget": "main"
+    },
+    {
+      "id": "8f3f3b4c-5ab5-44b3-96ad-f0fcbb729770",
+      "name": "Hardware deal check (ASUS GX10 / GPU)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 8 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T13:00:00+00:00",
+      "lastRunAt": "2026-02-22T13:33:56.656000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 120202,
       "sessionTarget": "main"
     },
     {
@@ -690,6 +638,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "9b068a8f-bfc9-44e9-abec-5600a1381726",
+      "name": "Daily standup (8am ET)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 8 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T13:00:00+00:00",
+      "lastRunAt": "2026-02-22T13:35:56.861000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 19040,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "cbc8eb6b-24ca-442b-82bb-df2306d32300",
       "name": "Weekly Outlook ICS Re-Export Reminder",
       "enabled": true,
@@ -739,19 +700,6 @@
       "lastRunAt": "2026-02-16T20:59:22.939000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 7105,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "ff58ecb3-50eb-4d87-a0c2-560170d3862a",
-      "name": "Weekly Dave Shap monitor",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 8 * * 1",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-23T13:00:00+00:00",
-      "lastRunAt": "2026-02-16T20:59:30.059000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 7557,
       "sessionTarget": "isolated"
     },
     {
@@ -846,6 +794,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "67a7878e-0451-4174-9035-3a5bd331b02d",
+      "name": "Review nudge (tasks stuck >48h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 10 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T15:00:00+00:00",
+      "lastRunAt": "2026-02-22T16:47:39.535000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 3745,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "d9b93eeb-158a-49a9-beca-ae49ae5a1a89",
       "name": "Daily portfolio rebalance check",
       "enabled": true,
@@ -911,19 +872,19 @@
       "sessionTarget": "isolated"
     },
     {
-      "id": "ac4b5301-bd44-4ad2-ab46-d36e1516459e",
-      "name": "4 AM deep environment diagnostic",
+      "id": "59d9f17d-2345-438e-b9d6-769ae9a4291f",
+      "name": "Morning brief (Weekend 7am)",
       "enabled": true,
       "scheduleKind": "cron",
-      "schedule": "0 4 17 2 *",
+      "schedule": "0 7 * * 0,6",
       "timezone": "America/Detroit",
-      "nextRunAt": "2027-02-17T09:00:00+00:00",
-      "lastRunAt": "2026-02-17T09:01:39.527000+00:00",
+      "nextRunAt": "2026-02-28T12:00:00+00:00",
+      "lastRunAt": "2026-02-21T13:59:24.570000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 64572,
+      "lastDurationMs": 144621,
       "sessionTarget": "isolated"
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-22T11:15:07.385551+00:00"
+  "lastSyncedAt": "2026-02-22T17:15:04.961378+00:00"
 }
