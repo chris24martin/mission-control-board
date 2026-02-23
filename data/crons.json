@@ -254,114 +254,10 @@
       "scheduleKind": "cron",
       "schedule": "15 */12 * * *",
       "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T17:15:00+00:00",
-      "lastRunAt": "2026-02-22T11:15:00.016000+00:00",
+      "nextRunAt": "2026-02-23T05:15:00+00:00",
+      "lastRunAt": "2026-02-22T17:15:00.008000+00:00",
       "lastStatus": "ok",
-      "lastDurationMs": 10439,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "e37e1d7e-13f1-4f4e-a48e-4356986a2d91",
-      "name": "System health check (immediate alerts)",
-      "enabled": true,
-      "scheduleKind": "every",
-      "schedule": "every 10800000ms",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T19:45:55.990000+00:00",
-      "lastRunAt": "2026-02-22T16:50:48.834000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 9953,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "c78496fc-e7dc-427d-9bcf-3527884ec5fd",
-      "name": "remind-chrismartin-ai-pages",
-      "enabled": true,
-      "scheduleKind": "at",
-      "schedule": "2026-02-22T23:09:55.366Z",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-22T23:09:55.366000+00:00",
-      "lastRunAt": null,
-      "lastStatus": null,
-      "lastDurationMs": null,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "d0d9fabb-99f0-438a-a469-b1110e0bc0a7",
-      "name": "Weekly self-optimization review",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 21 * * 0",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-23T02:00:00+00:00",
-      "lastRunAt": "2026-02-16T02:00:00.022000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 108448,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "554332f2-b072-4600-8098-ecd00e218973",
-      "name": "Weekly memory rollup",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 22 * * 0",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-23T03:00:00+00:00",
-      "lastRunAt": "2026-02-16T03:00:00.025000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 13,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
-      "name": "Nightly memory summarization",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-23T04:00:00+00:00",
-      "lastRunAt": "2026-02-22T04:00:00.024000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 25211,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "314d53c6-d646-4c7a-ba4a-94036547e66e",
-      "name": "Weekly embedding update",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * 0",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-23T04:00:00+00:00",
-      "lastRunAt": "2026-02-16T04:00:00.035000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 2,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "c061294c-cae6-4568-82cb-8ece1810081c",
-      "name": "Daily DB backup + git commit",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 23 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-23T04:00:00+00:00",
-      "lastRunAt": "2026-02-22T04:00:25.235000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 34489,
-      "sessionTarget": "isolated"
-    },
-    {
-      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
-      "name": "Auto snapshot (every 6h)",
-      "enabled": true,
-      "scheduleKind": "cron",
-      "schedule": "0 */12 * * *",
-      "timezone": "America/Detroit",
-      "nextRunAt": "2026-02-23T05:03:20.011000+00:00",
-      "lastRunAt": "2026-02-22T17:03:20.028000+00:00",
-      "lastStatus": "ok",
-      "lastDurationMs": 8391,
+      "lastDurationMs": 7401,
       "sessionTarget": "isolated"
     },
     {
@@ -401,6 +297,19 @@
       "lastRunAt": "2026-02-22T07:30:00.024000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 1434972,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "e37e1d7e-13f1-4f4e-a48e-4356986a2d91",
+      "name": "System health check (immediate alerts)",
+      "enabled": true,
+      "scheduleKind": "every",
+      "schedule": "every 10800000ms",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T07:45:55.990000+00:00",
+      "lastRunAt": "2026-02-23T04:45:56.014000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 7926,
       "sessionTarget": "isolated"
     },
     {
@@ -807,6 +716,19 @@
       "sessionTarget": "isolated"
     },
     {
+      "id": "7b21e3e5-d45f-477c-924d-40b327c0b8ff",
+      "name": "Auto snapshot (every 6h)",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 */12 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-23T17:03:20.011000+00:00",
+      "lastRunAt": "2026-02-23T05:03:20.027000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 7546,
+      "sessionTarget": "isolated"
+    },
+    {
       "id": "d9b93eeb-158a-49a9-beca-ae49ae5a1a89",
       "name": "Daily portfolio rebalance check",
       "enabled": true,
@@ -830,6 +752,32 @@
       "lastRunAt": "2026-02-20T21:30:23.719000+00:00",
       "lastStatus": "ok",
       "lastDurationMs": 6575,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "ab5098df-a80e-4dd7-8d4b-7b62e14f938e",
+      "name": "Nightly memory summarization",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-24T04:00:00+00:00",
+      "lastRunAt": "2026-02-23T04:00:00.014000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 15370,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "c061294c-cae6-4568-82cb-8ece1810081c",
+      "name": "Daily DB backup + git commit",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * *",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-02-24T04:00:00+00:00",
+      "lastRunAt": "2026-02-23T04:00:29.914000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 19370,
       "sessionTarget": "isolated"
     },
     {
@@ -883,8 +831,47 @@
       "lastStatus": "ok",
       "lastDurationMs": 144621,
       "sessionTarget": "isolated"
+    },
+    {
+      "id": "d0d9fabb-99f0-438a-a469-b1110e0bc0a7",
+      "name": "Weekly self-optimization review",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 21 * * 0",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-03-02T02:00:00+00:00",
+      "lastRunAt": "2026-02-23T02:00:00.016000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 66462,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "554332f2-b072-4600-8098-ecd00e218973",
+      "name": "Weekly memory rollup",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 22 * * 0",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-03-02T03:00:00+00:00",
+      "lastRunAt": "2026-02-23T03:00:00.017000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 36318,
+      "sessionTarget": "isolated"
+    },
+    {
+      "id": "314d53c6-d646-4c7a-ba4a-94036547e66e",
+      "name": "Weekly embedding update",
+      "enabled": true,
+      "scheduleKind": "cron",
+      "schedule": "0 23 * * 0",
+      "timezone": "America/Detroit",
+      "nextRunAt": "2026-03-02T04:00:00+00:00",
+      "lastRunAt": "2026-02-23T04:00:15.384000+00:00",
+      "lastStatus": "ok",
+      "lastDurationMs": 14530,
+      "sessionTarget": "isolated"
     }
   ],
   "note": "Auto-generated mirror of OpenClaw cron jobs for Mission Control display. Source of truth is OpenClaw cron scheduler.",
-  "lastSyncedAt": "2026-02-22T17:15:04.961378+00:00"
+  "lastSyncedAt": "2026-02-23T05:15:03.621365+00:00"
 }
