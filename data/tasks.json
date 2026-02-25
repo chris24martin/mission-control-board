@@ -1246,6 +1246,12 @@
           "author": "Charles",
           "text": "Updated scope: do NOT emphasize graduation; focus on multi-event venue use cases and FAQ automation value.",
           "createdAt": "2026-02-25T00:41:19.792923Z"
+        },
+        {
+          "id": "c_1771982634632",
+          "author": "Charles",
+          "text": "Split into 3 child sprints (data/market, scenarios, final pitch pack). Target completion by 5:00 AM local.",
+          "createdAt": "2026-02-25T01:23:54.632719Z"
         }
       ],
       "createdAt": "2026-02-25T00:33:47.904061Z",
@@ -1310,6 +1316,12 @@
           "author": "Charles",
           "text": "Business name confirmed: Don Bair Plumbing Heating & Cooling. Will focus on missed-call capture, emergency scheduling, and after-hours demand.",
           "createdAt": "2026-02-25T00:41:19.792923Z"
+        },
+        {
+          "id": "c_1771982634632",
+          "author": "Charles",
+          "text": "Split into 3 child sprints (data/market, scenarios, final pitch pack). Target completion by 5:00 AM local.",
+          "createdAt": "2026-02-25T01:23:54.632719Z"
         }
       ],
       "createdAt": "2026-02-25T00:33:47.904061Z",
@@ -1320,6 +1332,268 @@
       "assignedTo": "charles",
       "workItemType": "sprint",
       "processingStartedAt": "2026-02-25T00:37:56.419820Z"
+    },
+    {
+      "id": "sprint_hv_data_market",
+      "title": "Holly Vault Sprint A \u2014 Data & market facts",
+      "description": "Gather venue/event market data, local demand indicators, pricing benchmarks, booking stats, and inquiry-response impact. No graduation emphasis; multi\u2011event focus.",
+      "status": "in_progress",
+      "project": "pitch_sprints",
+      "tags": [
+        "sprint",
+        "holly",
+        "vault",
+        "data"
+      ],
+      "priority": "high",
+      "dod": "Market/data section complete with sources + 3\u20135 key metrics for the pitch pack.",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Venue/event market benchmarks (MI/Metro Detroit) + pricing ranges",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Lead/inquiry response-time impact on booking conversion (sources)",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Local demand indicators + seasonality",
+          "done": false
+        }
+      ],
+      "comments": [],
+      "createdAt": "2026-02-25T01:23:54.632719Z",
+      "parentId": "sprint_holly_vault_pitch_data",
+      "storyPoints": null,
+      "startDate": "2026-02-25T01:23:54.632719Z",
+      "targetDate": "2026-02-25T05:00:00-05:00",
+      "assignedTo": "charles",
+      "workItemType": "sprint"
+    },
+    {
+      "id": "sprint_hv_scenarios",
+      "title": "Holly Vault Sprint B \u2014 Scenarios & pain points",
+      "description": "Create creative, multi\u2011event scenarios (weddings, corporate, fundraisers, reunions, galas) and map FAQ/pain\u2011point automation benefits.",
+      "status": "in_progress",
+      "project": "pitch_sprints",
+      "tags": [
+        "sprint",
+        "holly",
+        "vault",
+        "scenarios"
+      ],
+      "priority": "high",
+      "dod": "5\u20137 scenarios with pain points + AI concierge value for each.",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Wedding + anniversary scenarios",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Corporate / off\u2011site / holiday party scenarios",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Fundraisers / nonprofits / galas",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Community events (reunions, milestone birthdays)",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Logistics pain points + FAQ automation map",
+          "done": false
+        }
+      ],
+      "comments": [],
+      "createdAt": "2026-02-25T01:23:54.632719Z",
+      "parentId": "sprint_holly_vault_pitch_data",
+      "storyPoints": null,
+      "startDate": "2026-02-25T01:23:54.632719Z",
+      "targetDate": "2026-02-25T05:00:00-05:00",
+      "assignedTo": "charles",
+      "workItemType": "sprint"
+    },
+    {
+      "id": "sprint_hv_pitch_pack",
+      "title": "Holly Vault Sprint C \u2014 Final pitch pack",
+      "description": "Assemble one\u2011page pitch data pack: persona, pains, differentiators, ROI, and proof points. Pull from A/B results.",
+      "status": "in_progress",
+      "project": "pitch_sprints",
+      "tags": [
+        "sprint",
+        "holly",
+        "vault",
+        "pitch-pack"
+      ],
+      "priority": "high",
+      "dod": "1\u2011page pitch data pack ready for write\u2011up with citations.",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Persona + buying journey",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Differentiators + why us",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Pricing/ROI bullets",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Proof points + source citations",
+          "done": false
+        }
+      ],
+      "comments": [],
+      "createdAt": "2026-02-25T01:23:54.632719Z",
+      "parentId": "sprint_holly_vault_pitch_data",
+      "storyPoints": null,
+      "startDate": "2026-02-25T01:23:54.632719Z",
+      "targetDate": "2026-02-25T05:00:00-05:00",
+      "assignedTo": "charles",
+      "workItemType": "sprint"
+    },
+    {
+      "id": "sprint_plumber_data_market",
+      "title": "Don Bair Sprint A \u2014 Data & market facts",
+      "description": "Gather local plumbing/HVAC market data, pricing benchmarks, emergency call premiums, missed\u2011call loss stats, and demand indicators.",
+      "status": "in_progress",
+      "project": "pitch_sprints",
+      "tags": [
+        "sprint",
+        "plumber",
+        "data"
+      ],
+      "priority": "high",
+      "dod": "Market/data section complete with sources + 3\u20135 key metrics for pitch pack.",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Local service demand + seasonality",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Emergency call pricing premium + avg ticket",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Missed\u2011call revenue impact stats",
+          "done": false
+        }
+      ],
+      "comments": [],
+      "createdAt": "2026-02-25T01:23:54.632719Z",
+      "parentId": "sprint_neighbor_plumber_pitch_data",
+      "storyPoints": null,
+      "startDate": "2026-02-25T01:23:54.632719Z",
+      "targetDate": "2026-02-25T05:00:00-05:00",
+      "assignedTo": "charles",
+      "workItemType": "sprint"
+    },
+    {
+      "id": "sprint_plumber_scenarios",
+      "title": "Don Bair Sprint B \u2014 Scenarios & pain points",
+      "description": "Creative scenarios: emergency burst, after\u2011hours triage, seasonal tune\u2011ups, upsell/maintenance plans. Map to AI phone agent value.",
+      "status": "in_progress",
+      "project": "pitch_sprints",
+      "tags": [
+        "sprint",
+        "plumber",
+        "scenarios"
+      ],
+      "priority": "high",
+      "dod": "5\u20137 scenarios with pain points + AI concierge/dispatcher value for each.",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Emergency hot\u2011water / burst pipe call flow",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "After\u2011hours call capture + scheduling",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Seasonal HVAC tune\u2011up pipeline",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Quote triage + upsell/maintenance plans",
+          "done": false
+        }
+      ],
+      "comments": [],
+      "createdAt": "2026-02-25T01:23:54.632719Z",
+      "parentId": "sprint_neighbor_plumber_pitch_data",
+      "storyPoints": null,
+      "startDate": "2026-02-25T01:23:54.632719Z",
+      "targetDate": "2026-02-25T05:00:00-05:00",
+      "assignedTo": "charles",
+      "workItemType": "sprint"
+    },
+    {
+      "id": "sprint_plumber_pitch_pack",
+      "title": "Don Bair Sprint C \u2014 Final pitch pack",
+      "description": "Assemble one\u2011page pitch data pack: persona, pains, differentiators, ROI, proof points. Pull from A/B results.",
+      "status": "in_progress",
+      "project": "pitch_sprints",
+      "tags": [
+        "sprint",
+        "plumber",
+        "pitch-pack"
+      ],
+      "priority": "high",
+      "dod": "1\u2011page pitch data pack ready for write\u2011up with citations.",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Persona + buying journey",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Differentiators + why us",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Pricing/ROI bullets",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Proof points + source citations",
+          "done": false
+        }
+      ],
+      "comments": [],
+      "createdAt": "2026-02-25T01:23:54.632719Z",
+      "parentId": "sprint_neighbor_plumber_pitch_data",
+      "storyPoints": null,
+      "startDate": "2026-02-25T01:23:54.632719Z",
+      "targetDate": "2026-02-25T05:00:00-05:00",
+      "assignedTo": "charles",
+      "workItemType": "sprint"
     }
   ],
   "projects": [
