@@ -1072,6 +1072,232 @@
       "workItemType": "task",
       "archived": true,
       "archivedAt": "2026-02-07T22:08:49.944Z"
+    },
+    {
+      "id": "voice-233b68",
+      "title": "Hey Charles \u2014 Android (Galaxy S22 Ultra)",
+      "description": "Tasker + AutoVoice wake word \u2192 Telegram bot \u2192 TTS response. Hands-free mobile assistant.",
+      "status": "in_progress",
+      "priority": "high",
+      "tags": [
+        "voice",
+        "mobile",
+        "wfo"
+      ],
+      "createdAt": 1771168369878
+    },
+    {
+      "id": "voice-7adf69",
+      "title": "Hey Charles \u2014 Surface Laptop (Windows)",
+      "description": "Python + Picovoice Porcupine wake word + Whisper STT + Windows TTS. Background service.",
+      "status": "in_progress",
+      "priority": "high",
+      "tags": [
+        "voice",
+        "windows",
+        "wfo"
+      ],
+      "createdAt": 1771168369878
+    },
+    {
+      "id": "voice-ef1954",
+      "title": "Hey Charles \u2014 Pi 5 Bedside Voice Assistant",
+      "description": "Raspberry Pi 5 + ReSpeaker mic + speaker. Always-on bedside assistant. Depends on Pi hardware purchase.",
+      "status": "backlog",
+      "priority": "medium",
+      "tags": [
+        "voice",
+        "hardware",
+        "wfo"
+      ],
+      "createdAt": 1771168369878
+    },
+    {
+      "id": "voice-6284b8",
+      "title": "Google Messages Web \u2014 SMS Access for Charles",
+      "description": "Pair Google Messages web (messages.google.com) with Chrome relay so Charles can read/draft SMS replies.",
+      "status": "backlog",
+      "priority": "medium",
+      "tags": [
+        "mobile",
+        "integration"
+      ],
+      "createdAt": 1771168369878
+    },
+    {
+      "id": "wfo_sms_channel",
+      "title": "\ud83d\udcf2 WFO: SMS channel (inbound + outbound) for client messaging",
+      "description": "Add an SMS channel to WorkForce One so agents can receive inbound texts, draft/auto-send replies, and support human handoff.\n\nNotes:\n- Google Messages for Web pairing is a good *prototype* for personal use, but for clients we should use an official provider API (e.g., Twilio) or a managed gateway.\n- Must be multi-tenant, secure, and compliant (opt-out keywords, audit logs, retention controls).\n\nAdoption constraint:\n- Do NOT require end users to switch their default messaging app. Prefer provider/API-based SMS for full automation, and offer an \"agent-assist\" mode (draft replies + copy/paste) when full automation isn\u2019t possible.",
+      "status": "backlog",
+      "project": "workforce-one",
+      "tags": [
+        "wfo",
+        "sms",
+        "channels",
+        "client-feature"
+      ],
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Decide MVP modes: Provider SMS (full automation) vs Agent-assist (no-switch) vs BYOD Android gateway",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Design channel adapter interface (inbound event -> agent; outbound send)",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Implement inbound SMS webhook ingestion + tenant auth/verification",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Implement outbound SMS send + rate limits + error handling",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Conversation UI + human handoff + allow/denylist",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Compliance: STOP/HELP handling, consent note, retention/log redaction",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "(Optional) Android gateway POC using Tasker/Intent for existing numbers",
+          "done": false
+        }
+      ],
+      "priority": "high",
+      "comments": [],
+      "createdAt": "2026-02-21T17:53:59.033449Z",
+      "parentId": null,
+      "storyPoints": null,
+      "startDate": null,
+      "targetDate": null,
+      "assignedTo": null,
+      "workItemType": "feature"
+    },
+    {
+      "id": "sprint_holly_vault_pitch_data",
+      "title": "Sprint: Holly Vault \u2014 Pitch data pack",
+      "description": "Gather and synthesize pitch-ready data for the Holly Vault scenario. Focus: market size, customer pain points, differentiation, pricing/ROI, and proof points. Output should be a concise data pack for the pitch write-up.",
+      "status": "in_progress",
+      "project": "pitch_sprints",
+      "tags": [
+        "sprint",
+        "pitch",
+        "holly",
+        "vault"
+      ],
+      "priority": "high",
+      "dod": "One-page data pack with market snapshot, target customer profile, 3\u20135 pain points, differentiators, pricing/ROI bullets, and 2\u20133 supporting proof points/metrics.",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Define target customer + buyer persona (Holly local vault use case)",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Identify core pain points + urgency drivers (3\u20135) with evidence",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Competitive landscape + positioning (why us)",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Pricing/ROI story + expected outcomes",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Assemble one-page pitch data pack",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "id": "c_1771979876419",
+          "author": "Charles",
+          "text": "Sprint window set: now \u2192 2026-02-25T05:00:00-05:00 (local). Research in progress; will generate creative local scenarios + pitch data pack.",
+          "createdAt": "2026-02-25T00:37:56.419820Z"
+        }
+      ],
+      "createdAt": "2026-02-25T00:33:47.904061Z",
+      "parentId": null,
+      "storyPoints": null,
+      "startDate": "2026-02-25T00:37:56.419820Z",
+      "targetDate": "2026-02-25T05:00:00-05:00",
+      "assignedTo": "charles",
+      "workItemType": "sprint",
+      "processingStartedAt": "2026-02-25T00:37:56.419820Z"
+    },
+    {
+      "id": "sprint_neighbor_plumber_pitch_data",
+      "title": "Sprint: Neighbor Plumber \u2014 Pitch data pack",
+      "description": "Gather and synthesize pitch-ready data for the Neighbor Plumber scenario. Focus: local demand, customer pain points, differentiation, pricing/ROI, and proof points. Output should be a concise data pack for the pitch write-up.",
+      "status": "in_progress",
+      "project": "pitch_sprints",
+      "tags": [
+        "sprint",
+        "pitch",
+        "plumber",
+        "local"
+      ],
+      "priority": "high",
+      "dod": "One-page data pack with market snapshot, target customer profile, 3\u20135 pain points, differentiators, pricing/ROI bullets, and 2\u20133 supporting proof points/metrics.",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Define target customer + buyer persona (local plumber)",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Identify core pain points + urgency drivers (3\u20135) with evidence",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Competitive landscape + positioning (why us)",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Pricing/ROI story + expected outcomes",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Assemble one-page pitch data pack",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "id": "c_1771979876419",
+          "author": "Charles",
+          "text": "Sprint window set: now \u2192 2026-02-25T05:00:00-05:00 (local). Research in progress; will generate creative local scenarios + pitch data pack.",
+          "createdAt": "2026-02-25T00:37:56.419820Z"
+        }
+      ],
+      "createdAt": "2026-02-25T00:33:47.904061Z",
+      "parentId": null,
+      "storyPoints": null,
+      "startDate": "2026-02-25T00:37:56.419820Z",
+      "targetDate": "2026-02-25T05:00:00-05:00",
+      "assignedTo": "charles",
+      "workItemType": "sprint",
+      "processingStartedAt": "2026-02-25T00:37:56.419820Z"
     }
   ],
   "projects": [
@@ -1122,6 +1348,12 @@
       "name": "Module 5 \u2014 Real Estate (First Home)",
       "color": "#14b8a6",
       "icon": "\ud83c\udfe0"
+    },
+    {
+      "id": "pitch_sprints",
+      "name": "Pitch Sprints",
+      "color": "#8b5cf6",
+      "icon": "\ud83c\udfc1"
     }
   ],
   "activities": [
