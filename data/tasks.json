@@ -1186,7 +1186,7 @@
     {
       "id": "sprint_holly_vault_pitch_data",
       "title": "Sprint: Holly Vault \u2014 Pitch data pack",
-      "description": "Gather and synthesize pitch-ready data for the Holly Vault scenario. Focus: market size, customer pain points, differentiation, pricing/ROI, and proof points. Output should be a concise data pack for the pitch write-up.",
+      "description": "Gather and synthesize pitch-ready data for The Holly Vault (event space in Holly, MI). Focus: venue inquiry automation, repeat FAQ volume, staff time savings, and revenue lift across multiple event types (weddings, corporate, birthdays, fundraisers, reunions, etc.). Output is a concise data pack for the pitch write-up.",
       "status": "in_progress",
       "project": "pitch_sprints",
       "tags": [
@@ -1222,6 +1222,16 @@
           "id": "sub_005",
           "title": "Assemble one-page pitch data pack",
           "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Event-type scenarios (weddings, corporate, reunions, fundraisers, etc.) + how FAQ automation helps",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Venue inquiry funnel: estimate volume, response delays, and conversion impact",
+          "done": false
         }
       ],
       "comments": [
@@ -1230,6 +1240,12 @@
           "author": "Charles",
           "text": "Sprint window set: now \u2192 2026-02-25T05:00:00-05:00 (local). Research in progress; will generate creative local scenarios + pitch data pack.",
           "createdAt": "2026-02-25T00:37:56.419820Z"
+        },
+        {
+          "id": "c_1771980079793",
+          "author": "Charles",
+          "text": "Updated scope: do NOT emphasize graduation; focus on multi-event venue use cases and FAQ automation value.",
+          "createdAt": "2026-02-25T00:41:19.792923Z"
         }
       ],
       "createdAt": "2026-02-25T00:33:47.904061Z",
@@ -1288,6 +1304,12 @@
           "author": "Charles",
           "text": "Sprint window set: now \u2192 2026-02-25T05:00:00-05:00 (local). Research in progress; will generate creative local scenarios + pitch data pack.",
           "createdAt": "2026-02-25T00:37:56.419820Z"
+        },
+        {
+          "id": "c_1771980079793",
+          "author": "Charles",
+          "text": "Business name confirmed: Don Bair Plumbing Heating & Cooling. Will focus on missed-call capture, emergency scheduling, and after-hours demand.",
+          "createdAt": "2026-02-25T00:41:19.792923Z"
         }
       ],
       "createdAt": "2026-02-25T00:33:47.904061Z",
